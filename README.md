@@ -1,8 +1,9 @@
 Okgrafix web site
 =================
 
-Project in working progress.
-TODO:
+## Project in working progress. ##
+
+### TODO: ###
   1. add SASS and SUSY
   2. Use 500px API for pull images for Photography page
   3. Add Mongolab and save data for contact form
@@ -37,7 +38,6 @@ The easiest way to get started is to install Git and clone the repository:
 
 ``` bash
 # Using Git, fetch only the latest commits.  You won't need the full history
-# for your project.
 git clone --depth 1 https://github.com/mromanoff/okgrafix-2015.git
 
 # Move the repository to your own project name.
