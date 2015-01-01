@@ -1,0 +1,46 @@
+<nav class="main-transparent is-mobile" data-component="navigation">
+    <a href="#" class="menu icon-menu is-mobile"></a>
+    <a href="#" class="icon-close is-hidden"></a>
+</nav>
+
+<nav class="main">
+    <!-- Mobile Menu -->
+    <div class="links-wrApper is-mobile">
+        <ul class="main-links">
+          {{#each primaryItems}}
+              <li {{#if active}}class="active"{{/if}}><a href="#{{path}}">{{name}}</a></li>
+          {{/each}}
+        </ul>
+
+        <ul class="secondary-links">
+          {{#each secondaryItems}}
+              <li {{#if active}}class="active"{{/if}}><a  class="highlight menu-login" href="#{{path}}">{{name}}</a></li>
+          {{/each}}
+        </ul>
+    </div>
+
+    <!-- Full Navigation -->
+    <div class="full-wrApper">
+        <h1 class="logo">
+            <a href="/">
+                <img src="/img/header-logo.png" alt="Okgrafix">
+            </a>
+        </h1>
+
+        <div class="links-wrApper is-tablet is-desktop">
+            <nav>
+                <ul class="main-links">
+                  {{#each primaryItems}}
+                      <li {{#if active}}class="active"{{/if}}><a href="#{{path}}">{{name}}</a></li>
+                  {{/each}}
+                </ul>
+            </nav>
+
+            <ul class="secondary-links">
+              {{#each secondaryItems}}
+                  <li {{#if active}}class="active"{{/if}}><a  class="highlight menu-login" href="#{{path}}">{{name}}</a></li>
+              {{/each}}
+            </ul>
+        </div>
+    </div>
+</nav>

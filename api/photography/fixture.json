@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "category": "photography",
+    "projectName": null,
+    "url": "http://equinox.com/",
+    "thumbnail": "/app/img/recent_projects1.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-1.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "Equinox - It's not Fitness. It's Life. For over 20 years, Equinox fitness clubs have provided an unparalleled member experience, setting new standards from personal training to group fitness to rejuvenating wellness treatments. The results are extraordinary. Tour the clubs and experience what ESPN calls \"the best gym in America.\" Featuring innovative group fitness classes, luxurious spas, exclusive boutiques and nourishing cafes, Equinox clubs provide members with an inviting and exhilarating fitness experience.",
+    "information": "My Role: Senior Front End Developer, .NET, CSS, CSS3, SASS, HTML5, JavaScript, jQuery, Backbone JS",
+    "client": [
+      {
+        "name": "Equinox",
+        "url": "work/1"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "category": "photography",
+    "projectName": null,
+    "url": "http://q.equinox.com/",
+    "thumbnail": "/app/img/recent_projects1.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-2.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "Equinox Blog and News Letter",
+    "information": "My Role: Senior Front End Developer, .NET, CSS, CSS3, SASS, Bootstrap 3, HTML5, JavaScript, jQuery, Responsive Design",
+    "client": [
+      {
+        "name": "Equinox",
+        "url": "work/1"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "category": "photography",
+    "projectName": null,
+    "url": "http://www.blinkfitness.com/",
+    "thumbnail": "/app/img/recent_projects1.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-3.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "Incredibly affordable GYM, it has two great membership options, and all pricing is presented clearly up front. There are no sales people, just a friendly staff to make your workout enjoyable.",
+    "information": "My Role: Senior Front End Developer, .NET, CSS, CSS3, LESS, Bootstrap 2, HTML5, JavaScript, jQuery, Underscore JS, Google Map API, Responsive Design",
+    "client": [
+      {
+        "name": "Equinox",
+        "url": "work/1"
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "category": "photography",
+    "projectName": null,
+    "url": "http://www.playboyfragrances.com/",
+    "thumbnail": "/app/img/recent_projects1.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-4.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "This interactive website showcases the various offerings of the brand's \"For Him\" and \"For Her\" line of fragrances. The site houses photo galleries, editorial content, virtual tours, interviews, quizzes, and a history of the magazine. Playboy Fragrances also allows users to set up their own personal profiles with The Seduction Club. Here users can interact with the site in order to gain points and unlock goodies.",
+    "information": "My Role: Drupal 6, CSS, CSS3, HTML5, JavaScript, jQuery, Modernizr, JW Player",
+    "client": [
+      {
+        "name": "COTY",
+        "url": "portfolio/client/coty/"
+      },
+      {
+        "name": "RAPP",
+        "url": "portfolio/client/rapp/"
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "category": "photography",
+    "projectName": null,
+    "url": "http://astorcosmetics.com/",
+    "thumbnail": "/app/img/recent_projects1.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-10.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "Astor is a well known European cosmetic brand focused on enhancing a woman’s natural beauty. The Astor Cosmetics site showcases the various product lines from skin care and makeup to nail care. Users can sign in to create a basic profile where they save items that sparked their interest. The site also features makeup news, tips and tutorials with behind the scenes footage of Artistic Advisor and fashion icon Heidi Klum.",
+    "information": "My Role: Drupal 6, CSS, CSS3, HTML5, JavaScript, jQuery, Modernizr, JW Player",
+    "client": [
+      {
+        "name": "COTY",
+        "url": "portfolio/client/coty/"
+      },
+      {
+        "name": "RAPP",
+        "url": "portfolio/client/rapp/"
+      }
+    ]
+  },
+
+  {
+    "id": 6,
+    "category": "photography",
+    "projectName": null,
+    "projectUrl": "http://newyorkcolor.com/",
+    "thumbnail": "/app/img/recent_projects2.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-6.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "New York Color is highly popular discount beauty brand targeted towards teens and young adults. The New York Color website showcases the offerings of the brand's beauty products that can be found at most drug stores and major retailers. Other content includes a store locator, tips, tutorials, inspiration articles, press exposure, and promotions. Visitors are also able to request samples/communications from the company.",
+    "information": "My Role: Drupal 6, CSS, CSS3, HTML5, JavaScript, jQuery, Modernizr, JW Player",
+    "client": [
+      {
+        "name": "COTY",
+        "url": "portfolio/client/coty/"
+      },
+      {
+        "name": "RAPP",
+        "url": "portfolio/client/rApp/"
+      }
+    ]
+  },
+
+  {
+    "id": 7,
+    "category": "photography",
+    "projectName": null,
+    "projectUrl": "http://www.sallyhansen.com/",
+    "thumbnail": "/app/img/recent_projects2.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-7.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "They’ve come a long way from being just the master of nail care, today Sally Hansen is an all encompassing beauty brand that specializes in everything from makeup and hair removal to, of course, nail care. This site showcases the extensive product lines as well as featuring tutorials, quizzes and advice. The highlight of the site is an interactive nail product selector that helps you to determine the perfect look and product recommendation for you.",
+    "information": "My Role: Drupal 6, CSS, CSS3, HTML5, JavaScript, jQuery, Modernizr, JW Player",
+    "client": [
+      {
+        "name": "COTY",
+        "url": "portfolio/client/coty/"
+      },
+      {
+        "name": "RAPP",
+        "url": "portfolio/client/rApp/"
+      }
+    ]
+  },
+
+  {
+    "id": 8,
+    "category": "photography",
+    "projectName": null,
+    "projectUrl": "http://halleberryfragrances.com/",
+    "thumbnail": "/app/img/recent_projects2.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-8.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "The concept behind the Halle Berry fragrance line is that each woman has many facets and Halle Berry has a scent for each. There are three parts to the site, one per fragrance, “Reveal”, “Pure Orchid” and “Halle”. As the user rolls over each scent they are directed to page that displays how the scent came to be, media and a view of the collection.",
+    "information": "My Role: Drupal 6, CSS, CSS3, HTML5, JavaScript, jQuery, Modernizr, JW Player",
+    "client": [
+      {
+        "name": "COTY",
+        "url": "portfolio/client/coty/"
+      },
+      {
+        "name": "RAPP",
+        "url": "portfolio/client/rApp/"
+      }
+    ]
+  },
+
+  {
+    "id": 9,
+    "category": "photography",
+    "projectName": null,
+    "projectUrl": "http://guessparfums.com/",
+    "thumbnail": "/app/img/recent_projects2.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-9.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "Home of the GUESS fragrance brand, this interactive site showcases the product line, promotions, features a store locator and asks users to join in on the conversation. The site features three unforgettable women with their love stories from the perspective of their lovers. GUESS asks users, “Are you a legend in the making?” prompting them to share their stories on Facebook.",
+    "information": "My Role: Drupal 6, CSS, CSS3, HTML5, JavaScript, jQuery, Modernizr, JW Player",
+    "client": [
+      {
+        "name": "COTY",
+        "url": "portfolio/client/coty/"
+      },
+      {
+        "name": "RAPP",
+        "url": "portfolio/client/rApp/"
+      }
+    ]
+  },
+
+  {
+    "id": 10,
+    "category": "photography",
+    "projectName": null,
+    "projectUrl": "http://www2.witness.org/project-focus/?q=project-focus/",
+    "thumbnail": "/app/img/recent_projects3.jpg",
+    "categoryImage": "/app/img/photography/category/photo-portfolio-10.jpg",
+    "image": "/app/img/portfolio/astor/recent_projects1.jpg",
+    "description": "WITNESS uses video to open the eyes of the world to human rights violations. This interactive online experience was built in conjunction with a charity drive to help gain donations. The user is welcomed by a blurry video and a voice over, a button Appears asking them to “open their eyes”, as the user clicks, the video becomes clearer. At the end, they are asked to “Help change the picture, click to donate.” The drive was highly successful, a substantial amount of money was raised. As a result of the press that came from the online experience, there was also an increase in both new membership and existing membership participation.",
+    "information": "My Role: HTML5, CSS3, JavaScript, jQuery, PHP, JWPlayer",
+    "client": [
+      {
+        "name": "Witness",
+        "url": "http://www.witness.org/"
+      },
+      {
+        "name": "RAPP",
+        "url": "portfolio/client/rApp/"
+      }
+    ]
+  }
+
+]
