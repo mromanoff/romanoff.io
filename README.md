@@ -29,7 +29,7 @@ The easiest way to get started is to install Git and clone the repository:
 ``` bash
 # Using Git, fetch only the latest commits.  You won't need the full history
 # for your project.
-git clone --depth 1 https://github.com/mromanoff/okgrafix.git
+git clone --depth 1 https://github.com/mromanoff/okgrafix-2015.git
 
 # Move the repository to your own project name.
 mv okgrafix my-project
@@ -47,13 +47,9 @@ npm install
 
 ## Build process ##
 
-The build process consists of numerous Grunt plugin tasks that work together
-to optimize your application.
-
-``` bash
 # To run the build process, run the default Gulp task.
 gulp
-
+```
 
 ## License ##
 Copyright © 2015 Michael Romanoff
