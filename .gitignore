@@ -96,3 +96,7 @@ node_modules
 # WebStorm
 
 .idea/
+
+### Sass ###
+.sass-cache
+*.css.map
