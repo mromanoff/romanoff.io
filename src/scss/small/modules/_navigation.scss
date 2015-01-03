@@ -78,7 +78,7 @@ nav.main {
 
   &.active {
     .full-wrApper {
-     // @include rgba-background-inline($navigation-background-active);
+      background-color: rgba($navigation-background-active, .9);
     }
   }
 
@@ -107,9 +107,9 @@ nav.main {
   .links-wrApper {
     position: fixed;
     width: 100%;
-    height: 0px;
+    height: 0;
     overflow: hidden;
-    //@include rgba-background-inline($navigation-background-active);
+    background-color: rgba($navigation-background-active, .9);
     margin: 0 -20px;
 
     &.is-mobile {
@@ -118,7 +118,6 @@ nav.main {
       width: 100%;
       z-index: 999;
     }
-
     @include transition(height 0.3s);
   }
 
