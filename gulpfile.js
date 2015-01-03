@@ -9,11 +9,11 @@ var path = require('path');
 var merge = require('merge-stream');
 var buffer = require('vinyl-buffer');
 var _ = require('lodash');
-
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-
 var api = require('./api/api');
+
+//var sass = require('gulp-ruby-sass');
 
 gulp.task('clean', function () {
   return gulp.src('app/tmp', {read: false})
@@ -39,14 +39,32 @@ gulp.task('images', function () {
     .pipe(gulp.dest('./dist/img'));
 });
 
-gulp.task('styles', function () {
-  return gulp.src('./src/main.less')
-    .pipe($.less())
-    .pipe($.autoprefixer())
-    .pipe($.rename('bundle.css'))
+// using libsass
+gulp.task('styles', function() {
+  return gulp.src('./src/scss/**/*.scss')
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      sourceComments: false,
+      outputStyle: 'expanded'
+    }))
+    //.pipe($.rename('main.css'))
+    .pipe($.autoprefixer('last 2 version'))
+    .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'))
     .pipe(reload({stream: true}));
 });
+
+
+//gulp.task('styles', function () {
+//  return gulp.src('./src/scss/*.scss')
+//    .pipe($.plumber())
+//    .pipe(sass({
+//      compass: true
+//    }))
+//    .pipe(gulp.dest('./dist'));
+//});
+
 
 var bundler;
 function getBundler() {
@@ -64,8 +82,8 @@ function getBundler() {
 
 function bundle() {
   return getBundler().bundle()
-    .on('error', $.util.log)
-    .pipe(source('bundle.js'))
+    .pipe($.plumber())
+    .pipe(source('main.js'))
     .pipe(buffer())
     .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.sourcemaps.write('./'))
@@ -134,7 +152,7 @@ gulp.task('watch', ['build'], function () {
     gulp.start('test');
   });
   gulp.watch('./test/**/*.js', ['test']);
-  gulp.watch(['./src/main.less', './src/**/*.less'], ['styles']);
+  gulp.watch(['./src/scss/**/*.scss'], ['styles']);
 });
 
 gulp.task('default', ['watch']);

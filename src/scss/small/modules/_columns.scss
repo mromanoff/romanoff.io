@@ -69,7 +69,7 @@
 }
 
 .grid-container {
-    @include pie-clearfix;
+    //@include clearfix;
     width: 100%;
 
     .column {

@@ -1,19 +1,74 @@
 // ONLY VARIABLES SHOULD BE DEFINED IN THIS FILE.
 
+// Device brake points.
+// -------------------------
 $medium-breakpoint: 768px;
 $large-breakpoint: 1024px;
 $extra-large-breakpoint: 1920px;
 
-$font-family: 'Graphik Web', sans-serif;
+// Grays
+// -------------------------
+
+$gray-darker:            #222;
+$gray-dark:              #343434;
+$gray:                   #555;
+$gray-light:             #999;
+$gray-lighter:           #eee;
+
+// Brand colors
+// -------------------------
+
+$brand-primary:         #B22222;
+$brand-primary2:        #E9967A;
+$brand-primary3:        #483D8B;
+$brand-primary4:        #253f3f; //shade(#2F4F4F, 20%);
+$brand-primary5:        #DAA520;
+
+$brand-success:         #5cb85c;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+$brand-info:            #5bc0de;
+
+
+//TODO: saved TEMP
+$firebrick: firebrick; // #B22222 footer bg
+$darksalmon: darksalmon; // #E9967A footer color
+$darkslateblue: darkslateblue; // #483D8B forms bg
+$goldenrod: goldenrod; // #DAA520 button
+$darkgreen: #2F4F4F; // header nav
+
+
+// Primary bg and color
 $primary-fg: #000;
 $primary-bg: #fff;
 
-$swatch-0: red;
-$swatch-1: yellow;
-$swatch-2: darkslategrey;
-
 // Navigation Variables
-$navigation-background: #000;
+$navigation-background: $brand-primary4;
+$navigation-background-active: rgba(32, 55, 55, 0.9);
 
 //Footer
-$footer-text-color: #808080;
+$footer-text-color: $brand-primary2;
+$footer-bg-color: $brand-primary;
+
+// buttons
+$primary-btn-bg: $brand-primary5;
+
+// margin
+$default-margin: 20px;
+
+// padding
+$default-padding: 20px;
+
+
+// Typography
+// -------------------------
+$font-family: 'Graphik Web', sans-serif;
+$font-base: 16px;
+$font-small: ceil($font-base * 0.85);
+$font-smaller: ceil($font-base * 0.7);
+
+
+$font-family-sans-serif:  $font-family;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;

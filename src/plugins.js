@@ -3,4 +3,4 @@ Backbone.$ = require('jquery');
 require('bootstrap');
 require('backbone.syphon');
 require('backbone-query-parameters');
-//require('picturefill');
+require('picturefill');

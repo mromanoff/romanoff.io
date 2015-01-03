@@ -1,46 +1,22 @@
-// Paragraph Module
-//
-// Styleguide 3.0.11
 .paragraph {
-    @include pie-clearfix;
-    padding-left:$section-side-padding;
-    padding-right:$section-side-padding;
+  @include clearfix;
+  padding:0 $section-side-padding;
 
-    img {
-        display: block;
-        margin: 20px auto;
-        width: 90%;
-        //max-width: 300px; this causes this: MEQX-21
-        @include border-radius(900px);
-    }
-    h6 {
-        text-align: center;
+  img {
+    display: block;
+    margin: 20px auto;
+  }
 
-    }
-    p {
-        @include small-copy;
-        line-height: 1.6;
-    }
+  > h1{
+    margin-top: 1em;
+  }
 
-    &.white {
-        color: white;
-    }
+  h2 {
+    text-align: center;
+  }
 
-    &.black{
-        color: black;
-    }
-
-}
-
-// Block Paragraph Module (Banner)
-//
-// Styleguide 3.0.13
-.paragraph-block {
-    h2 {
-        max-width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 200;
-    }
+  p {
+    @include small-copy;
+    line-height: 1.6;
+  }
 }

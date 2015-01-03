@@ -1,23 +1,19 @@
-// 1- ALL SASS CODE MUST BE COMMENTED USING KSS
-//    More information available at http://warpspire.com/kss/syntax/
-// 2- All files should start with underscore UNLESS their exported .css is explicitly wanted
-// 3- This file (main) should only have import rules.
-// 4- All classes should be DASH SEPARATED (name-thing)
-// 5- DRY
-// 6- SMACSS (http://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/)
-// 7- Media queries in their specific section
-// 8- Mobile first
+// 1- All files should start with underscore UNLESS their exported .css is explicitly wanted
+// 2- This file (main) should only have import rules.
+// 3- All classes should be DASH SEPARATED (name-thing)
+// 4- DRY
+// 5- SMACSS (http://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/)
+// 6- Media queries in their specific section
+// 7- Mobile first
 
-//@import "compass/reset";
-//@import "compass/css3";
-//@import "compass/css3/user-interface";
-//@import "compass/utilities/general/clearfix";
+
+@import "../bower_components/compass-mixins/lib/compass/reset";
+@import "../bower_components/compass-mixins/lib/compass/css3";
+@import "../bower_components/compass-mixins/lib/compass/utilities/general/clearfix";
+@import "../bower_components/susy/sass/susy";
 @import "config/_settings";
 @import "config/_mixins";
-
-//@import "rgbapng";
-
-blah
+@import "vendor/nprogress";
 
 @import "_fonts";
 
@@ -25,17 +21,3 @@ blah
 //@import "_medium";
 //@import "_large";
 //@import "_extralarge";
-
-@media print {
-    nav.main, nav.main-transparent {
-        display: none;
-    }
-
-    // Class Search
-    .tpl-classsearch {
-        .classes-filter, .day-filter {
-            display: none;
-        }
-    }
-
-}

@@ -1,281 +1,175 @@
-//@import "compass/typography/text/replacement";
+//@import "../bower_components/compass-mixins/lib/compass/typography/text/replacement";
 
 $nav-height: 50px;
 
 body.closed-nav {
-    .page {
-        padding-top: 0;
+  .page {
+    padding-top: 0;
+  }
+
+  nav.main {
+    @include transform(translate3d(0,-100%,0));
+
+    &.open-links {
+      @include transform(translate3d(0,-$nav-height,0));
     }
 
-    nav.main {
-        @include transform(translate3d(0,-100%,0));
-
-        &.open-links {
-            @include transform(translate3d(0,-$nav-height,0));
-        }
-
-        .full-wrapper {
-            opacity: 0;
-        }
-
-        .links-wrapper {
-            &.is-mobile {
-                top: $nav-height;
-            }
-        }
-
+    .full-wrApper {
+      opacity: 0;
     }
+
+    .links-wrApper {
+      &.is-mobile {
+        top: $nav-height;
+      }
+    }
+
+  }
 }
 
 nav.main-transparent {
-    position: fixed;
-    width: 60px;
-    right: 0;
-    height: $nav-height;
-    z-index: 901;
-    @include transition(all 0.3s);
+  position: fixed;
+  width: 60px;
+  right: 0;
+  height: $nav-height;
+  z-index: 901;
+  @include transition(all 0.3s);
 
-    .menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        @include small-padding;
-
-        width: 18px;
-        height: 100%;
-        line-height: $nav-height;
-
-        color: white;
-
-        @include transition(top 0.3s);
-    }
-    .icon-close {
-        display: block;
-        position: absolute;
-        top: 0px;
-        right: 35px;
-
-        float: right;
-
-        width: 18px;
-        height: 100%;
-        line-height: $nav-height;
-
-        color: white;
-    }
-}
-
-nav.logged-in-submenu {
-    position: fixed;
-    right: 60px;
+  .menu {
+    position: absolute;
     top: 0;
-    width: 50px;
-    height: 50px;
-    z-index: 1000;
-
-    a {
-        color: #fff;
-        position: absolute;
-        right: 17px;
-        top: 17px;
-
-        &.icon-search {
-            display: none;
-        }
-    }
-
-    &.active {
-        background: #fff;
-
-        a {
-            color: #000;
-
-            &.icon-thin-add {
-                display: none;
-            }
-
-            &.icon-search {
-                display: block;
-            }
-        }
-    }
+    right: 0;
+    text-decoration: none;
+    @include small-padding;
+    width: 18px;
+    height: 100%;
+    line-height: $nav-height;
+    color: white;
+    @include transition(top 0.3s);
+  }
+  .icon-close {
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    float: right;
+    width: 18px;
+    height: 100%;
+    line-height: $nav-height;
+    color: white;
+  }
 }
 
 nav.main {
+  position: fixed;
+  width: 100%;
+  height: $nav-height;
+  z-index: 900;
+  @include transition(all 0.3s);
+
+  .full-wrApper {
+    height: 100%;
+    @include clearfix;
+    background: $navigation-background;
+    @include small-padding;
+    @include transition(all 0.3s);
+  }
+
+  &.active {
+    .full-wrApper {
+     // @include rgba-background-inline($navigation-background-active);
+    }
+  }
+
+  .logo {
+    float: left;
+    width: 164px;
+    padding-top: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include small-padding;
+    width: 18px;
+    height: 100%;
+    line-height: $nav-height;
+    color: white;
+    @include transition(top 0.3s);
+  }
+
+  .links-wrApper {
     position: fixed;
     width: 100%;
-    height: $nav-height;
-    z-index: 900;
-    @include transition(all 0.3s);
+    height: 0px;
+    overflow: hidden;
+    //@include rgba-background-inline($navigation-background-active);
+    margin: 0 -20px;
 
-    .full-wrapper {
-        height: 100%;
-        @include pie-clearfix;
-        background: #0A0A0A;
-        background: rgb(10,10,10);
-        @include small-padding;
-        @include transition(all 0.3s);
+    &.is-mobile {
+      top: 0;
+      left: 20px;
+      width: 100%;
+      z-index: 999;
     }
 
-    &.active {
-        .full-wrapper {
-            @include rgba-background-inline($navigation-background);
-        }
+    @include transition(height 0.3s);
+  }
+
+  &.open-links {
+    height: 1200px;
+    .links-wrApper.is-mobile {
+      height: 1200px;
     }
-
-    .logo {
-        float: left;
-
-        width: 130px;
-        height: 40px;
-        padding-top: 10px;
-
-        img {
-            width: 100%;
-        }
-
+    .full-wrApper {
+      opacity: 0;
     }
+  }
 
-    .menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        @include small-padding;
+  .main-links {
+    padding-top: 40px;
+  }
 
-        width: 18px;
-        height: 100%;
-        line-height: $nav-height;
+  .main-links, .secondary-links {
+    z-index: 999;
+    li {
+      display: block;
+      text-align: center;
 
-        color: white;
+      margin-bottom: 8px;
 
-        @include transition(top 0.3s);
-    }
+      a {
+        color: #7A7A7B;
+        font-size: 20px;
+        letter-spacing: 4.5px;
+        text-decoration: none;
+        @include transition(background 0.3s, color 0.3s);
 
-    .links-wrapper {
-        position: fixed;
-        width: 100%;
-        height: 0px;
-        overflow: hidden;
-        @include rgba-background-inline($navigation-background);
-        margin: 0 -20px;
-
-        &.is-mobile {
-            top: 0;
-            left: 20px;
-            width: 100%;
-            z-index: 999;
+        &:hover {
+          color: white;
         }
 
-        @include transition(height 0.3s);
-    }
-
-    &.open-links {
-        height: 100%;
-
-        .links-wrapper.is-mobile {
-            height: 100%;
+        &:active {
+          color: white;
         }
-        .full-wrapper {
-            opacity: 0;
+
+        &.menu-login {
+          color: white;
+          font-weight: 600;
         }
-    }
+      }
 
-    .main-links {
-        padding-top: 52px;
-    }
-
-    .main-links, .secondary-links {
-        z-index: 999;
-        li {
-            display: block;
-            text-align: center;
-
-            margin-bottom: 26px;
-            &:last-child {
-                margin-bottom: 33px;
-            }
-            a {
-                color: #7A7A7B;
-                font-size: 18px;
-                letter-spacing: 4.5px;
-                font-weight: regular;
-                text-transform: uppercase;
-
-                @include transition(background 0.3s, color 0.3s);
-
-                &:hover {
-                    color: white;
-                }
-
-                &:active {
-                    color: white;
-                }
-
-                &.menu-login {
-                    color: white;
-                    font-weight: 600;
-                }
-            }
-
-            &.selected {
-                a {
-                    color: #cfcfcf;
-                }
-            }
-        }
-    }
-
-    .links-wrapper.is-mobile {
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-
-        .member-dropdown {
-            text-align: center;
-
-            &:before {
-                border-top: 1px solid rgba(255, 255, 255, .2);
-                content: "";
-                display: block;
-                height: 0;
-                line-height: 0;
-                margin: 30px auto;
-                width: 120px;
-            }
-
-            li {
-                margin-bottom: 24px;
-                &:first-child {
-                    margin-top: 34px;
-                }
-                &:last-child {
-                    margin-bottom: 50px;
-                }
-            }
-
-            a {
-                color: #7A7A7B;
-                font-size: 14px;
-                font-weight: normal;
-                letter-spacing: 4.5px;
-                text-transform: uppercase;
-            }
-        }
-    }
-}
-
-// Navigation States
-nav.logged-out {
-    .member-dropdown, .user {
-        display: none;
-    }
-}
-nav.logged-in {
-    .secondary-links {
+      &.active {
         a {
-            display: none;
-            &.user {
-                display: block;
-            }
+          color: #cfcfcf;
         }
+      }
     }
+  }
 }

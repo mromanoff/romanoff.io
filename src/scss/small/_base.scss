@@ -1,683 +1,147 @@
 // General (global) styles are inherited from mobile.
-
 body {
-    color: $primary-fg;
-    font: 100%/1.3 $font-family !important;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: none;
-
-    min-width: 320px;
-    width: 100%;
+  color: $primary-fg;
+  font: 100%/1.3 $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  min-width: 320px;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 340px;
+.page {
+  -webkit-overflow-scrolling: touch;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 340px;
-  background-color: #f5f5f5;
-}
-
-// Default image tag properties
-//
-// Styleguide 4.0.1
-img {
-    // max-width: 100%;
-    // TODO: hard fix for image scaling
-    width: 100%;
-}
-
-// Bold text tag
-//
-// Styleguide 3.0.1
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-// Paragraph tag
-//
-// Styleguide 3.0.2
 p {
-    margin: 0 0 1em;
+  margin: 0 0 1em;
 }
 
-// Regular link
-//
-// Styleguide 3.0.3
 a {
-    color: $primary-fg;
+  color: $primary-fg;
+  &:hover{
     text-decoration: none;
-    //fix for blink in iOS
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
+  }
 }
 
-// Generic title centering and margin. Ideally applied only to header elements.
-//
-// Styleguide 3.0.4
+/*
+A Title.
+*/
 .title {
-    text-align: center;
-    font-weight: 400;
-    margin: 30px auto;
-    strong {
-        letter-spacing: .8px;
-    }
+  text-align: center;
+  font-weight: 400;
+  margin: 30px auto;
 }
 
-// Header level 1
-//
-// Styleguide 3.0.5
 h1 {
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-
-    small {
-      &.small-title {
-        display: block;
-        font-size: 0.5em;
-      }
-    }
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-// Header level 2
-//
-// Styleguide 3.0.6
+
 h2 {
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-// Header level 3
-//
-// Styleguide 3.0.7
 h3 {
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 0.16em;
-    margin: 1.5em 30px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  margin: 1.5em 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
-// Header level 4
-//
-// Styleguide 3.0.8
 h4 {
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-// Header level 5
-//
-// Styleguide 3.0.9
 h5 {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-// Header level 6
-//
-// Styleguide 3.0.10
+/*
+Sixth level header.
+Used at: paragraph's title in two column carousels.
+*/
 h6 {
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 0 0 1em;
-    text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 0 1em;
+  text-transform: uppercase;
 }
 
-// Horizontal rule
-//
-// Styleguide 4.0.2
 hr.separator-line {
-    border: 0;
-    border-top: 1px solid #000;
-    height: 0;
-    margin: 0 auto;
-    max-width: 75px;
-}
-
-hr.short {
-  width: 10%;
+  border: 0;
+  border-top: 1px solid #000;
+  height: 0;
   margin: 0 auto;
+  max-width: 75px;
 }
 
-#revision {
-    background: #fff;
-    color: #000;
-    opacity: 0.3;
-    padding: 5px 8px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 9999999999999;
-
-    &:hover {
-        opacity: 1;
-    }
+main {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding-top: 50px;
 }
 
 // Modules Margin-Padding
 $section-side-padding: 20px;
-$section-margin: 30px;
+$section-margin: 20px;
 $section-padding: 20px;
 
-// Module Wrapper
-//
-// Styleguide 4.0.3
+// Module WrApper
 .module {
-    margin-top: $section-margin;
-    padding-top: $section-padding;
+  margin-top: $section-margin;
+  padding-top: $section-padding;
 
-    .page &:first-child {
-        margin-top: 0;
-        padding-top: 0;
-    }
+  &.mod-0 {
+    margin-top: 0;
+    padding-top: 0;
+  }
 
-}
+  &.mod-last {
+    margin-bottom: ($section-margin * 2);
+  }
 
-.page .module:first-child.tpl-leftrightcomposedmodule {
-    overflow: hidden;
 }
 
 footer {
-    margin-top: $section-margin;
+  margin-top: $section-margin;
+}
+
+.module:last-child {
+  margin-bottom: -$section-margin;
 }
 
 // Margin Exceptions
 .no-gutter {
-    margin-top: 0;
-    padding-top: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 
-.page .module:first-child + .tpl-textcallout {
-    margin-top: -($section-margin - 30px);
+picture img {
+  width: 100%;
+  height: auto;
 }
 
-// Login page, Wizards and landings
-.page.image + footer, .page.wizard + footer, .page.bookabike + footer, .page.search + footer, .page.groupfitness + footer {
-    margin-top: 0;
+img.full-width{
+  width: 100%;
+  height: auto;
 }
-
-// SAV
-.tpl-classesnearme + .tpl-scheduleavisit, .tpl-spasnearme + .tpl-scheduleavisit, .tpl-fulltabs + .tpl-scheduleavisit, .tpl-splitcallout + .tpl-scheduleavisit, .tpl-articlelist + .tpl-scheduleavisit, .tpl-nearestclub + .tpl-scheduleavisit {
-    @extend .no-gutter;
-}
-
-.tpl-scheduleavisit:last-child {
-    margin-bottom: -$section-margin;
-}
-
-// Classes Near Module
-.tpl-fulltabs + .tpl-classesnearme, .tpl-spasnearme + .tpl-classesnearme, .tpl-scheduleavisit + .tpl-classesnearme, .tpl-splitcallout + .tpl-classesnearme, .tpl-articlelist + .tpl-classesnearme {
-    @extend .no-gutter;
-}
-
-.tpl-classesnearme:last-child {
-    margin-bottom: -$section-margin;
-}
-
-// Split Callout
-.tpl-fulltabs + .tpl-splitcallout, .tpl-spasnearme + .tpl-splitcallout, .tpl-scheduleavisit + .tpl-splitcallout, .tpl-classesnearme + .tpl-splitcallout, .tpl-articlelist + .tpl-splitcallout  {
-    @extend .no-gutter;
-}
-
-.tpl-splitcallout:last-child {
-    margin-bottom: -$section-margin;
-}
-
-// Split Callout
-.tpl-fulltabs + .tpl-articlelist, .tpl-spasnearme + .tpl-articlelist, .tpl-scheduleavisit + .tpl-articlelist, .tpl-classesnearme + .tpl-articlelist, .tpl-splitcallout + .tpl-articlelist {
-    @extend .no-gutter;
-}
-
-.tpl-articlelist:last-child {
-    margin-bottom: -$section-margin;
-}
-
-// Title Callout + forms
-.tpl-titlecallout + .tpl-login {
-    @extend .no-gutter;
-}
-
-// Join Member + Purchse Membership Submit
-.tpl-residentialjoinmember + .tpl-submitcallout {
-    @extend .no-gutter;
-}
-
-// Title Calloout + search by zip
-.tpl-titlecallout + .tpl-searchbyzip {
-    @extend .no-gutter;
-}
-
-// Subtitle Callout
-.tpl-subtitlecallout {
-    @extend .no-gutter
-}
-
-// Button under Charges Preview in Step 3
-.tpl-usertransactionpreviewcallout + .tpl-ctacallout {
-    @extend .no-gutter
-}
-.tpl-usertransactionpreviewcallout + .tpl-submitcallout {
-    @extend .no-gutter
-}
-
-// Hero Slider + Search
-.tpl-classsearch + .tpl-leftrightcomposedmodule {
-    @extend .no-gutter
-}
-
-// Upcoming Search + Search
-.tpl-leftrightcomposedmodule + .tpl-classsearch {
-    @extend .no-gutter
-}
-
-// Recommended Classes+ Facebook friends
-.tpl-leftrightcomposedmodule + .tpl-facebookclasses {
-    @extend .no-gutter
-}
-
-// Search + Facebook friends
-.tpl-smallclasssearch + .tpl-facebookclasses {
-    @extend .no-gutter
-}
-
-// Facebook friends + Instagram/Twitter
-.tpl-facebookclasses + .tpl-leftrightcomposedmodule {
-    @extend .no-gutter
-}
-
-// Facebook friends + new from eq (carousel)
-.tpl-facebookclasses + .tpl-newfromeq {
-    @extend .no-gutter
-}
-
-// new from eq (carousel) + footer
-.tpl-facebookclasses + footer {
-    @extend .no-gutter
-}
-
-// Profile + Footer
-.profile + footer {
-    @extend .no-gutter
-}
-
-// Athletic Level Editor + What I Care About Editor
-.tpl-athleticleveleditor + .tpl-whaticareabouteditor {
-    @extend .no-gutter
-}
-
-// Fitness Goals Editor + Athletic Level Editor
-.tpl-fitnessgoalseditor + .tpl-athleticleveleditor {
-    @extend .no-gutter
-}
-
-// Instagram and twitter module + Footer
-.home + footer {
-    @extend .no-gutter
-}
-
-// calendar page title + week selector over week calendar
-.tpl-calendarmonthfilter + .tpl-classsearch {
-    @extend .no-gutter
-}
-
-// footer on calendar
-.page.calendar + footer {
-    @extend .no-gutter
-}
-
-// Profile + Footer
-.referrals + footer {
-    @extend .no-gutter
-}
-
-// Contact Us + Footer
-.contactus + footer {
-  @extend .no-gutter;
-}
-
-
-// use to align its children to the center
-.center-children {
-  text-align: center;
-}
-
-// needed to have links w/ absolute positioning
-.section-relative {
-  position: relative;
-
-  a {
-    font-size: 12px;
-    text-decoration: underline;
-    text-transform: uppercase;
-  }
-}
-
-.tpl-calendarmonthfilter, .tpl-calendarsearch {
-    @extend .no-gutter;
-}
-
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clear {
-	clear: both;
-}
-
-.row {
-  @extend .clearfix;
-}
-
-
-.absolute-center {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.pad-top-10{
-	padding-top: 10px;
-}
-
-.pad-bottom-10{
-	padding-bottom: 10px;
-}
-
-.mar-bottom-20{
-	margin-bottom: 20px;
-}
-
-.mar-right-20{
-	margin-right: 20px;
-}
-
-.loading-indicator {
-  @extend .absolute-center;
- // @include transition(opacity 1s ease-in-out);
-
-  opacity: 1;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 45px;
-  text-align: center;
-  border: #fff 1px solid;
-  display: inline-block;
-  margin: auto;
-  width: 254px;
-  height: 64px;
-
-  &.fade-out {
-    opacity: 0;
-  }
-}
-
-
-// Grid System
-//
-// At this level (Smartphones), columns work as rows; they expand
-// the full width and have a border at the bottom for separation
-// instead of at the sides.
-//
-// Styleguide 4.0.4
-.row {
-  // begining with medium devices, float left
-  [class*='col-'] {
-    border-bottom: #d0d3d3 1px solid;
-    margin-bottom: 18px;
-    padding-bottom: 1px;
-
-    [class*='col-'] {
-      border-bottom: none;
-    }
-  }
-}
-// tmp
-.hr-short {
-  width: 10%;
-  margin: 0 auto;
-}
-
-//todo: move to forms module
-.agreement {
-  .collapsible {
-    display: none;
-  }
-}
-
-// Spinner loader across the site
-//
-//.loader, .error-message-component {
-//  position: absolute;
-//  top: 50%;
-//  left: 50%;
-//  z-index: 210;
-//  //width: 80%;
-//  text-align: center;
-// // @include translate(-50%, -50%);
-//}
-
-// General loader and error overlay styles
-//.loader-overlay, .error-overlay {
-//  background: rgba(255, 255, 255, .7);
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  z-index: 100;
-//  width: 100%;
-//  height: 100%;
-//  .error-overlay-container, .loader-overlay-container {
-//    position: absolute;
-//    top: 50%;
-//    left: 50%;
-//    text-align: center;
-//    @include translate(-50%, -50%);
-//  }
-//}
-
-//.loader, .error-box {
-//  &.popup {
-//    background: rgba(0, 0, 0, .7);
-//    width: 300px;
-//    padding: 20px;
-//    z-index: 100;
-//    @include box-sizing(border-box);
-//  }
-//}
-
-// General error box styles
-.error-box {
-  .error-title {
-    margin: 0 !important;
-    font-size: 12px !important;
-    font-weight: 700;
-    text-transform: uppercase;
-    max-width: 100%;
-  }
-  .error-description {
-    font-size: 10px;
-    line-height: 1.5;
-    margin: 10px 0 0 0;
-  }
-  &.white {
-    .error-title, .error-description {
-      color: #fff;
-    }
-  }
-  // Popup error styles
-}
-
-// Loader circles color
-.loader, .error-box, .loader-overlay {
-  &.white {
-    .loader-circles {
-      background-color: #fff;
-    }
-  }
-  &.black {
-    .loader-circles {
-      background-color: #000;
-    }
-  }
-}
-
-// Loader circle styles
-.loader .loader-circles, .loader-overlay .loader-circles {
-  width: 12px;
-  height: 12px;
-  margin: 0 3px;
-  background-color: #ccc;
-  border-radius: 100%;
-  display: inline-block;
-}
-
-.loader .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.loader .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-@-webkit-keyframes bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0.0) }
-  40% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes bouncedelay {
-  0%, 80%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
-  } 40% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-  }
-}
-
-// Generic overlay messages
-//.overlay-box {
-//  background-color: #7c878e;
-//  position: absolute;
-//  bottom: 150%;
-//  left: 50%;
-//  z-index: 10;
-//  width: 300px;
-//  height: 0;
-//  padding: 20px 30px;
-//  opacity: 0;
-//  overflow: hidden;
-//  @include box-sizing(border-box);
-//  @include css-transition(all, 500ms, ease);
-//  @include css-translate(-50%, 0);
-//  &:after {
-//    content: '';
-//    position: absolute;
-//    bottom: -6px;
-//    left: 50%;
-//    margin-left: -6px;
-//    border-left: 6px solid transparent;
-//    border-right: 6px solid transparent;
-//    border-top: 6px solid #7c878e;
-//  }
-//  h2 {
-//    font-size: 12px;
-//    color: #fff;
-//  }
-//  p {
-//    font-size: 11px !important;
-//    font-weight: 500 !important;
-//    color: #fff;
-//    text-transform: uppercase !important;
-//    max-width: 100% !important;
-//    margin: 10px 0 0 0 !important;
-//    a {
-//      text-transform: uppercase;
-//      text-decoration: underline;
-//      color: #fff;
-//    }
-//  }
-//  &.active {
-//    padding: 20px 40px;
-//    height: auto;
-//    opacity: 1;
-//    z-index: 100;
-//    overflow: initial;
-//    transition: opacity 500ms, height 0;
-//    -webkit-transition: opacity 500ms, height 0;
-//    -ms-transition: opacity 500ms, height 0;
-//  }
-//}
-
-//.page-snap-enabled {
-//  .takeover-module {
-//    top: 0;
-//    overflow-y: visible;
-//    .icon-close {
-//      top: 30px;
-//      right: 0;
-//    }
-//    .takeover-container {
-//      top: 40px;
-//      height: 100%;
-//    }
-//  }
-//}
-
-//.takeover-module {
-//  display: none;
-//  background: rgba(0, 0, 0, .7);
-//  position: fixed;
-//  top: 50px;
-//  left: 0;
-//  z-index: 200;
-//  width: 100%;
-//  height: 100%;
-//  overflow-y: auto;
-//  .icon-close {
-//    position: fixed;
-//    top: 50px;
-//    right: 0;
-//    width: 40px;
-//    height: 40px;
-//    text-align: center;
-//    line-height: 40px;
-//    color: #fff;
-//  }
-//  .takeover-container {
-//    position: absolute;
-//    top: 20px;
-//    left: 50%;
-//    width: 70%;
-//    @include css-translate(-50%, 0);
-//    @include box-sizing(border-box);
-//  }
-//}
