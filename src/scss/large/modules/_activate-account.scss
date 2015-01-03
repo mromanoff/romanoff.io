@@ -1,0 +1,26 @@
+.page {
+    &.start {
+        .subtitle-message {
+            padding: 0 15%;
+        }
+
+        form {
+            fieldset {
+                .separator {
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+
+                .dropdown {
+                    border-color: rgba(255, 255, 255, 0.5);
+                    font-size: 22px;
+                    letter-spacing: 2px;
+                }
+
+                &:last-child {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }    
+}

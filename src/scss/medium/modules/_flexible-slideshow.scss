@@ -1,0 +1,75 @@
+.flexible-slideshow {
+    .owl-wrapper {
+        height: 470px;
+    }
+    &.pagination {
+        .owl-controls {
+            bottom: 10px;
+        }
+    }
+    .slide-item {
+        height: 470px;
+        .foreground-image {
+            max-height: 470px;
+        }
+        &[data-align="left"] {
+            .foreground-image {
+                left: 0;
+            }
+        }
+        &[data-align="center"] {
+            .foreground-image {
+                left: 50%;
+                @include translate(-50%, 0);
+            }
+        }
+        &[data-align="right"] {
+            .foreground-image {
+                right: 0;
+            }
+        }
+        .cta-wrapper {
+            bottom: 40px;
+            .button {
+                display: inline-block;
+                width: auto;
+                padding: 1.35em 3em;
+            }
+        }
+
+    }
+    .violator {
+        height: 30px;
+        font-size: 12px;
+    }
+}
+
+// Homepage Parallax Specific Styles
+.page-snap-enabled .homepage {
+    .flexible-slideshow {
+        height: 600px;
+        .owl-wrapper, .slide-item {
+            height: 600px;
+        }
+        .slide-item {
+            padding-top: 130px;
+        }
+       .foreground-image {
+            top: 130px;
+        }
+    }
+    .page-snap:first-child { 
+        .flexible-slideshow {
+            height: 470px;    
+            .owl-wrapper, .slide-item {
+                height: 470px;
+            } 
+            .slide-item {
+                padding-top: 0;
+            }
+           .foreground-image {
+                top: 0px;
+            }
+        }
+    }
+}

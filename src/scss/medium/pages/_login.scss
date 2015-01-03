@@ -1,0 +1,46 @@
+.login {
+    .simple-form {
+        margin-top: 40px;
+        margin-bottom: 300px;
+        
+        input[type="text"], input[type="password"], input[type="tel"], input[type="email"] {
+            font-size: 22px;
+            height: 75px;
+        }
+        .button.box.small {
+            font-size: 14px;
+        }
+        
+        fieldset {
+            margin-bottom: 25px;
+        }
+        
+        hr {
+            margin-bottom: 25px;
+        }
+        
+        .checkbox {
+            margin-bottom: 20px;
+        }
+        
+        .label,
+        .lost-credentials.extra {
+            font-size: 12px;
+        }
+    }
+
+    &.page.image {
+        .background {
+            height: auto;
+        }
+        .rich-content {
+            header {
+                margin-top: 40px !important;
+                min-height: 125px !important;
+                h2.rich-content-title {
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+}

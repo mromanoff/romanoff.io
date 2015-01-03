@@ -1,0 +1,803 @@
+// Simple Form Elements
+form {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 0 15px;
+
+    font-family: 'Graphik Web';
+    font-weight: 200;
+
+    &.simple-form {
+        .checkbox-replacement {
+            border: 2px solid #000;
+            border: 2px solid rgba(0,0,0,0.5);
+
+        }
+    }
+
+    &.white {
+        color: white;
+    }
+    &.black {
+        color: black;
+    }
+
+    hr {
+        border-top: none;
+        border-bottom: 1px solid;
+    }
+
+    // Join residential specific styles
+    &.personal-information {
+        fieldset {
+            label {
+                font-weight: normal;
+                letter-spacing: 0.14em;
+            }
+        }
+    }
+
+    // Fieldset padding
+    //
+    // Styleguide 2.0
+    fieldset {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 99%;
+        min-width: 0;
+
+        & > label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        &.center {
+            text-align: center;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-transform: uppercase;
+        text-decoration: underline;
+        &.button {
+            text-decoration: none;
+        }
+    }
+
+    // Wrapper for form sections.
+    .form-section {
+        overflow: hidden;
+        margin-top: $section-margin;
+    }
+
+    // Separator, usually used for labels or text above or below an input or CTA button
+    //
+    // Styleguide 2.0.1
+    .separator {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 'Graphik Web', sans-serif;
+    }
+
+    input {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+
+    input + input {
+        border-top: none !important;
+    }
+
+    a.button.box, .button.box {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.white {
+        .button {
+            boder-color: #fff !important;
+        }
+        input[type="text"], input[type="password"], input[type="tel"], input[type="email"] {
+            border-color: rgba(255,255,255,0.5);
+            color: #fff;
+        }
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            color: rgba(255,255,255,0.5);
+        }
+        input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: rgba(255,255,255,0.5);
+        }
+        input::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: rgba(255,255,255,0.5);
+        }
+        input:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: rgba(255,255,255,0.5);
+        }
+    }
+
+
+    &.medium {
+        max-width: 640px;
+    }
+
+    // Large (Bigger form. Allows to have floated input fields)
+    //
+    // .full               - input with white border
+    // .three-quarter      - input with red border
+    // .half               - input with white border
+    // .half-medium        - input with 100% in mobile 50% in tablet and desktop
+    // .quarter            - input with red border
+    //
+    // Styleguide 2.0.3
+    &.large {
+        max-width: 820px;
+        .title {
+            font-size: 24px;
+        }
+        fieldset {
+            @include box-sizing(border-box);
+            width: 100%;
+            float: left;
+            padding: 0 5px;
+
+            &.full {
+                width: 100%;
+            }
+
+            &.three-quarter {
+                width: 65%;
+            }
+            &.half {
+                width: 50%;
+            }
+            &.half-medium {
+                width: 100%;
+            }
+            &.quarter {
+                width: 35%;
+            }
+        }
+
+      fieldset.fieldset-row {
+        float: none;
+        clear: both;
+        width: 100%;
+        
+        legend, .title {
+            font-weight: bold;
+        }
+
+      }
+    }
+
+    // Textarea
+    //
+    // Styleguide 2.1.3
+    textarea {
+        @include box-sizing(border-box);
+        background: #1a1a1a;
+        border: 0;
+        display: block;
+        color: #fff;
+        font-family: 'Graphik Web', sans-serif;
+        font-size: 16px;
+        min-height: 120px;
+        padding: 15px 20px;
+        resize: none;
+        text-transform: uppercase;
+        width: 100%;
+        
+        &.description {
+            background: #FFFFFF;
+            border: 1px solid #1a1a1a;
+            color: #1a1a1a;
+        }
+    }
+}
+
+// Inputs
+//
+// .white               - input with white border
+// .error               - input with red border
+//
+// Styleguide 2.1
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"] {
+    @include box-sizing(border-box);
+    @include rgba-background-inline(rgba(255,255,255,0));
+    -webkit-appearance: none;
+    border-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    border: 1px solid #080808;
+    margin: 0px auto;
+    padding: 17px 30px;
+    color: #080808;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Graphik Web';
+    font-weight: 200;
+    font-size: 20px;
+    outline: none;
+
+    &.white {
+        border-color: #fff;
+        color: #fff;
+    }
+
+    &.error {
+        border-color: red !important;
+    }
+}
+
+// ie9, ie10: fix for automatic icons on input fields
+input[type="text"]::-ms-clear, input[type="password"]::-ms-reveal {
+    display: none;
+}
+
+// Buttons resets
+//
+// Styleguide 1.1
+input[type="button"], input[type="submit"], button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: 1px solid #000;
+    background: transparent;
+    padding: 0.8em 1em;
+}
+
+// Dropdown
+//
+// .inline              - inline display
+// .half                - half width
+// .white               - white color
+//
+// Styleguide 2.1.1
+.dropdown {
+    position: relative;
+    @include box-sizing(border-box);
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    min-width: 50px;
+    height: 56px;
+    line-height: 56px;
+    border: 1px solid #080808;
+    margin: 0px auto;
+    background: transparent;
+    color: #080808;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Graphik Web';
+    font-weight: 200;
+    font-size: 20px;
+    outline: none;
+
+    & + & {
+        border-left: none;
+    }
+
+    &.inline {
+        @include inline-block;
+        width: auto;
+    }
+
+    &.half {
+        float: left;
+        width: 50%;
+    }
+
+    select {
+        -webkit-appearance: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include opacity(0);
+    }
+    .option {
+        color: #fff;
+        
+        &.open:after {
+            display: inline-block;
+            @include transform(rotateZ(180deg)); 
+        }
+
+        &:after {
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            // position: absolute;
+            // top: 0;
+            // right: 10px;
+            margin-left: 4px;
+            content: "\e60b";
+            font-size: 16px;
+        }
+    }
+}
+
+form {
+    &.white {
+        .dropdown {
+            border-color: #fff;
+            color: #fff;
+        }
+    }
+    &.black {
+        .dropdown{
+            border-color: #080808;
+            color: #080808;
+            .option {
+                color: #080808;
+            }
+        }
+    }
+    .dropdown.error {
+        border-color: red;
+        color: red;
+    }
+}
+
+// Checkbox
+//
+// .checked             - checked status
+// .small               - Smaller box version, like the one used for smallprint
+// .error               - red border
+// .inline              - Inline checkbox
+//
+//Styleguide 2.2.1
+.checkbox {
+    position: relative;
+    @include inline-block;
+
+    input {
+        display: none;
+    }
+
+    &.inline {
+        .checkbox-replacement {
+            border: 0;
+        }
+    }
+
+    &.checked {
+        .checkbox-replacement:before {
+            display: block;
+        }
+    }
+
+    &.error {
+        .checkbox-replacement {
+            border-color: red !important;
+        }
+    }
+
+    &.small {
+        .checkbox-replacement {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            height: 10px;
+            margin-top: 5px;
+            width: 10px;
+
+            &:before {
+                font-size: 24px;
+                top: -1px;
+                left: -6px;
+            }
+        }
+
+        .span {
+            font-size: 12px;
+        }
+    }
+
+    .checkbox-replacement {
+        display: block;
+        float: left;
+
+        width: 15px;
+        height: 15px;
+        margin-right: 6px;
+        margin-top: -2px;
+
+        border: 2px solid #fff;
+        border: 2px solid rgba(255,255,255,0.5);
+        background: rgba(255,255,255,0);
+
+        cursor: pointer;
+
+        &:before {
+            display: none;
+            position: absolute;
+            font-size: 38px;
+            top: -12px;
+            left: -10px;
+        }
+
+
+    }
+
+    .label {
+        display: block;
+        margin-left: 26px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+}
+
+form {
+    &.white {
+        .checkbox-replacement {
+            border-color: rgba(255,255,255,0.5);
+            color: #fff;
+        }
+    }
+    &.black {
+        .checkbox-replacement {
+            border-color: rgba(0,0,0,0.5);
+            color: #080808;
+        }
+    }
+}
+// Radio button
+//
+// .selected            - Selected status
+// .inline              - Don't break lines when using this div
+// .error               - red border
+//
+// Styleguide 2.2.2
+.radio {
+    display: block;
+    margin: 0 0 20px;
+    $color: #fff;
+
+    &.inline {
+        @include inline-block;
+        margin: 0 15px 10px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    &.selected {
+        .radio-replacement:after {
+            display: block;
+        }
+    }
+
+    &.error {
+        .radio-replacement {
+            border-color: red !important;
+        }
+    }
+
+    .radio-replacement {
+        border: 1px solid darken($color, 50%);
+        border-radius: 20px;
+        cursor: pointer;
+        display: inline-block;
+        height: 16px;
+        margin-right: 10px;
+        position: relative;
+        top: 4px;
+        width: 16px;
+
+        &:after {
+            background: $color;
+            border-radius: 10px;
+            content: '';
+            display: none;
+            height: 6px;
+            left: 5px;
+            position: absolute;
+            top: 5px;
+            width: 6px;
+        }
+    }
+
+    .label {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+// Extra (usually links below form)
+//
+// Styleguide 2.0.2
+.extra {
+    text-align: center;
+    font-size: 14px;
+    a {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 14px;
+    }
+}
+
+// For SPA using Backbone-form forms
+form.forms-spa {
+  margin-top: 40px;
+
+  input[type="radio"] {
+    -webkit-appearance: radio;
+    box-sizing: border-box;
+  }
+
+  .fancy-switch {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
+    .switch-label {
+      font-size: 27px;
+      font-weight: 200;
+
+      &::before {
+        content: attr(data-on);
+      }
+      &::after {
+        content: "/" attr(data-off);
+      }
+
+      &.off::before {
+        color: #ddd;
+      }
+
+      &.off::after {
+        color: #333;
+      }
+
+      &.on::before {
+        color: #333;
+      }
+
+      &.on::after {
+        color: #ddd;
+      }
+    }
+  }
+
+  .select-wrapper {
+    max-width: 100%; // reset original form style
+  }
+
+  .collapsible {
+    padding-top: 10px;
+    display: none;
+  }
+
+  .expiration-date {
+    .select-wrapper {
+      width: 50%;
+      float: left;
+      &.date {
+        display: none;
+      }
+    }
+  }
+
+  .disabled {
+    border-color: #444;
+    .option {
+      color: #444;
+    }
+  }
+
+  fieldset {
+
+    padding: 0;
+
+    div[data-error] {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    > div {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 5px;
+      margin-bottom: 15px;
+      float: left;
+      &.quarter {
+        width: 50%;  // crazy, but it deal with this.
+      }
+
+    }
+
+    label {
+      margin-bottom: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: normal;
+      letter-spacing: 0.16em;
+    }
+
+    &.static-fieldset {
+      margin-bottom: 10px;
+
+      div {
+        margin-bottom: 0;
+      }
+    }
+
+    &.phone-fields {
+      > div {
+
+        > div {
+          label { display: none; }
+        }
+
+        > div:nth-child(3) {
+          .fancy-select {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    &.weight-field {
+      overflow:hidden;
+
+      > fieldset {
+        float:left;
+      }
+
+      > fieldset:nth-child(1) {
+        width: 80%;
+      }
+
+      >fieldset:nth-child(2) {
+        width: 10%;
+      }
+      .weight-unit {
+        padding-top: 40px;
+        padding-left: 10px;
+      }
+    }
+
+    &.measure-unit-field,
+    &.gender-field {
+      label {
+        display: none;
+      }
+      li {
+        display:inline-block;
+
+        label {
+          display: inline;
+        }
+      }
+    }
+
+    &.membership-agreement-fields {
+      margin-top: 0;
+    }
+
+    .agreement {
+      line-height: 140%;
+      padding: 8px;
+    }
+  }
+
+  hr {
+    border: none;
+    border-bottom: #ddd 1px solid;
+    margin-bottom: 40px;
+  }
+
+  .form-error {
+    text-align: center;
+    padding-bottom: 18px;
+  }
+
+  .error {
+    color: red;
+    input[type="text"],
+    input[type="password"] {
+      border: 1px solid red;
+    }
+
+    .dropdown,
+    .checkbox-replacement {
+      border-color: red;
+
+      > .option {
+        color: red;
+      }
+    }
+
+    .checkbox {
+      a { color: red !important; } // tmp !important
+    }
+
+    p[data-error] {
+      font-size: 12px;
+      margin: 10px 0;
+    }
+  }
+
+}
+
+//Specific styles for Join Zip Code
+.wizard.step1 {
+    form {
+        fieldset {
+            input {
+                height: 77px;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+//Specific styles for Textarea on Onboarding
+.onboarding {
+    .join-schedule-form {
+        fieldset {
+            textarea {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+// tmp
+.toggle {
+  font-size: 27px;
+  font-weight: 200;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  color: #ddd; // look disable at first
+
+  i, b {
+    transition: color 0.5s;
+    -moz-transition:color 0.5s; /* Firefox 4 */
+    -webkit-transition:color 0.5s; /* Safari and Chrome */
+    -o-transition:color 0.5s; /* Opera */
+  }
+
+  &.off {
+    i { color: #ccc; }
+
+    b { color: #333; }
+  }
+
+  &.on {
+    i { color: #333; }
+
+    b { color: #ccc; }
+  }
+}

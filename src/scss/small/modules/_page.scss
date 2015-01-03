@@ -1,0 +1,108 @@
+// Full width Page
+.page {
+    -webkit-transition: -webkit-filter 1s; 
+    transition: filter 1s;
+     
+    margin: 0 auto;
+    padding-top: 50px;
+
+    &.full-bleed {
+        max-width: 100%;
+    }
+}
+
+body.uiwebview .page {
+	padding-top:0px;
+}
+body.uiwebview>nav {
+	//override the is-mobile declaration with !important
+	display:none !important;
+}
+body.uiwebview .search-menu-box {
+	display:none !important;
+}
+body.uiwebview footer {
+	//override the is-mobile declaration with !important
+	display:none !important;
+}
+
+
+
+// Page Module: Wizard & Image Landing Page
+.page.image {
+    min-height: 800px;
+    overflow: hidden;
+    .rich-content {
+        position: absolute;
+        z-index: 1;
+        top: 10%;
+        left: 0;
+        width: 100%;
+
+        header {
+            min-height: 260px;
+        }
+    }
+}
+
+// Wizard Page Body
+body.wizard {
+    &.black {
+        background: #080808;
+        color: #fff;
+    }
+    &.white {
+        background: #fff;
+        color: #080808;
+    }
+}
+
+.page.wizard {
+    .rich-content {
+        header {
+            min-height: 125px;
+
+            .rich-content-title {
+                border: 0;
+                font-size: 25px;
+                line-height: 1.1;
+                padding: 0;
+            }
+        }
+    }
+
+    h6 {
+        text-align: center;
+    }
+
+    .extra {
+        a {
+            color: #fff;
+        }
+    }
+
+    .simple-form {
+        .bottom-space {
+            .button.white {
+                border-color: #fff;
+            }
+        }
+    }
+}
+
+.page.image, .page.wizard {
+    .content-wrapper {
+        max-width: 480px;
+        margin: 0 auto;
+        &.centered {
+            text-align: center;
+        }
+        &.medium {
+            max-width: 640px;
+        }
+        &.large {
+            max-width: 820px;
+        }
+    }
+}
+

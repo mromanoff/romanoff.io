@@ -1,0 +1,13 @@
+.page.thankyou {
+	.main-social-icons {
+		li {
+			a {
+				border: none;
+
+				&:hover {
+	                background: transparent;
+	            }
+			}
+		}
+	}
+}

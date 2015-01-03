@@ -1,0 +1,45 @@
+.instagram {
+	text-align: center;
+
+	&.black-bg {
+		background: #000;
+	}
+
+	.instagram-main-container {
+		display: table;
+		height: 185px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 516px;
+
+		.instagram-container {
+			display: table-cell;
+			vertical-align: middle;
+
+			ul {
+				margin-bottom: 23px;
+				
+				li {
+					display: inline-block;
+				}
+			}
+
+			.instagram-button-container {
+				> span {
+					color: #fff;
+					font-size: 16px;
+					vertical-align: middle;
+				}
+
+				a {
+					color: #fff;
+					span {
+						font-size: 11px;
+						margin-left: 5px;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+}

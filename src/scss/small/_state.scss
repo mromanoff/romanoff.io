@@ -1,0 +1,68 @@
+// Visibility toggle classes for different viewport sizes / states.
+//
+// Styleguide 4.0.4
+.is-tablet, .is-desktop, .is-desktop-large, .hidden {
+    display: none !important;
+}
+
+.is-mobile {
+    display: block !important;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-black {
+    color: #080808;
+}
+
+
+// Error messages
+//
+// .box - Wrapper to look like an alert message.
+//
+// Styleguide 3.0.14
+.is-error {
+    font-size: 14px;
+    font-weight: 400;
+    color: #f00;
+    letter-spacing: .8px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.box {
+        //@include rgba-background-inline(rgba(255, 0, 0, .1));
+        border: 1px solid #f00;
+        padding: 1em 1.2em;
+        text-align: center;
+    }
+}
+
+
+
+// Alert Status
+//
+// This is used for alarming the user when they are running
+// low on inventory. Red is 0, Yellow is 1, and gray is more
+// than one
+//
+// Styleguide 3.0.15
+.alert-status-0 {
+  background: $swatch-0;
+  color: #fff;
+}
+
+.alert-status-1 {
+  background: $swatch-1;
+  color: #000;
+}
+
+.alert-status-2 {
+  background: $swatch-2;
+  color: #fff;
+}

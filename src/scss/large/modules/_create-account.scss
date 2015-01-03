@@ -1,0 +1,20 @@
+// Create new Equinox Account
+
+.page {
+	&.create {
+        form {
+            .separator {
+                display: none;
+            }
+            fieldset {
+                input {
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

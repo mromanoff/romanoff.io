@@ -1,0 +1,54 @@
+// Modules Margin-Padding
+$section-side-padding: 20px;
+$section-margin: 40px;
+$section-padding: 30px;
+
+.takeover-module {
+    top: 60px;
+    .icon-close {
+        top: 60px;
+    }
+    .takeover-container {
+        top: 20px;
+        max-height: none;
+        width: auto;
+        height: 92%;
+        height: calc(100% - 100px);
+        height: -webkit-calc(100% - 100px);
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+// Margin exeptions
+
+// Title Callout + Residential Join Member
+.tpl-titlecallout + .dtm-step3-residentialjoinmember {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+// Paragraph + Form (Activate your account)
+.tpl-subtitleparagraphcallout + .tpl-activateform {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+// Paragraph + Form (Activate your account)
+.tpl-titlecallout + .tpl-memberimagetextcallout {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+// Member Callout + Image Text callout
+.tpl-memberimagetextcallout + .tpl-imagetextcallout {
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+// Member Callout + Image Text callout
+.tpl-titlecallout + .tpl-createaccountform {
+    margin-top: 0;
+}

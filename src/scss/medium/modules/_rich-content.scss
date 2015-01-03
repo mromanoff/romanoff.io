@@ -1,0 +1,99 @@
+.rich-content {
+    header {
+        min-height: 375px;
+
+        .top-title {
+            font-size: 16px;
+            margin-top: -150px;
+        }
+
+        h2 {
+            top: 50%;
+            padding-top: 25px;
+            padding-bottom: 25px;
+
+            small {
+                font-size: 0.3em;
+            }
+        }
+
+    }
+
+    .caption {
+        @include pie-clearfix;
+        @include large-padding;
+        overflow: hidden;
+        padding: 1.3em;
+        margin-top: 30px;
+
+        p {
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            margin: 0 0 3em;
+        }
+
+        nav.buttons {
+            float: left;
+            left: 50%;
+            position: relative;
+
+            a {
+                @include box-sizing(border-box);
+                float: left;
+                position: relative;
+                left: -50%;
+                width: 265px;
+                font-size: 14px;
+
+                &.black {
+                    border: 1px solid #000;
+                }
+
+                &.white {
+                    width: 265px;
+                }
+            }
+        }
+    }
+
+    &.fixed {
+    }
+}
+
+.rich-content-title {
+    border: 2px solid #fff;
+    font-size: 50px;
+    min-height: 200px;
+    height: 200px;
+    width: 490px;
+}
+
+.rich-content-video {
+    h2 {
+        font-size: 42px;
+        min-height: 210px;
+        padding: 50px 50px;
+        width: 430px;
+
+        .header-button {
+            display: block;
+            margin: 40px auto 0;
+            padding: 1.2em 0;
+            width: 200px;
+        }
+    }
+}
+
+.page.image {
+    .rich-content.no-absolute {
+        padding-right: 10%;
+
+        &.paragraph {
+            padding: 0;
+        }
+
+        .title, p {
+            color: #fff;
+        }
+    }
+}

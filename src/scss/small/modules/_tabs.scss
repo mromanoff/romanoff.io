@@ -1,0 +1,162 @@
+.tabs-container {
+    .tab {
+        display: none;
+
+        &.tab-active {
+            display: block;
+        }
+
+        & > .two-cols {
+            @include small-padding;
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .tabs-navigation {
+        display: none;
+    }
+}
+
+.two-cols {
+    text-align: center;
+
+    .caption h4 {
+        display: none;
+    }
+
+    .carousel {
+        position: relative;
+
+        .owl-carousel {
+            padding-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .swipe-guide {
+            font-size: 12px;
+            bottom: 10px;
+            top: auto;
+            z-index: 1;
+
+            .icon-swipe-left, .icon-swipe-right {
+                font-size: 5px;
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+
+    .rounded {
+        border-top-left-radius: 263px;
+        border-top-right-radius: 263px;
+        border-bottom-left-radius: 263px;
+        border-bottom-right-radius: 263px;
+        display: block;
+        height: 263px;
+        margin: 25px auto;
+        width: 263px;
+    }
+}
+
+.simple-tabs-container {
+    h3 {
+        margin: 2.5em 0 1em;
+    }
+
+    p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 0 20px 30px;
+        padding:0 $section-side-padding;
+        text-align: center;
+    }
+
+    .tab-active {
+        padding-top: 30px;
+    }
+}
+
+.columns-layout {
+    .two-cols {
+        h4 {
+            display: block;
+            font-size: 20px;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        p {
+            @include small-padding;
+        }
+    }
+}
+
+
+.tabs-simple {
+  display: table; // so we can center this thing
+  width: 100%;
+
+  .tabs-nav-centered {
+    display: inline-block;
+  }
+
+  .tabs-nav {
+    display: table;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+
+    li {
+      float: left;
+    }
+  }
+
+  .tabs-content {
+    width: 100%;
+
+    > div {
+      display: none;
+    }
+
+    > .active {
+      display: block;
+    }
+  }
+
+  &.tabs-simple-ui-blocky {
+    .tabs-nav {
+      ul {
+        border: 1px solid #000;
+        overflow: hidden;
+
+        li {
+          padding: 10px 40px;
+          cursor: pointer;
+
+          &.active {
+            cursor: default;
+            background: #080808;
+
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.club-finder-select-location {
+  display: none;
+}
+
+.club-finder-map {
+  height : 300px;
+}

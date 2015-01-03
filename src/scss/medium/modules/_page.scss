@@ -1,0 +1,56 @@
+.page {
+    padding-top: 130px;
+}
+
+.page.image {
+    max-width: 100%;
+    min-height: 1000px;
+    position: relative;
+
+    .wrapper {
+        position: static;
+    }
+
+    .background {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .rich-content {
+        position: static;
+
+        header {
+            min-height: 280px;
+        }
+    }
+
+    .button.white {
+        border-color: white;
+    }
+}
+
+.page.image, .page.wizard {
+    .rich-content header {
+        background: transparent;
+        margin-top: 120px;
+    }
+}
+
+.page.wizard {
+    min-height: 1080px;
+    max-width: none;
+
+    .rich-content {
+        header {
+            margin-top: 0;
+            min-height: 144px;
+
+            .rich-content-title {
+                font-size: 30px;
+                width: 384px;
+            }
+        }
+    }
+}

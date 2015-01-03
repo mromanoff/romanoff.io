@@ -1,0 +1,58 @@
+//Global module
+
+.class-module {
+	padding: 35px 10%;
+
+	.prev-class {
+		left: 37px;
+		top: 282px;
+	}
+
+	.next-class {
+		right: 37px;
+		top: 282px;	
+	}
+
+	p {
+		font-size: 13px;
+		margin-bottom: 23px;
+	}
+
+	.rounded {
+		@include border-radius(100%);
+		width: 100px;
+		height: 100px;
+		margin-bottom: 20px;
+
+		> span {
+			padding: 45px 0;
+		}
+	}
+
+	.class-detail {
+		
+		li {
+			font-size: 14px;
+			line-height: 20px;
+
+			&.big-font {
+				font-size: 45px;
+				line-height: 52px;
+				letter-spacing: 10px;
+			}
+
+			&.medium-font {
+				font-size: 22px;
+				line-height: 33px;
+			}
+
+			&.small-font {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.underlined-small-link {
+		font-size: 12px;
+	}
+}

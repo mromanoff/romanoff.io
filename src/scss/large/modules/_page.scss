@@ -1,0 +1,16 @@
+.page {
+    padding-top: 60px;
+}
+
+.page.wizard {
+    .rich-content {
+        header {
+        	min-height: 185px;
+
+            .rich-content-title {
+                font-size: 38px;
+                width: 466px;
+            }
+        }
+    }
+}

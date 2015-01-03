@@ -1,0 +1,84 @@
+.main-calendar {
+	header {
+		.main-calendar-header {
+			h2 {
+				// font-size: 45px;
+				letter-spacing: 10px;
+			}
+			a.navigation {
+				display: block;
+			}
+		}
+	}
+	.day-detail-main-container {
+		width: 14.285%;
+		.day-detail-container {
+			.events-container {
+				//Ipad higlight button - Don't delete this
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+				.event-view {
+					.instructors {
+						display: block;
+					}
+					.club-name {
+						display: block;
+					}
+					&.check-in {
+						[class*="icon-"] {
+							display: block;
+							margin-bottom: 0;
+						}
+						small.check {
+							display: block;
+						}
+					}
+				}
+				.see-more-classes {
+					&.active {
+						p {
+							.classes-amount {
+								color: #fff;
+							}
+						}
+					}
+					p {
+						@include transform(rotate(45deg));
+						.classes-amount {
+							display: block;
+							font-size: 14px;
+							line-height: 1.9;
+							color: #7c878e;
+							@include transform(rotate(-45deg));
+						}
+
+						span {
+							margin-left: -3px;
+						}
+					}
+
+					.more-classes {
+						display: block;
+						margin: 0 auto;
+						margin-top: 16px;
+						width: 90px;
+						text-align: center;
+					}
+				}
+			}
+		}
+		.extra-event-container {
+			.extra-event-view {
+				small {
+					display: inline-block;
+				}
+				.instructors {
+					display: block;
+				}
+				.club-name {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

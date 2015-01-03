@@ -1,0 +1,55 @@
+.page.feedback{
+	min-height: 520px;
+}
+
+.txt-center{
+	text-align: center;
+}
+
+hr{
+	margin: 40px 0 20px;
+}
+	
+.feedback-wrapper {
+	h1{
+		margin-bottom: 20px;
+	}
+
+	.sub-title{
+		margin-bottom: 40px;
+	}
+
+	.error {
+		border: 1px solid red;
+	}
+
+	button[type='submit']{
+		padding: 1.35em 3em;
+		width: auto;
+		display: inline-block;
+	}
+
+	.feedback-thanks{
+		margin-top: 100px;
+
+		.thanks-title{
+			font-size: 40px;
+		}
+
+		hr{
+			width: 300px;
+			margin: 60px auto 40px;
+		}
+	}
+
+}
+
+#browse {
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#faqSection + .html-callout {
+	display: none;
+}

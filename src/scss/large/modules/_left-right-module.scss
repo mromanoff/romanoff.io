@@ -1,0 +1,29 @@
+.left-right-module {
+	.separator-title-container {
+		padding: 54px 0;
+		h3 {
+			font-size: 35px;
+		}
+	}
+
+	.columnsContainer {
+
+		&.short-height {
+			display: inline-block;
+			padding: 32px 0;
+		}
+
+		.leftColumn {
+			&.one-third {
+				width: 33%;
+			}
+		}
+
+		.rightColumn {
+
+			&.two-third {
+				width: 67%;
+			}
+		}
+	}
+}

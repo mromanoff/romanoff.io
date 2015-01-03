@@ -1,0 +1,65 @@
+.static-page {
+	padding: 36px 26px 45px;
+	text-align: left;
+
+	h5 {
+		font-size: 30px;
+		margin-bottom: 44px;
+	}
+
+	p {
+		margin-bottom: 14px;
+	}
+
+	.contactus-container {
+		max-width: 1097px;
+		display: block;
+		margin: 0 auto;
+		.columns-container {
+			.row {
+				border: 0;
+				display: inline-block;
+				margin-bottom: 0;
+				padding: 0 18px;
+				vertical-align: top;
+				width: 32.9%;
+				@include box-sizing(border-box);
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				h6 {
+					margin-bottom: 26px;
+					
+					&:first-child {
+						margin-bottom: 25px;
+					}
+				}
+
+				ul {
+					margin-bottom: 19px;
+					line-height: 1.6em;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					li {
+						font-size: 14px;
+						letter-spacing: 1px;
+
+						&.bold-title {
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

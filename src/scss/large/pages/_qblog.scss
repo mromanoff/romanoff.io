@@ -1,0 +1,62 @@
+.qblog {
+    padding: 60px 0 0;
+    background-color: #e6e6e6;
+    max-width: 980px;
+}
+
+.qblog-logo {
+    top: 60px;
+    left: 0;
+    width: 171px;
+    height: 171px;
+}
+
+.carousel {
+    .swipe-guide {
+        display: none;
+    }
+}
+
+.carousel-item {
+    .caption {
+        h2 {
+            font-size: 45px;
+            letter-spacing: 8.1px;
+        }
+    }
+}
+
+.qblog-content {
+    padding: 38px 0;
+    .article-container {
+        article {
+            .article-content {
+                .article-category, .article-date, p {
+                    font-size: 12px;
+                    letter-spacing: .96px;
+                }
+            }
+        }
+    }
+    aside {
+        .subscribe, .article-excerpt {
+            a {
+                padding: 23px 60px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+        }
+        .subscribe {
+            p {
+                font-size: 11px;
+                font-weight: 400;
+            }
+        }
+        .article-excerpt {
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+}

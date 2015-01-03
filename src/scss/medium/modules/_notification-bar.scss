@@ -1,0 +1,17 @@
+.notification-container {
+	padding: 10px 40px;
+	p {
+		font-size: 9px;
+	}
+
+	a {
+		top: 5px;
+		right: 15px;
+
+		span {
+			&:before {
+				font-size: 9px;
+			}
+		}
+	}
+}

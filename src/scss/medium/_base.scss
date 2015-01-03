@@ -1,0 +1,176 @@
+$pageTransitionTime: 1s;
+
+h1 {
+    &.title {
+        font-size: 2em;
+    }
+
+    small {
+      &.small-title {
+        font-size: 0.5em;
+      }
+    }
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h6 {
+    letter-spacing: 2px;
+}
+
+hr.separator-line {
+    max-width: 125px;
+}
+
+// Modules Margin-Padding
+$section-side-padding: 20px;
+$section-margin: 40px;
+$section-padding: 30px;
+
+// Module Wrapper
+.module {
+    margin-top: $section-margin;
+    padding-top: $section-padding;
+    &.tpl-takeover {
+    	display: none;        
+    }
+}
+
+// Sticky Footer
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 270px;
+}
+footer {
+    height: 270px;
+    margin-top: $section-margin;
+}
+
+.tpl-classsearch {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.tpl-classsearch {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.tpl-calendarmonthfilter, .tpl-calendarsearch, .tpl-calendar {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+// Margin Exceptions
+.page .module:first-child + .tpl-textcallout {
+    margin-top: -($section-margin - 30px);
+}
+.tpl-scheduleavisit:last-child {
+    margin-bottom: -$section-margin;
+}
+.tpl-classesnearme:last-child {
+    margin-bottom: -$section-margin;
+}
+.tpl-splitcallout:last-child {
+    margin-bottom: -$section-margin;
+}
+.tpl-articlelist:last-child {
+    margin-bottom: -$section-margin;
+}
+.tpl-clubcta, .tpl-upcoming{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+// Grid System
+//
+// Columns are very simple, they only float left and have a width.
+// We intentionally do not add any padding or borders as this breaks
+// the widths and causes tons of headaches. Instead, we rely on the
+// div under a column called `.col-padding` to do the padding and
+// borders.
+//
+// Styleguide 4.0.4
+.row {
+
+  border-top: #d0d3d3 1px solid;
+  border-bottom: #d0d3d3 1px solid;
+
+  // begining with medium devices, float left
+  [class*='col-'] {
+    float: left;
+    border-bottom: none; // RESET
+    margin-bottom: 0; // RESET
+    padding-bottom: 0; // RESET
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+  }
+
+  [class*='col-'] {
+    .col-padding {
+      width: 100%;
+      border-right: #d0d3d3 1px solid;
+    }
+  }
+
+  [class*='col-']:last-of-type {
+    .col-padding {
+      border-right: none; // apply border to the right except on the last column
+    }
+  }
+
+  .col-1-2,
+  .col-2-4 {
+    width: 50%;
+  }
+
+  .col-1-4 {
+    width: 25%;
+  }
+
+  .col-1-3 {
+    width: 33.3%;
+  }
+}
+
+.black {
+  .row {
+    border-top: #d0d3d3 1px solid;
+    border-bottom: #d0d3d3 1px solid;
+
+    [class*='col-'] {
+      .col-padding {
+        border-right: #d0d3d3 1px solid;
+      }
+    }
+  }
+}
+
+
+.white {
+  .row {
+    border-top: #fff 1px solid;
+    border-bottom: #fff 1px solid;
+
+    [class*='col-'] {
+      .col-padding {
+        border-right: #fff 1px solid;
+      }
+    }
+  }
+}
+
+.takeover-module {
+  top: 130px;
+  .icon-close {
+    top: 130px;
+    right: 10px;
+  }
+  .takeover-container {
+    max-width: 780px;
+    height: 73%;
+  }
+}

@@ -1,0 +1,60 @@
+.offer-hero {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .h1, h1 {
+    margin-bottom: 80px;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 90px;
+    color: #fff;
+  }
+
+  p {
+    background: #fff;
+    margin-bottom: 0;
+    padding: 90px 80px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+  }
+
+  section {
+      background: #fff;
+      width: 100%;
+
+      nav {
+        margin: 0 0 42px 0;
+        margin-bottom: 0;
+      }
+
+      .sub-links {
+        text-align: center;
+        font-size: 12px;
+        text-decoration: underline;
+        padding-bottom: 16px;
+        margin-top: 0;
+      }
+  }
+
+  .paragraph {
+    padding-left: 0;
+  }
+
+  .paragraph:last-child {
+    //padding-bottom: 20px;
+  }
+}

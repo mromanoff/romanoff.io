@@ -1,0 +1,21 @@
+// Sign In with Equinox account
+
+.page {
+    &.signup {
+        .member-callout {
+            letter-spacing: 1px;
+        }
+        .paragraph {
+            h1.title {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        .rich-content {
+            .caption {
+                margin-top: 46px;
+            }
+        }
+    }    
+}

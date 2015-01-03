@@ -1,0 +1,172 @@
+.profile {
+	.header-container {
+		padding: 46px 100px;
+
+		h1 {
+			font-size: 45px;
+			letter-spacing: 10px;
+		}
+
+		p {
+			font-size: 12px;
+			margin-bottom: 38px;
+		}
+
+		.rounded {
+			@include border-radius(80px);
+			width: 137px;
+			height: 137px;
+			margin: 0 auto -112px;
+		}
+	}
+
+	.module-container {
+		padding: 50px 74px 53px;
+
+		&.personal-info {
+			padding: 87px 100px 40px;
+		}
+
+		h3 {
+			font-size: 29px;
+
+			span.suffix {
+				top: -8px;
+			}
+		}
+
+		.half-container {
+			margin-right: 20px;
+
+			.info {
+				.empty {
+					height: 43px;
+				}
+			}
+
+			&.birthdate, &.gender {
+				padding-top: 0;
+			}
+
+			h3 {
+				font-size: 32px;
+				margin-bottom: 2px;
+			}
+
+			&.weight .input-container input,
+			&.height .input-container.metric input {
+				width: 135px;
+			}
+		}
+
+		.input-container {
+			width: 170px;
+
+			input {
+				font-size: 24px;
+				width: 135px;
+				height: 42px;
+			}
+
+			span {
+				margin-top: 7px;
+			}
+		}
+
+		.underlined-link {
+			font-size: 10px;
+			margin-top: 19px;
+		}
+
+		.circles-wrapper {
+			.goals-container {
+				.circles-container {
+					width: 16.5%;
+
+					span {
+						font-size: 10px;
+						margin-top: 38px;
+						width: 87px;
+					}
+
+					.rounded-button {
+						.rounded {
+							@include border-radius(80px);
+							width: 87px;
+							height: 87px;
+
+							> span {
+								font-size: 30px;
+								padding: 29px 0;
+								margin-top: 0;
+							}
+						}
+					}
+				}
+			}
+
+			.circles-container {
+				span {
+					font-size: 10px;
+					margin-top: 38px;
+					width: 87px;
+				}
+
+				.rounded-button {
+					.rounded {
+						@include border-radius(80px);
+						width: 87px;
+						height: 87px;
+
+						> span {
+							font-size: 30px;
+							padding: 29px 0;
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.title-container {
+			padding-right: 20px;
+
+			h3 {
+				font-size: 23px;
+			}
+		}
+
+		.small-circles-wrapper {
+			width: 49%;
+
+			.rounded-button {
+
+				.rounded {
+					width: 21px;
+					height: 21px;
+
+					&.color-circle {
+						span {
+							font-size: 13px;
+						}
+					}
+				}
+			}
+
+			.small-circle-description {
+				
+				span {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+	.athlete-level {
+		.range-selection {
+			.track-wrapper {
+				width: 42%;
+			}
+		}
+	}
+}

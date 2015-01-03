@@ -1,0 +1,52 @@
+@import "compass/typography/text/replacement";
+
+$nav-height: 60px;
+
+nav.main {
+    height: $nav-height;
+
+    .full-wrapper {
+        @include small-padding;
+    }
+
+    .logo {
+        float: left;
+        width: 140px;
+        height: 100%;
+        padding-top: 14px;
+    }
+
+    .main-links, .secondary-links {
+        margin: 0;
+        li {
+            margin: 0;
+            a {
+                line-height: $nav-height;
+            }
+        }
+    }
+
+    .main-links {
+        float: left;
+        margin-left: 20px;
+    }
+    .secondary-links {
+        position: static;
+        float: right;
+    }
+
+    .member-dropdown {
+        width: 150px;
+        
+        &:before {
+            right: 56px;
+        }
+
+        li {
+            a {
+                padding-left: 20px;
+            }
+        }
+    }
+    
+}

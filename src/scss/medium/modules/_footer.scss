@@ -1,0 +1,28 @@
+footer {
+    h4 {
+        padding: 50px 0 30px;
+    }
+
+    .social-icons {
+        margin-bottom: 57px;
+        padding-top: 33px;
+        li {
+            margin: 0 12px;
+        }
+    }
+
+	.footer-links {
+    	display: block;
+    	line-height: 41px;
+    	margin: 0 auto;
+    	width: 640px;
+
+    	li {
+    		margin: 0 10px;
+
+    		a {
+    			font-size: 11px;
+    		}
+    	}
+    }
+}

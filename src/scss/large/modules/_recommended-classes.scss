@@ -1,0 +1,25 @@
+// Don't delete this piece of code
+.recommended-classes {
+	
+	.carousel-container {
+		.button-container {
+			padding: 0 5px;
+			margin:30px auto 0;
+			max-width:320px;
+		}
+	}
+
+	.underlined-small-link {
+		font-size: 10px;
+		margin-bottom: 20px;
+	}
+}
+.home {
+	.recommended-classes {
+		&.class-module {
+			.underlinde-small-link {
+				margin-top: 75px;
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+// Different buttons containers
+nav.button-container {
+    padding: 1.3em;
+    margin-top: 30px;
+
+    &.centered {
+        text-align: center;
+    }
+}
+
+a.button {
+    &.cta {
+        @include medium-label;
+
+        span {
+            font-size: 64px;
+        }
+    }
+
+    &.small {
+        font-size: 13px;
+    }
+    
+    &.box {
+        @include inline-block;
+        padding: 1.35em 3em;
+    }
+}
+
+.caption {
+    .buttons {
+        a {
+            padding: 1.2em;
+        }
+    }
+}
+
+.button-group {
+  display:table;
+  margin: 0 auto;
+  text-align: center;
+
+  div {
+    display:table-row;
+
+    button {
+      display:table-cell;
+      -webkit-appearance: button; // RESET
+      width: auto; // RESET
+      padding: 1.2em 6em;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+// tmp: cta for mobile, normal link for everything else
+.btn-mobile-cta {
+  background: none;
+  padding: 0;
+  border: none;
+  text-decoration: underline;
+  width: 100%;
+  display: inline;
+}

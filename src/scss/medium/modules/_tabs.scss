@@ -1,0 +1,190 @@
+.tabs-container {
+    $gray: #b8b8b8;
+    border-bottom: 1px solid $gray;
+
+    .tabs-navigation {
+        display: block;
+        position: relative;
+        z-index: 2;
+
+        ul {
+            border-bottom: 1px solid $gray;
+            padding:0 $section-side-padding;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                max-width: 120px;
+                padding-left: 1.6em;
+                @media (screen and min-width: 1023px) {
+                    max-width: 230px;
+                }
+
+                a.button.tab-trigger {
+                    border: 0;
+                    color: $gray;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    &:after {
+                        border-color: $gray;
+                    }
+
+                    &.active {
+                        color: #080808;
+                    }
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .tabs-content-wrapper {
+        position: relative;
+        z-index: 1;
+
+        .fading {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    .tab {
+        background: #fff;
+
+        & > .two-cols {
+            padding: 0;
+        }
+    }
+}
+
+.two-cols {
+    @include pie-clearfix;
+
+    .caption {
+        float: left;
+        padding: 40px 5% 0;
+        width: 40%;
+
+        h4 {
+            display: block;
+            font-weight: normal;
+            letter-spacing: 0.2em;
+            margin: 0 0 1em;
+        }
+
+        hr {
+            margin: 20px auto;
+            width: 75px;
+        }
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .carousel {
+        float: left;
+        min-height: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 40%;
+    }
+
+    .rounded {
+        @include border-radius(0px);
+        float: right;
+        height: auto;
+        margin: 0;
+        width: 50%;
+    }
+}
+
+.simple-tabs-container {
+    margin: 0 auto 50px;
+    width: 520px;
+
+    p {
+        font-size: 12px;
+    }
+
+    .tabs-container {
+        border: 0;
+        overflow: hidden;
+
+        .tabs-navigation {
+            ul {
+                border: 0;
+                // (740 - 520) / 2
+                margin: 0 0 0 -110px;
+                padding: 0;
+                width: 740px;
+
+                a.button.tab-trigger {
+                    font-size: 14px;
+                    letter-spacing: 0;
+                    padding: 0.8em 0.8em 0;
+                }
+            }
+        }
+
+        .tabs-content-wrapper {
+            @include pie-clearfix;
+            width: 1000%;
+
+            .tab {
+                width: 10%;
+            }
+        }
+
+        .tab {
+            float: left;
+        }
+
+        a.button.tab-trigger.active:after {
+            display: none;
+        }
+    }
+}
+
+.tabs-simple {
+  > .tabs-content {
+    > div[class*='tab-'] {
+      display: block;
+    }
+  }
+}
+
+.select-club-tabs {
+  @include clearfix;
+
+  > .tabs-content {
+    height: 300px;
+
+    > div[class*='tab-1'] { display: none; }
+
+    .tab-2 {
+      display: block;
+
+      .half-col {
+        float: left;
+        width: 50%;
+        position: relative;
+
+        .map-container {
+          width: 100%;
+          height : 300px;
+        }
+      }
+
+      .club-finder-select-location {
+        display: block;
+      }
+    }
+  }
+}

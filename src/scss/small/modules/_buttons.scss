@@ -1,0 +1,236 @@
+// Buttons navigation container
+//
+// Styleguide 1.0.0
+nav.buttons {
+    @include pie-clearfix;
+
+    // Navigational buttons elements (anchor) - .black class added just for visibility purposes.
+    //
+    // .inline             - Button width adjusted to text contents.
+    // .half-button        - One half of container's width button.
+    // .third-button       - A third of container's width button.
+    // .quarter-button     - A quarter of container's width button.
+    //
+    // Styleguide 1.0.1
+    a {
+        display: block;
+        float: left;
+        letter-spacing: 0.22em;
+        line-height: 1.3;
+        padding: 1em 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+
+        &:hover {
+            // TODO
+            // :hover              - On mouse over style.
+        }
+
+        &.inline {
+            display: inline-block;
+            float: none;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: auto;
+        }
+
+        &.half-button {
+            width: 50%;
+        }
+
+        &.third-button {
+            width: 33.33%;
+        }
+
+        &.quarter-button {
+            width: 25%;
+        }
+    }
+}
+
+// Container for Call To Action buttons
+//
+// .centered           - Center buttons inside
+// .block           - Force Diplay block buttons inside
+//
+// Styleguide 1.0.2
+.button-container {
+    padding: 1.3em 0;
+    margin-top: 30px;
+
+    &.centered {
+        text-align: center;
+    }
+
+    &.bottom-space {
+        margin-bottom: 15px;
+    }
+
+    &.block {
+        padding: 0;
+        margin: 0 auto;
+        .button.box {
+            display: block !important;
+        }
+    }
+}
+
+// Regular links as buttons
+//
+// .white               - Button with light background and dark foreground (font color.)
+// .black               - Button with dark background and light foreground (font color.)
+// .cta                 - Button style for Call To Action.
+// .small               - Button typography in small size.
+// .header-button       - Button thin style to fit in <rich-content> header.
+// .box                 - Button thin style black background white foreground.
+// .box.small           - Mixed button
+// .fat                 - Bigger padding button
+// .fat.black           - Mixed button
+// .tab-trigger         - Tab trigger button.
+// .tab-trigger.active  - Tab trigger button, active state.
+// .inline              - Inline button
+// .bottom-space        - With margin bottom
+// .transparent.white   - Transparent button with white border and text
+// .transparent.black   - Transparent button with black border and text
+//
+// Styleguide 1.0.3
+.button {
+    font-family: "Graphik Web", sans-serif;
+    cursor: hand;
+    cursor: pointer;
+    
+    &:hover {
+        // TODO
+        // :hover              - On mouse over style.
+    }
+
+    &.white {
+        border-color: #080808;
+        background: #fff;
+        color: #080808;
+        &.no-border {
+            border-color:#fff;
+        }
+    }
+
+    &.black {
+        border-color: #080808;
+        background: #080808;
+        color: #fff;
+        &.white-border {
+            border-color: #fff;
+        }
+    }
+
+    &.cta {
+        @include small-label;
+
+        span {
+            display: block;
+            font-size: 52px;
+        }
+    }
+
+    &.small {
+        font-size: 11px;
+        font-weight: bold;
+        padding: 1.4em 0;
+    }
+
+    &.header-button {
+        @include box-button;
+        @include medium-label;
+        border-color: #fff;
+        color: #fff;
+    }
+
+    &.box {
+        @include box-button;
+        @include medium-label;
+        @include box-sizing(border-box);
+
+        padding-top: 1.85em;
+        padding-bottom: 1.85em;
+
+        &.small {
+            @include small-label;
+        }
+
+    }
+
+    &.fat {
+        display: inline-block;
+        padding: 1.5em 3em;
+
+        &.black {
+            border: 1px solid #4a4a4a;
+        }
+    }
+
+    &.tab-trigger {
+        @include box-button;
+        @include small-label;
+        border-left-width: 0;
+        border-right-width: 0;
+        display: block;
+        margin: -1px 0 0;
+        position: relative;
+
+        &.active {
+            &:after {
+                $size: 18px;
+                background: #fff;
+                border-bottom: 1px solid #080808;
+                border-right: 1px solid #080808;
+                content: "";
+                display: block;
+                height: $size;
+                left: 50%;
+                margin: (-$size/2) 0 0 (-$size/2);
+                position: absolute;
+                top: 100%;
+                width: $size;
+                @include rotate;
+            }
+        }
+    }
+
+    &.inline {
+        display: inline-block;
+    }
+
+    &.bottom-space {
+        margin-bottom: 15px;
+    }
+
+    &.transparent {
+        background: transparent;
+        &.black {
+            border: 1px solid;
+            color: #000;
+        }
+        &.white {
+            border: 1px solid;
+            color: #fff;
+        }
+    }
+}
+
+.button-group {
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+// tmp: cta for mobile, normal link for everything else
+.btn-mobile-cta {
+  @extend .box;
+  @extend .white;
+  @extend .button;
+
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  display:block;
+}

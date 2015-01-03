@@ -1,0 +1,48 @@
+.q-blog {
+	.article-image-wrapper {
+		max-height: 405px;
+		height: auto;
+
+		.qblog-title {
+			h3 {
+				font-size: 25px;
+				letter-spacing: 1px;
+			}
+		}
+	}
+
+	.blog-article-container {
+
+		.selected-article {
+			border-width: 0 20px 22px 20px;
+			top: -11px;
+			left: 39px;
+		}
+		
+		.article-text-container {
+			padding: 37px 45px;
+			text-align: left;
+
+			p {
+				line-height: 19px;
+				letter-spacing: 1.5px;
+			}
+
+			.recommended {
+				font-size: 11px;
+
+				span.icon-bookmark {
+					font-size: 29px;
+				}
+			}
+
+			.category-font, p {
+				font-size: 12px
+			}
+
+			h4 {
+				font-size: 14px;
+			}
+		}
+	}
+}

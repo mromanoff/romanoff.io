@@ -1,0 +1,33 @@
+.twitter {
+	.twitter-message-container {
+		height: 185px;
+		max-width: 445px;
+		margin: 0 auto;
+
+		.twitter-message {
+			p {
+				font-size: 16px;
+  				letter-spacing: 2px;
+  				line-height: 1.7em;
+
+  				&.date {
+  					font-size: 12px;
+  					margin-bottom: 3.75em;
+  				}
+			}
+
+			.twitter-button-container {
+				> span {
+					font-size: 16px;
+				}
+
+				a {
+					span {
+						font-size: 11px;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}

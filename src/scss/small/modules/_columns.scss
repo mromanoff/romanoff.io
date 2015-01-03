@@ -1,0 +1,83 @@
+.columns-layout {
+    h1 {
+        max-width: 70%;
+    }
+
+    .cta-wrapper {
+        text-align: center;
+    }
+
+    // Text only columns have no max-width and much larger columns.
+    &.text-only {
+        ul {
+            max-width: none;
+            .column p {
+                text-align: center;
+                @include small-copy;
+            }
+        }
+    }
+
+    .column, .big-circle-column {
+        width: 100%;
+
+        img {
+            display: block;
+            width: 75px;
+            height: 75px;
+            @include border-radius(500px);
+            margin: 20px auto;
+        }
+
+        .content {
+            padding:0 $section-side-padding;
+            .title, p, .content-wrapper {
+                text-align: center;
+                margin: 0 auto;
+            }
+            .title {
+                font-weight: bold;
+                font-size: 1em;
+                margin: 5px auto;
+            }
+            p, .content-wrapper {
+                @include small-copy;
+                font-size: 12px;
+                margin: 10px auto;
+            }
+            .content-wrapper {
+                ul {
+                    li {
+                        line-height: 21px;
+
+                        &:first-child {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .big-circle-column {
+        img {
+            border: 1px solid #b3b3b3;
+        }
+    }
+
+}
+
+.grid-container {
+    @include pie-clearfix;
+    width: 100%;
+
+    .column {
+        display: block;
+        float: left;
+
+        &.half {
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,235 @@
+.carousel.image-carousel {
+    .swipe-guide {
+        top: auto;
+        bottom: 12%;
+    }
+}
+
+.carousel.tabbed-carousel {
+    nav {
+        .caret {
+            border: none;
+        }
+    }
+
+    .swipe-guide {
+        top: auto;
+        bottom: 10%;
+    }
+}
+
+.carousel {
+    overflow: hidden;
+    min-height: 380px;
+
+    .swipe-guide {
+        top: 54%;
+    }
+
+    // only when used in home it needs to show pagination on all the devices
+    &.home-main-hero {
+      min-height: 300px;
+      &.pagination .owl-pagination {
+        display: block;
+        margin-bottom: 20px;
+        margin-top: 0;
+      }
+      .swipe-guide {
+        display: none;
+      }
+      .rich-content header {
+        height: auto;
+        min-height: 0;
+        max-height: none;
+      }
+    }
+
+    //Tabbed Carousel
+    &.tabbed-carousel {
+        .owl-carousel {
+
+            .owl-item {
+                .caption {
+                    @include opacity(0);
+                    @include transition(opacity 0.5s 0.5s);
+                }
+                &.active {
+                    .caption {
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
+
+    // Content Carousel Slide
+    .content-slider-item {
+        header {
+            position: relative;
+        }
+
+        .caption-wrapper {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            margin-top: -87px;
+
+            header {
+                min-height: 400px;
+            }
+
+            .caption {
+                display: table;
+                margin: 0 auto;
+                width: 450px;
+                height: 175px;
+                @include rgba-background-inline(rgba(255,255,255,0.5));
+
+                .caption-text-container {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    .content-title {
+                        font-weight: normal;
+                        font-size: 20px;
+                        padding: 0 0 20px 0;
+                        margin: 0;
+                    }
+                    p {
+                        max-width: 90%;
+                        font-size: 12px;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    .icon-arrow-left{
+      position: absolute;
+      top: 25px;
+      left: 0;
+      cursor: pointer;
+      z-index: 9999;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .icon-arrow-right{
+      position: absolute;
+      top: 25px;
+      right: 0;
+      cursor: pointer;
+      z-index: 9999;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+}
+
+.pagination {
+    .owl-theme .owl-controls {
+        margin-top: -30px;
+    }
+}
+
+
+.swipe-guide {
+    font-size: 15px;
+}
+
+.tabbed-carousel-container {
+    p {
+        font-size: 12px;
+    }
+}
+
+.cards-carousel {
+  position: relative;
+  color: #000;
+  text-align: center;
+  min-height: 200px;
+
+  .icon-left-arrow, .icon-right-arrow {
+    top: 30%;
+  }
+
+  h1, .h1 {
+    font-size: 25px;
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+
+  h2, .h2 {
+    font-size: 19px;
+    font-weight: 100;
+    margin-bottom: 24px;  // 11px for my inventory
+  }
+
+  .h3 {
+    font-size: 14px;
+  }
+
+  // used to keep arrows vertically aligned in "my inventory" and "my trainer" carousels
+  .carousel-container {
+    position: relative;
+  }
+
+  .owl-carousel {
+    //max-width: 843px;
+    margin: 0 auto;
+
+    .item {
+      padding: 28px 30px;
+
+      .circle {
+        margin: 30px auto 21px auto;
+
+        span {
+          margin-top: 12px;
+        }
+
+      }
+
+      ul {
+        li {
+          margin-bottom: 12px;
+          overflow:hidden;
+
+          i {
+            font-size: 12px;
+            display: inline-block;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      .jump-links {
+        overflow: hidden;
+        margin-bottom: 25px;
+
+        .align-left { float: left; }
+        .align-right { float: right; }
+      }
+
+      a {
+        font-size: 12px;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.single-item {
+    padding: 76px 0; //60px
+
+    .item {
+      border: none;
+      padding: 0;
+    }
+  }
+}

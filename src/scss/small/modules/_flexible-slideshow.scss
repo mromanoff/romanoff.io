@@ -1,0 +1,139 @@
+.flexible-slideshow {
+    .owl-wrapper {
+        height: 300px;
+    }
+    &.pagination {
+        .owl-controls {
+            position: absolute;
+            top: auto !important;
+            bottom: 0px;
+            .owl-page {
+                span {
+                    background: #fff;
+                    border: 1px solid #959595;
+                }
+            }
+        }
+        .owl-buttons {
+            .owl-prev, .owl-next {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                margin-left: -3.5px;
+                color: #959595;
+            }
+            .owl-prev {
+                margin-left: -6px;
+            }
+            @for $i from 1 through 10 {
+                &.buttons-#{$i} {
+                    .owl-prev {
+                        @include translate(-(16px*$i), 0);
+                    }
+                    .owl-next {
+                        @include translate((16px*$i), 0);
+                    }
+                    
+                } 
+            }
+        }
+        .owl-pagination {
+            display: block;
+        }
+    }
+    .slide-item {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+
+        .foreground-image {
+            position: absolute;
+            max-height: 300px;
+            width: auto;
+            z-index: 100;
+            top: 0;
+            left: 50%;
+            @include translate(-50%, 0);
+        }
+        .cta-wrapper {
+            position: absolute;
+            z-index: 120;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            .button {
+                border: none;
+                padding: 1.25em 2em;
+                display: block;
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .violator {
+        position: relative; 
+        z-index: 120;
+        display: table;
+        height: 27px;
+        width: 100%;
+        font-size: 9px;
+        text-align: center;
+
+        h6 {
+            max-width: 80%;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        &[data-align="left"] {
+            text-align: left;
+            h6 {
+                padding-right: 20%;
+            }
+        }
+        &[data-align="center"] {
+            text-align: center;
+            h6 {
+                padding: 0 20%;
+            }
+        }
+        &[data-align="right"] {
+            text-align: right;
+            h6 {
+                padding-right: 20%;
+            }
+        }
+    }
+}
+
+// Homepage Parallax Specific Styles
+.page-snap-enabled .homepage {
+    .flexible-slideshow {
+        height: 350px;
+        .owl-wrapper, .slide-item {
+            height: 350px;
+        }
+        .slide-item {
+            padding-top: 50px;
+        }
+       .foreground-image {
+            top: 50px;
+        }
+    }
+    .page-snap:first-child {
+        .flexible-slideshow {
+            height: 300px;
+            .owl-wrapper, .slide-item {
+                height: 300px;
+            }
+            .slide-item {
+                padding-top: 0;
+            }
+           .foreground-image {
+                top: 0px;
+            }
+        }
+    }
+}

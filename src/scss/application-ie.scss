@@ -1,0 +1,14 @@
+// 1- ALL SASS CODE MUST BE COMMENTED USING KSS
+//    More information available at http://warpspire.com/kss/syntax/
+// 2- All files should start with underscore UNLESS their exported .css is explicitly wanted
+// 3- This file (main) should only have import rules.
+// 4- All classes should be DASH SEPARATED (name-thing)
+// 5- DRY
+// 6- SMACSS (http://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/)
+// 7- Media queries in their specific section
+// 8- Mobile first
+
+/*SPECIFIC IE8 FIXES*/
+body {
+    min-width:1200px;
+}

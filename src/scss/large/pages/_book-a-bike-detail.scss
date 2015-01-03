@@ -1,0 +1,229 @@
+.page.image.bookabike {
+	.background {
+		img {
+			width: 100%;
+		}
+	}
+}
+.page .book-a-bike-detail {
+
+	h2, h3 {
+
+		small {
+		}
+		span {
+		}
+	}
+
+	h3 {
+	}
+
+	.message {
+	}
+
+	.modals {
+		> div {
+			width: 764px;
+			margin: 0 auto;
+		}
+
+		.modal-wrapper {
+
+			h2 span {
+			}
+
+			small {
+			}
+
+			.button-container a.button.box {
+			}
+		}
+	}
+
+	.background {
+		top: 55px;
+	}
+
+	.head {
+
+		.confirmation {
+			padding: 50px 0 80px;
+
+			h2 {
+				span {
+				}
+			}
+		}
+
+		.details {
+			.expand {
+				.expand-button {
+				}
+				.more-details {
+
+					h2.title {
+
+						small {
+						}
+						span {
+							letter-spacing: 10px;
+						}
+					}
+
+					p {
+						margin-bottom: 8px;
+					}
+
+					.date {
+						span {
+						}
+					}
+
+					.links {
+
+						a {
+						}
+					}
+				}
+
+			}
+
+			.book-fav-bike {
+
+				a {
+
+					.icon-star {
+					}
+				}
+			}
+
+			.reserved.message {
+
+				.options a {
+				}
+			}
+
+			.bikes-graphic {
+				height: 540px;
+
+				.bike {
+					font-size: 18px;
+
+					&:not(.unavailable):hover {
+						font-size: 0;
+
+						&:before {
+							font-size: 28px;
+						}
+					}
+
+					&.unavailable {
+					}
+
+					&.selected {
+						font-size: 0;
+
+						&:before {
+							font-size: 28px;
+						}
+
+						&:hover {
+							font-size: 18px;
+						}
+					}
+
+					&.faved {
+
+						&:before {
+						}
+					}
+				}
+
+				.door {
+
+					&:before {
+						font-size: 32px;
+					}
+				}
+
+				.instructor-bike {
+					.icon-bike-2 {
+						padding-bottom: 6px;
+					}
+				}
+			}
+		}
+
+		.class-full{
+			h2 span {
+			}
+		}
+
+	}
+
+	.content {
+
+		.confirmation {
+			padding: 65px 0 40px;
+
+			.share {
+				font-size: 14px;
+				text-indent: 0;
+				margin: 35px auto;
+
+				.social-icons {
+				}
+			}
+
+			.export {
+				margin-bottom: 50px;
+
+				a {
+				}
+			}
+
+			.reminder {
+				margin: 0 auto 55px;
+				font-size: 12px;
+				width: 50%;
+				line-height: 1.5em;
+			}
+
+			.options {
+				a {
+					font-size: 15px;
+				}
+			}
+		}
+
+		.countdown {
+
+			h3 {
+
+				small {
+				}
+
+				span.countdown-time {
+				}
+
+				span.countdown-digit {
+				}
+			}
+
+			.message {
+				p {
+				}
+			}
+		}
+
+		.class-full {
+
+			.message {
+			}
+
+			.button-container a.button.box {
+			}
+		}
+	}
+}
+

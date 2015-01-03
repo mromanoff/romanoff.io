@@ -1,0 +1,21 @@
+.bike-classes-component {
+    padding-bottom: 60px;
+    background-color: #efefef;
+}
+.bike-classes-container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+.bike-classes {
+	li {
+		a {
+            max-width: 1200px;
+            margin: 0 auto;
+			.class-info {
+				h2, p {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

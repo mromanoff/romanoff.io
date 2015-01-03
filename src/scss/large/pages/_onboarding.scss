@@ -1,0 +1,12 @@
+.onboarding {
+    .select-wrapper {
+        & + input {
+            height: 75px;
+        }
+
+        &.box {
+            height: 75px;
+            padding: 23px 0;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.flexible-slideshow {
+    .owl-wrapper {
+        height: 550px;
+    }  
+    .slide-item {
+        height: 550px;
+        .foreground-image {
+            max-height: 550px;
+        }
+    }
+    .violator {
+        height: 35px;
+        font-size: 13px;
+    }
+}
+
+// Homepage Parallax Specific Styles
+.page-snap-enabled .homepage {
+    .flexible-slideshow {
+        height: 630px;
+        .owl-wrapper, .slide-item {
+            height: 630px;
+        }
+        .slide-item {
+            padding-top: 80px;
+        }
+       .foreground-image {
+            top: 80px;
+        }
+    }
+    .page-snap:first-child { 
+        .flexible-slideshow {
+            height: 550px;
+            .owl-wrapper, .slide-item {
+                height: 550px;
+            } 
+            .slide-item {
+                padding-top: 0;
+            }
+           .foreground-image {
+                top: 0px;
+            }
+        }
+    }
+}

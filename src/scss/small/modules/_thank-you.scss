@@ -1,0 +1,16 @@
+.page.thankyou {
+	.main-social-icons {
+		li {
+			a {
+				border: none;
+
+				&:hover {
+	                background: transparent;
+	            }
+			}
+		}
+	}
+	.rich-content.cta {
+		position: static;
+	}
+}

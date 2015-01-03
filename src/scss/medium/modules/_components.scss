@@ -1,0 +1,224 @@
+.v2 {
+
+  .limit-width {
+    max-width: 800px;
+  }
+
+}
+
+// to do reminder for devs
+.todo {
+  color: #009ACD !important;
+
+  &::before {
+    content: '*';
+  }
+
+  &::after {
+    content: '*';
+  }
+}
+
+.info-block {
+  &.narrow {
+    width: 40%;
+  }
+}
+
+
+.presentation-table {
+  margin-top: 0;   // RESET
+  padding-top: 0;  // RESET
+  margin-bottom: 4%;
+
+  .row {
+    [class*='col-'] {
+      .col-padding {
+        padding-top: 64px;
+        padding-bottom: 64px;
+        min-height: 370px; // tmp fix for equal height (370px for /account hp)
+      }
+    }
+  }
+}
+
+.settings-table {
+  text-align: left; // reset mobile rule
+
+  .row {
+    text-align: left; // reset mobile rule
+
+    h3 {
+      text-align: left;
+      padding-bottom: 16px;
+    }
+
+    .col-1-2:nth-child(2) {
+
+      a {
+        vertical-align: middle;
+        display: inline;
+        float: right;
+        text-align: right;
+        width: auto;
+      }
+
+      .toggle {
+        margin-top: 5%;
+      }
+    }
+  }
+}
+
+.three-points-table {
+  .row {
+    padding-left: 4%;
+    padding-right: 4%;
+    max-width: 80%;
+    margin: 0 auto;
+    border: none;
+
+    [class*='col-'] {
+      .col-padding {
+        width: auto; // RESET
+        padding-left: 6%;
+        padding-right: 6%;
+        border: none; // RESET
+      }
+    }
+  }
+
+  h3 {
+    color: #080808;
+  }
+}
+
+.circle {
+  width: 75%;
+  padding-bottom: 75%;
+  -moz-border-radius: 75%;
+  -webkit-border-radius: 75%;
+  border-radius: 75%;
+}
+
+
+.bubbles-grid {
+  margin-bottom: 4%;
+
+  li {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 2% 1%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+
+    img {
+      width: 100%;
+      margin-bottom: 7%;
+    }
+
+    p {
+      a {
+        display: block;
+      }
+    }
+
+  }
+}
+
+.pthorizontal {
+  overflow: hidden;
+  margin-top: 45px; // reset random -45px in .module.dtm-pt-inventory-training-qblog-3-column
+  border-bottom: #ddd 1px solid;
+
+  &.paragraph {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  ul {
+
+    > div {
+      border-right: #ddd 1px solid;
+      min-height: 500px; // try to keep same height
+    }
+
+    > div:last-child {
+      border-right: none;
+    }
+
+    .cards-carousel {
+      float:left;
+      width:25%;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      padding-left: 20px; // .owl-wrapper-outer must have the negative margin equivalent of this
+      padding-right: 20px; // .owl-wrapper-outer must have the negative margin equivalent of this
+
+      .owl-wrapper-outer {
+          //margin-left: -20px; this breaks in desktop/tablet
+      }
+
+      .icon-left-arrow,
+      .icon-right-arrow {
+        top: 21%;
+      }
+
+    }
+
+    .article-hero {
+      padding: 120px 20px 0 20px; // RESET
+      float:left;
+      width:50%;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+  }
+}
+
+.dtm-pt-science-based-results {
+  .module-3col-points {
+      h3.title {
+        margin-bottom: 30px;
+      }
+
+      p {
+        line-height: 20px;
+      }
+
+      .row {
+        [class*='col-'] {
+          margin-bottom: 18px;
+
+          .col-padding {
+            width : 80%;
+          }
+        }
+      }
+  }
+}
+
+/*
+.pthorizontal ul {
+  background:blue;
+}
+
+.pthorizontal .cards-carousel {
+  float:left;
+  width:25%;
+  background:#ddd;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.pthorizontal .article-hero {
+  float:left;
+  width:50%;
+  background: yellow;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+*/

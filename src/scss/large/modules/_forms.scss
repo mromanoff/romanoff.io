@@ -1,0 +1,71 @@
+form {
+	&.login {
+		input[type="text"], input[type="password"], input[type="tel"], input[type="email"] {
+			height: 77px;
+			letter-spacing: 1px;
+            font-size: 22px;
+		}
+	}
+
+	&.personal-information {
+		max-width: 991px;
+		.personal-info, .billing-info {
+			.title {
+				font-size: 30px;
+				margin-bottom: 60px;
+			}
+
+			fieldset {
+				label {
+					margin-bottom: 10px;
+				}
+
+				input[type="text"] {
+					height: 70px;
+					font-size: 22px;
+				}
+
+				.dropdown {
+					height: 70px;
+
+					.option {
+						padding: 5px 0;
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.personal-info {
+			margin-top: 0;
+			.title {
+				margin-top: 0;
+			}
+		}
+
+		.billing-info {
+			fieldset {
+				.checkbox {
+					.label {
+						margin-left: 31px;
+					}
+				}
+				&.center.full {
+					margin-bottom: 40px;
+				}
+
+				.dropdown {
+					font-size: 22px;
+				}
+			}
+		}
+
+		.billing-info, .membership-agreement {
+			.title {
+				font-size: 30px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+}

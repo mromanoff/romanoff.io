@@ -1,0 +1,204 @@
+// TODO: KSS
+
+.rich-content {
+
+    //Don't add any styles here. This class is used by a lot of modules
+
+    header {
+        background: transparent;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+        min-height: 300px;
+
+        // Rich Content with background image
+        //
+        // Styleguide 5.0.2
+        img {
+            display: block;
+        }
+
+        .top-title {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: -122px;
+        }
+
+        // Rich Content Title
+        //
+        // .black               - black color font
+        //
+        // Styleguide 5.0
+        h2 {
+            display: table;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+
+            .header-button {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    .caption {
+        @include small-padding;
+        padding: 0;
+        padding-bottom: 20px;
+
+        p {
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            line-height: 1.6;
+            margin: 0 0 2em;
+            text-align: center;
+        }
+
+        nav.buttons {
+            a {
+                float: none;
+                width: auto;
+            }
+        }
+    }
+
+    &.fixed {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        //This prevents from the element blocking the slider.
+        //For IE we're using data-component="forwardevent" to forward click events.
+        pointer-events: none;
+
+        header {
+            background: transparent;
+            height: 100%;
+        }
+    }
+
+    &.hide-on-swipe {
+        @include transition(opacity 0.5s ease);
+
+        &.faded-out {
+            opacity: 0;
+        }
+    }
+}
+
+.rich-content-title {
+    @include translateZ(0);
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 1;
+    margin: 0 auto;
+    min-height: 125px;
+    padding: 15px 20px;
+    text-align: center;
+    width: 220px;
+
+    span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+
+        & > span {
+            display: block;
+        }
+    }
+
+    // Rich Content subtitle or description
+    //
+    // Styleguide 5.0.1
+    small {
+        display: block;
+        font-size: 0.4em;
+        font-weight: bold;
+        margin: 10px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.first-line {
+            margin-top: 10px;
+            text-transform: lowercase;
+        }
+    }
+
+    a{
+      color: white;
+      display: block;
+      font-size: 0.4em;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+}
+
+.rich-content.black {
+    .rich-content-title {
+        color: #080808;
+        border-color: #080808;
+    }
+}
+
+.rich-content-video {
+    position: relative;
+    overflow: hidden;
+
+    header {
+        background: #000;
+        min-height: 300px;
+        z-index: 2;
+
+        h2 {
+            min-height: 180px;
+
+            .icon-play {
+                display: inline-block;
+                margin: 0 7px 0 0;
+                position: relative;
+                top: 2px;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .video-container {
+        z-index: 1;
+    }
+
+    .pointer-events-none {
+        pointer-events: none;
+    }
+
+}
+
+.page.image {
+    .rich-content.no-absolute {
+        position: static;
+        width: auto;
+
+        &.paragraph {
+            padding: 0 5%;
+        }
+
+        .title, p {
+            color: #000;
+        }
+    }
+}

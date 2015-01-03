@@ -1,0 +1,173 @@
+.page.step1, .page.step2, .page.step3 {
+    &.step1, &.step2, &.step3 {
+        .rich-content {
+            header {
+                
+            }
+        }
+    }
+    .rich-content {
+        header {
+            padding-top: 60px;
+            min-height: 145px;
+
+            h2 {
+                &.rich-content-title {
+                    width: 600px;
+                }
+                
+                span {
+                    > span {
+                        font-size: 45px;
+                    }
+
+                    small {
+                        font-size: 14px;
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+.page.step1 {
+    .select-wrapper {
+        font-size: 40px;
+        padding-bottom: 4px;
+
+        .option {
+            letter-spacing: 5px;
+        }
+    }
+
+    .tpl-ctacallout {
+        nav {
+            padding: 0;
+
+            a.button.box {
+                margin-top: 40px;
+                max-width: 475px;
+            }
+        }
+    }
+}
+
+.page.step2 {
+    .subtitle-module {
+        margin-bottom: 24px;
+
+        a {
+            font-size: 12px;
+        }
+    }
+
+    .membership-list {
+        .membership-tier {
+            h3 {
+                max-width: 322px;
+            }
+            .middle-wrapper {
+                .club-name {
+                    font-size: 40px;
+
+                    small {
+                        letter-spacing: 4px;
+                    }
+                }
+                .description {
+                    font-size: 12px;
+                }
+            }
+            hr {
+                margin: 35px 0;
+            }
+            .membership-price {
+                font-size: 12px;
+                strong {
+                    font-size: 28px;
+                }
+            }
+
+            .total {
+                margin: 50px auto;
+            }
+        }
+    }
+}
+
+.page.step3 {
+    .membership-agreement {
+        p {
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            padding: 0 10%;
+        }
+
+        .agreement-checkboxes {
+            fieldset {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    nav.button-container {
+        margin-top: 0;
+        padding: 0;
+
+        .button.box {
+            padding: 2.1em 13em;
+        }
+    }
+
+    form.personal-information {
+        .personal-info {
+            fieldset {
+                input[type="text"] {
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+
+    .membership-total {
+        small {
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+        }
+
+        .col {
+            padding: 70px 50px;
+        }
+
+        h3 {
+            font-size: 40px;
+            font-weight: 200;
+            max-width: 400px;
+            margin-bottom: 20px;
+            small {
+                margin-bottom: 0;
+            }
+
+            .cta {
+                font-size: 12px;
+            }
+        }
+
+        .cta {
+            font-size: 11px;
+            margin-bottom: 50px;
+        }
+
+        .club-info {
+            margin-top: 0;
+        }
+
+        .total {
+            margin-bottom: 0;
+            .item-due {
+                font-size: 14px;
+            }            
+        }
+
+    }
+}

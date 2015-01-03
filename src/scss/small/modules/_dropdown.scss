@@ -1,0 +1,33 @@
+.dropdown-component {
+    border-bottom: 1px solid #b3b3b3;
+    display: inline-block;
+    padding: 3px 20px 3px 3px;
+    position: relative;
+
+    &:after {
+        border-bottom: 1px solid #666;
+        border-right: 1px solid #666;
+        content: "";
+        display: block;
+        height: 7px;
+        position: absolute;
+        right: 0;
+        top: 13px;
+        width: 7px;
+        @include rotate(45deg);
+    }
+
+    &.expanded {
+        li {
+            display: block;
+        }
+    }
+
+    li {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

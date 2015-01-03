@@ -1,0 +1,54 @@
+.search-menu {
+	height: auto;
+	padding: 15px 0 20px;
+	.search-container {
+		display: block;
+		border-bottom: 1px solid #404040;
+		margin: 0 auto 30px;
+		width: 262px;
+
+		.search-field {
+			padding: 0;
+
+			fieldset {
+				margin: 0;
+				width: 262px;
+
+				span {
+					padding: 5px 0;
+				}
+
+				input {
+					font-size: 21px;
+					width: 244px;
+					height: 30px;
+					padding: 5px 10px;
+				}
+			}
+		}
+	}
+
+	ul {
+		display: block;
+		margin: 0 auto;
+		width: 590px;
+
+		li {
+			display: inline-block;
+			float: none;
+			width: auto;
+
+			a {
+				padding: 0 18px;
+
+				span {
+					font-size: 11px;
+
+					&:before {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}

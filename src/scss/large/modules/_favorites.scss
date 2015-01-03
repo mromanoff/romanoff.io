@@ -1,0 +1,115 @@
+.favorites {
+
+	.header-container {
+		padding: 54px 100px;
+
+		h1 {
+			font-size: 45px;
+			letter-spacing: 10px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 12px;
+		}
+	}
+
+	.favorites-filter-wrapper {
+		max-width: 1200px;
+
+		.favorite-filter-module {
+			padding: 63px 28px;
+			min-width: 27%;
+			min-height: 382px;
+
+			.rounded {
+				@include border-radius(60px);
+				width: 102px;
+				height: 102px;
+				margin: 0 auto 29px;
+
+				> span {
+					font-size: 33px;
+					padding: 36px 0;
+				}
+			}
+
+			.autocomplete-field {
+				padding: 12px 20px 0px 0px;
+				width: 233px;
+
+				input[type="text"] {
+					font-size: 15px;
+					font-style: italic;
+					margin-left: 37px;
+					margin-bottom: 12px;
+					width: 200px;
+				}
+
+				.add-filter {
+					font-size: 26px;
+					right: 23px;
+					margin-top: -16px;
+				}
+
+				.close {
+					right: 24px;
+					top: 18px;
+				}
+
+				&.selected {
+					span {
+						&:first-child {
+							left: 12px;
+							top: 13px;
+							font-size: 16px;
+						}
+					}
+				}
+			}
+
+			.favorites-added {
+				margin-top: 13px;
+
+				li {
+					line-height: 27px;
+					font-size: 11px;
+				}
+			}
+
+			.underlined-link {
+				font-size: 10px;
+				font-weight: 700;
+				margin-top: 16px;
+			}
+		}
+
+		.favorite-wrapper {
+			&.edit-mode-container {
+				top: 27px;
+				min-width: 17%;
+				padding: 30px 60px 36px;
+
+				h3 {
+					font-size: 16px;
+					font-style: italic;
+				}
+
+				.rounded {
+					margin-bottom: 47px;
+				}
+
+				.favorites-added {
+					margin: 25px 0 55px;
+				}
+			}
+		}
+
+	}
+
+	// Autocomplete Arrows
+    ul.autocompleteResults {
+    	top: 46px;
+    	width: 100%;
+    }
+}

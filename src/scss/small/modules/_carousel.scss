@@ -1,0 +1,360 @@
+@import "vendor/_owlcarousel";
+
+.carousel {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);  // remove orange highlight on swipe for old android phones
+    outline: none; // remove orange outline on swipe for old android phones
+
+    &:focus{
+        outline: none;
+    }
+
+    &.home-main-hero {
+      background-color: #000;
+    }
+
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+
+    header {
+        overflow: hidden;
+    }
+
+    .owl-carousel {
+        overflow: hidden;
+    }
+
+    .swipe-guide {
+        left: 50%;
+        margin: 0 0 0 -100px;
+        position: absolute;
+        text-align: center;
+        top: 48%;
+        width: 200px;
+    }
+
+    &.image-carousel, &.tabbed-carousel {
+        .swipe-guide {
+            top: auto;
+            bottom: 12%;
+        }
+    }
+
+    // Tabbed Carousel Navigation
+    &.tabbed-carousel {
+        nav {
+            position: relative;
+            text-align: center;
+            .caret {
+                z-index: 100;
+                background: #fff;
+                border-bottom: 1px solid #080808;
+                border-right: 1px solid #080808;
+                content: "";
+                display: block;
+                height: 18px;
+                left: 50%;
+                margin: -9px 0 0 -18px;
+                position: absolute;
+                top: 100%;
+                width: 18px;
+                @include transform(rotate(45deg));
+                @include transition(left 0.5s);
+            }
+            a {
+                @include inline-block;
+                margin: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #cacaca;
+                max-width: 120px;
+                font-size: 14px;
+                line-height: 1.1;
+
+                &.selected {
+                    color: #080808;
+                }
+            }
+        }
+    }
+
+    // Content Carousel Slide
+    .content-slider-item {
+        header {
+            min-height: 250px;
+        }
+
+        .caption {
+            @include small-padding;
+        }
+
+        .content-title {
+            text-align: center;
+            font-size: 14px;
+            margin: 1.5em 0 1em;
+        }
+
+        p {
+            @include small-copy;
+            margin: 0 10px;
+            text-align: center;
+        }
+    }
+
+    .icon-arrow-left, .icon-arrow-right{
+        display: none;
+    }
+}
+
+.tabbed-carousel-container {
+    .paragraph p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 10px auto;
+        text-align: center;
+        margin-bottom: $section-margin + $section-padding;
+    }
+}
+
+/* Swipe Guide */
+.swipe-guide {
+    @include translateZ(0);
+    @include small-label;
+    font-size: 10px;
+    color: #fff;
+
+    &.black {
+        color: #080808;
+        .icon-swipe-left, .icon-swipe-right {
+            font-size: 6px;
+            color: #080808;
+            @include opacity(0.6);
+        }
+    }
+
+    .icon-swipe-left, .icon-swipe-right {
+        font-size: 6px;
+        color: #fff;
+        @include opacity(0.6);
+    }
+}
+
+.black .swipe-guide {
+    color: #080808;
+
+    .icon-swipe-left, .icon-swipe-right {
+        color: #080808;
+        @include opacity(0.6);
+    }
+}
+
+/* Styling Pagination*/
+.pagination {
+    .owl-theme .owl-controls {
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        margin-top: -20px;
+        text-align: center;
+        z-index: 100;
+    }
+
+    .owl-theme .owl-controls .owl-page {
+        display: inline-block;
+        // zoom: 1;
+        // *display: inline;/*IE7 life-saver */
+    }
+    .owl-theme .owl-controls .owl-page span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin: 2px 4px;
+        // filter: Alpha(Opacity=50);/*IE7 fix*/
+        opacity: 0.5;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        @include border-radius(20px);
+        background: #fff;
+        border: 1px solid #959595;
+    }
+
+    .owl-theme .owl-controls .owl-page.active span,
+    .owl-theme .owl-controls.clickable .owl-page:hover span {
+        // filter: Alpha(Opacity=100);/*IE7 fix*/
+        opacity: 1;
+    }
+}
+
+.cards-carousel {
+  position: relative;
+  color: #000;
+  text-align: center;
+  min-height: 150px;
+  
+
+
+  .icon-left-arrow, .icon-right-arrow {
+    position: absolute;
+    top: 44%;
+    font-size: 30px;
+    text-decoration: none;
+    display: none;
+  }
+
+  .icon-left-arrow { left: 4%; }
+  .icon-right-arrow { right: 4%; }
+
+  .h1 {
+    font-size: 35px;
+    font-weight: 200;
+    margin-bottom: 16px;
+  }
+
+  .h2 {
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 11px;  // 11px for my inventory
+  }
+
+  .h3 {
+    font-size: 14px;
+  }
+
+  .auto-renew-info {
+      text-transform: uppercase;
+      a {
+          text-transform: uppercase;
+          text-decoration: underline;
+      }
+
+      strong {
+          display: inline;
+      }
+  }
+
+  // used to keep arrows vertically aligned in "my inventory" and "my trainer" carousels
+  .carousel-container {
+    position: relative;
+  }
+
+  .owl-carousel {
+    width: 94%;
+    //max-width: 843px;
+    margin: 0 auto;
+
+    .item {
+      border: #fefefe 1px solid;
+      color: #000;
+      border: #ccc 1px solid;
+      margin: 0 10%; // 10.8
+      font: 100%/1.3 "Graphik Web", sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+
+      .circle {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 500px;
+        border-top-left-radius: 500px;
+        border-top-right-radius: 500px;
+        border-bottom-left-radius: 500px;
+        border-bottom-right-radius: 500px;
+        margin: 30px auto 30px auto;
+        text-align: center;
+        padding-bottom: 0;  // RESET
+
+        span {
+          font-size: 13px;
+          display: block;
+          margin-top: 12px;
+          small{
+            display: block;
+            font-size: 11px;
+          }
+        }
+
+        i {
+          font-size: 38px;
+          line-height: 36px;
+          display: block;
+        }
+
+        strong {
+          font-weight: bold;
+          display: block;
+        }
+      }
+
+
+
+      p {
+        line-height: 21px;
+        max-width: 80%;
+        margin: 0 auto 16px auto;
+
+        span {
+          display: block;
+        }
+      }
+
+      a {
+        color: #000;
+      }
+
+      ul {
+
+        &.inline-list {
+          li {
+            display: inline;
+
+            a { display: inline-block; }
+          }
+        }
+
+        li {
+          margin-bottom: 12px;
+          display: block;
+
+          span {
+            font-size: 12px;
+            display: inline-block;
+            margin-right: 3px;
+
+            &.icon-rotate {
+              font-size: 18px;
+            }
+
+            &.icon-envelope {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .jump-links {
+        overflow: hidden;
+        margin-bottom: 25px;
+
+        .align-left { float: left; }
+        .align-right { float: right; }
+      }
+
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+
+  &.single-item {
+
+    .item {
+      border: none;
+      padding: 0;
+      max-width: none;
+    }
+  }
+}
+
+

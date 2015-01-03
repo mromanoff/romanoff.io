@@ -1,0 +1,30 @@
+.offer-hero {
+  padding: 90px 40px 70px 40px;
+  color: #fff;
+
+  .h1, h1 {
+    font-size: 45px;
+  }
+
+  p {
+    max-width: 40%;
+    margin-bottom: 4.4%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: none;
+  }
+
+  section {
+    background: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .sub-links {
+      margin-top: 8px;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

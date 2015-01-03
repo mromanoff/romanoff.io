@@ -1,0 +1,33 @@
+.page.schedule {
+
+  .appointments-list {
+
+    .day-dates {
+      li {
+        width: 14.285%;
+        display: block;
+      }
+    }
+
+    .appointments-container {
+      li {
+          width: 14.285%;
+
+          &.empty {
+            display: block;
+          }
+
+          &:nth-child(7n+5) {
+            display: block;
+          }
+          &:nth-child(7n+6) {
+            display: block;
+          }
+          &:nth-child(7n+7) {
+            display: block;
+          }
+        }
+    }
+
+  }
+}

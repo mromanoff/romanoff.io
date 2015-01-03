@@ -1,0 +1,257 @@
+.page.step2 + footer {
+	margin-top : 0;
+}
+
+.page.step2{
+	overflow-x: hidden;
+}
+
+.visitus{
+  .module{
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+.visitus + footer{
+  margin-top: 0;
+}
+
+#leads {
+	background: #000;
+	color: #fff;
+
+	#leads-thanks,
+	#leads-error {
+		padding-top: 80px;
+		width: 640px;
+		margin: 0 auto;
+		text-transform: uppercase;
+		text-align: center;
+
+		.rich-content-title {
+			width: auto;
+			height: auto;
+			min-height: 1%;
+			line-height: 60px;
+			font-size: 50px;
+			padding: 30px 20px;
+		}
+
+		h4 {
+			width: 400px;
+			margin: 0 auto;
+			margin-top: 60px;
+		}
+	}
+
+	#error {
+		padding: 20px;
+		color: red;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.range-selection {
+		width: 86%;
+
+		.answers {
+			.paragraph {
+				padding: 0;
+
+				h6 {
+					display: none;
+				}
+			}
+
+			p {
+				letter-spacing: 0;
+				text-transform: none;
+				font-size: 14px;
+				height: 46px;
+				text-align: left;
+				margin: 0;
+				max-width: 100%;
+			}
+		}
+	}
+
+	&.step2 {
+
+        #other-heading{
+          text-align: center;
+          font-size: 24px;
+          font-weight: normal;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        #other {
+          width: 90%;
+          height: 160px;
+          text-transform: uppercase;
+          font-family: 'Graphik Web', sans-serif;
+          font-size: 16px;
+          text-align: center;
+          padding: 15px 20px;
+          resize: none;
+          box-sizing: border-box;
+          border: 1px solid #000;
+          background: #1a1a1a;
+          color: #fff;
+        }
+
+        #leads-form {
+			padding-top: 60px;
+		}
+		
+		.row {
+			padding: 20px 0;
+			border: none;
+		}
+
+		.question-heading {
+			float: left;
+			width: 42%;
+
+			h3 {
+				margin: 0 30px 10px;
+				text-align: left;
+				font-size: 25px;
+				letter-spacing: 0;
+			}
+
+			h4 {
+				margin-left: 30px;
+			}
+		}
+
+		.answer-options {
+			float: right;
+			width: 50%;
+			text-transform: uppercase;
+
+			label {
+				display: inline-block;
+				margin-bottom: 25px;
+				font-weight: 500;
+			}
+
+			.col-1 {
+				width: 218px;
+				margin-right: 5px;
+			}
+
+			.col-2 {
+				width: 205px;
+			}
+		}
+
+		hr {
+			border: none;
+			border-bottom: 1px solid #CCC;
+		}
+	}
+
+    &.step1 {
+
+      #other-heading{
+        margin-left: 0;
+		width: 100%;
+		text-align: center;
+        font-size: 24px;
+        font-weight: normal;
+      }
+	  	  
+      #other {
+        width: 480px;
+        height: 160px;
+        text-transform: uppercase;
+        font-family: 'Graphik Web', sans-serif;
+        font-size: 16px;
+        text-align: center;
+        padding: 15px 20px;
+        resize: none;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      .leads-wrapper{
+        max-width: 740px;
+        padding: 2%;
+        margin: 0 auto;
+
+        .content-wrapper{
+			
+			.checkbox {
+				color: #fff;
+			}
+
+          div{
+            margin: 0;
+
+            .row {
+              border: 0;
+              margin: 50px auto;
+              width: 90%;
+
+              .col-1-2{
+                width: 50%;
+                text-align: left;
+                margin: 20px 0;
+              }
+            }
+
+            > span {
+              display: inline-block;
+              vertical-align: middle;
+              margin: 10px 0;
+            }
+
+            small {
+              font-size: 0.5em;
+            }
+
+            small.small {
+              font-weight: normal;
+              color: #989797;
+              margin: 0;
+            }
+
+            input[type='text'],
+            input[type='email'],
+            input[type='tel']{
+              width: 350px;
+              margin: 10px auto;
+              display: -moz-inline-stack;
+              display: inline-block;
+              vertical-align: middle;
+              zoom: 1;
+              background: #1a1a1a;
+              color: #fff;
+              border: none;
+              font-size: 30px;
+              min-width: 0;
+              padding: 10px 20px;
+              text-align: left;
+
+              &:last-child{
+                margin-left: 10px;
+              }
+            }
+
+            input[type='checkbox']{
+              display: none;
+            }
+          }
+
+          div, input {
+            font-size: 30px;
+          }
+
+        }
+      }
+    }
+}

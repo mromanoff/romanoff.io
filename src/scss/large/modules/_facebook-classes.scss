@@ -1,0 +1,52 @@
+.facebook-friends-classes {
+
+	.class-information {
+		ul {
+			line-height: 18px;
+		}
+	}
+
+	.connect-fb {
+		
+		.post-info-container {
+			.posts-info {
+				h3 {
+					font-size: 22px;
+					margin-bottom: 19px;
+				}
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.two-part-module {
+		h3 {
+			font-size: 19px;
+		}
+		.left-main-container {
+			width: 66.3%;
+			.left-container {
+				p {
+					margin-top: 29px;
+				}
+			}
+		}
+		.right-main-container {
+			width: 33%;
+		}
+	}
+
+	// One friend Classes specific style
+	.one-friend-class {
+		.left-main-container {
+			width: 33%;
+		}
+		.right-main-container {
+			width: 66.9%;
+		}
+	}
+
+}

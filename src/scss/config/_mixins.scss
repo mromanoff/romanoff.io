@@ -1,0 +1,109 @@
+// Small padding (used for buttons and consistency)
+//
+// Styleguide 4.2.1
+@mixin small-padding {
+    padding: 0 20px;
+}
+
+// Styleguide 4.2.2
+@mixin large-padding {
+    padding: 0 40px;
+}
+
+// Styleguide 4.2.3
+@mixin small-label {
+    position: relative;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+// Styleguide 4.2.4
+@mixin medium-label {
+    @include small-label;
+    font-size: 14px;
+}
+
+// Border for boxes.
+//
+// Styleguide 4.2.5
+@mixin box-button {
+    border-width: 1px;
+    border-style: solid;
+    padding: 1.2em 1.5em;
+}
+
+// Smaller text size
+//
+// Styleguide 4.2.6
+@mixin small-copy {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+// Larger text size
+//
+// Styleguide 4.2.7
+@mixin large-copy {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin: 0 0 3em;
+}
+
+// Samsung S4 Exclusive Border Radius Mixin.
+//
+// $r - Radius size
+//
+// Styleguide 4.2.8
+@mixin border-radius ($r) {
+    border-top-left-radius: $r;
+    border-top-right-radius: $r;
+    border-bottom-left-radius: $r;
+    border-bottom-right-radius: $r;
+    border-radius: $r;
+}
+
+// Add vendor prefix
+//
+// $prop - property to add vendor
+// $val - value for the property
+@mixin prefix ($prop, $val) {
+    -webkit-#{$prop}:$val;
+       -moz-#{$prop}:$val;
+        -ms-#{$prop}:$val;
+         -o-#{$prop}:$val;
+            #{$prop}:$val;
+}
+
+// Transform rotation
+//
+// $deg - Rotation degrees
+//
+@mixin css-rotate($deg) {
+    @include prefix(transform, rotate($deg));
+}
+
+@mixin css-translate($x, $y) {
+    @include prefix(transform, translate($x, $y));
+}
+
+@mixin css-transition($property, $duration, $ease) {
+    @include prefix(transition, $property $duration $ease);
+}
+
+// Clearfix
+@mixin clearfix {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+        *zoom:1;
+    }
+}

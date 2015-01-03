@@ -1,0 +1,48 @@
+.separator-title-container {
+	padding: 65px 0 !important;
+    padding-top: 25px;
+	position: relative;
+	margin: 0;
+	h3 {
+		font-size: 22px;
+		margin-bottom: 0;
+	}
+
+	.more-button-desktop {
+		display: block;
+		position: absolute;
+		z-index: 100;
+		width: 50px;
+		margin-left: -25px;
+		bottom: 16%;
+		left: 50%;
+		text-align: center;
+		color: #b2b2b2;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		@include transition(opacity 0.5s);
+
+		&.scrolling {
+		    opacity: 0;
+		}
+
+		&.hidden {
+		    opacity: 0;
+		}
+		span {
+			&:before {
+			    display: block;
+			    text-align: center;
+			    font-size: 32px;
+			    font-weight: 400;
+			}
+		}
+	}
+}
+
+.home-splash + .separator-title-container {
+    margin-top: -139px;
+    z-index: 300;
+    background: white;
+}

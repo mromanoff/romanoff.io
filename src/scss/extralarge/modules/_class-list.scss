@@ -1,0 +1,16 @@
+.classes-list {
+    .classes-day-container {
+        .classes-day:nth-of-type(5), .classes-day:nth-of-type(6), .classes-day:nth-of-type(7) {
+            display: block;
+        }
+    }
+	.day-dates {
+		li {
+			width: 14.285%;
+            display: block;
+		}
+	}
+	.classes-day {
+		width: 14.285%;
+	}
+}

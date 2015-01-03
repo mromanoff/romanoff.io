@@ -1,0 +1,68 @@
+.small-calendar {
+	width: 400px;
+	.calendar-box {
+		padding-top: 115px;
+	}	
+	.calendar-container {
+
+		.no-classes-overlay {
+			.message-main-container {
+				height: 511px;
+
+				.message-container {
+					padding: 0 40px;
+
+					h6 {
+						font-size: 14px;
+					}
+
+					p {
+						font-size: 24px;
+					}
+				}
+			}
+		}
+
+		table {
+			.day-detail-container {
+				border-bottom: 2px dotted #e0e0e0;
+
+				.day-left-container {
+					font-size: 16px;
+					padding: 24px 0;
+					width: 50px;
+				}
+
+				.classes-detail {
+					padding: 18px 33px;
+
+					ul {
+						margin-top: 20px;
+						
+						li {
+							font-size: 14px;
+
+							&.class-date-location {
+								font-size: 12px;
+								letter-spacing: 5px;
+							}
+
+							&.class-title {
+								font-weight: bold;
+
+								span {
+									margin-right: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.expand-collapse {
+		left: -32px;
+		padding: 19px 10px;
+	}
+}

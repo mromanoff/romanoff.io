@@ -1,0 +1,288 @@
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon.woff') format('woff'),
+        url('../fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*="icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Flat scalable icons.
+//
+// .icon-play          - Play arrow
+// .icon-menu          - Three bars icon
+// .icon-circle-cta    - Call To Action right arrow inside a circle
+// .icon-swipe-left    - Half arrow pointing left
+// .icon-swipe-right   - Half arrow pointing right
+// .icon-facebook      - Facebook logo
+// .icon-pinterest     - Pinterest logo
+// .icon-twitter       - Twitter logo
+// .icon-youtube       - YouTube logo
+// .icon-marker        - Filled marker
+// .icon-marker-dot    - Marker with a transparent disc inside
+// .icon-marker-o      - Marker with Equinox O letter
+// .icon-dropdown      - Dropdown caret
+// .icon-unlocked      - Open lock
+// .icon-locked        - Closed lock
+// .icon-close         - Cross
+// .icon-check         - Menu
+// .icon-time          - Clock icon
+// .icon-trainer       - Trainer person
+// .icon-status        - Bike icon
+// .icon-right-arrow   - Submenu arrow pointing right
+// .icon-left-arrow    - Submenu arrow pointing left
+// .icon-class-name    - Two trainer icon representing class
+// .icon-export        - Export icon
+// .icon-training      - Weight icon
+// .icon-workout       - Three bars icon
+// .icon-search        - Magnifying glass icon
+// .icon-intagram      - Instagram icon
+// .icon-calendar      - Calendar icon
+// .icon-expand-arrow  - Arrow icon
+// .icon-lock          - Larger lock icon
+// .icon-heart         - Heart icon
+// .icon-twirl         - Twirl representing an event category
+// .icon-qblog         - Q icon
+// .icon-bookmark      - Bookmark icon
+// .icon-print         - Printer icon
+// .icon-star-empty    - Empty star icon
+// .icon-expand        - Expand arrow
+// .icon-collapse      - Collapse arrow
+// .icon-qmag          - QMag logo icon
+// .icon-activity      - Three circles icon
+// .icon-thin-add      - Thin plus icon
+// .icon-fat-check     - Fat check icon
+// .icon-filters       - Filters icon
+// .icon-fat_search    - Fat magnifying glass icon
+//
+// Styleguide 4.1
+.icon-play {
+    border-left: 7px solid #fff;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+.icon-arrow-left:after{
+  content: "\e60b";
+ // @include rotate(90deg);
+  display: block;
+}
+
+.icon-arrow-right:after{
+  content: "\e60b";
+//  @include rotate(-90deg);
+  display: block;
+}
+
+//
+// REPLACE BELOW ONLY
+//
+
+
+
+.icon-fat_search:before {
+  content: "\e63d";
+}
+.icon-filters:before {
+  content: "\e63c";
+}
+.icon-chain:before {
+  content: "\e63a";
+}
+.icon-email:before {
+  content: "\e63b";
+}
+.icon-menu:before {
+  content: "\e600";
+}
+.icon-circle-cta:before {
+  content: "\e601";
+}
+.icon-swipe-left:before {
+  content: "\e603";
+}
+.icon-facebook:before {
+  content: "\e604";
+}
+.icon-pinterest:before {
+  content: "\e605";
+}
+.icon-twitter:before {
+  content: "\e606";
+}
+.icon-youtube:before {
+  content: "\e607";
+}
+.icon-marker:before {
+  content: "\e608";
+}
+.icon-marker-dot:before {
+  content: "\e609";
+}
+.icon-marker-o:before {
+  content: "\e60a";
+}
+.icon-dropdown:before {
+  content: "\e60b";
+}
+.icon-unlocked:before {
+  content: "\e60c";
+}
+.icon-close:before {
+  content: "\e60e";
+}
+.icon-check:before {
+  content: "\e60f";
+}
+.icon-swipe-right:before {
+  content: "\e602";
+}
+.icon-time:before {
+  content: "\e610";
+}
+.icon-right-arrow:before {
+  content: "\e613";
+}
+.icon-class-name:before {
+  content: "\e614";
+}
+.icon-export:before {
+  content: "\e615";
+}
+.icon-left-arrow:before {
+  content: "\e616";
+}
+.icon-workout:before {
+  content: "\e617";
+}
+.icon-search:before {
+  content: "\e618";
+}
+.icon-training:before {
+  content: "\e619";
+}
+.icon-instagram:before {
+  content: "\e61a";
+}
+.icon-collapse-arrow:before {
+  content: "\e61b";
+}
+.icon-calendar:before {
+  content: "\e61c";
+}
+.icon-star:before {
+  content: "\e61d";
+}
+.icon-bike-2:before {
+  content: "\e61e";
+}
+.icon-door:before {
+  content: "\e61f";
+}
+.icon-locked:before {
+  content: "\e60d";
+}
+.icon-lock:before {
+  content: "\e620";
+}
+.icon-twirl:before {
+  content: "\e621";
+}
+.icon-heart:before {
+  content: "\e622";
+}
+.icon-trainer:before {
+  content: "\e611";
+}
+.icon-close-2:before {
+  content: "\e623";
+}
+.icon-phone:before {
+  content: "\e624";
+}
+.icon-plus:before {
+  content: "\e625";
+}
+.icon-minus:before {
+  content: "\e626";
+}
+.icon-loop:before {
+  content: "\e629";
+}
+.icon-shuffle:before {
+  content: "\e62a";
+}
+.icon-retweet:before {
+  content: "\e62b";
+}
+.icon-rotate:before {
+  content: "\e62c";
+}
+.icon-rotate2:before {
+  content: "\e62d";
+}
+.icon-reply:before {
+  content: "\e62e";
+}
+.icon-forward:before {
+  content: "\e62f";
+}
+.icon-envelope:before {
+  content: "\e627";
+}
+.icon-iphone:before {
+  content: "\e628";
+}
+.icon-bookmark:before {
+  content: "\e630";
+}
+.icon-print:before {
+  content: "\e632";
+}
+.icon-qblog:before {
+  content: "\e636";
+}
+.icon-status:before {
+  content: "\e612";
+}
+.icon-star-empty:before {
+  content: "\e633";
+}
+.icon-expand-arrow:before {
+  content: "\e634";
+}
+.icon-schedule:before {
+  content: "\e635";
+}
+.icon-qmag:before {
+  content: "\e636";
+}
+.icon-activity:before {
+  content: "\e637";
+}
+.icon-fat-check:before {
+  content: "\e638";
+}
+.icon-thin-add:before {
+  content: "\e639";
+}

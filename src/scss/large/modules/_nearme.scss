@@ -1,0 +1,19 @@
+.nearme {
+    .left {
+        padding-top: $section-margin+25;
+        padding-bottom: $section-margin+30;
+
+        h4 {
+            letter-spacing: 5px;
+            margin: 0 0 45px;
+        }
+
+        p {
+        	margin-bottom: 30px;
+
+        	&:last-child {
+        		margin-bottom: 70px;
+        	}
+        }
+    }
+}
