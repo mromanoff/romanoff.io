@@ -75,10 +75,6 @@ h5 {
   text-transform: uppercase;
 }
 
-/*
-Sixth level header.
-Used at: paragraph's title in two column carousels.
-*/
 h6 {
   font-size: 14px;
   font-weight: bold;
@@ -144,4 +140,14 @@ picture img {
 img.full-width{
   width: 100%;
   height: auto;
+}
+
+#nprogress {
+  .bar {
+    background-color: $brand-danger;
+  }
+
+  .peg {
+    box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  }
 }
