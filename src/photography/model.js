@@ -9,20 +9,16 @@ module.exports = Model.extend({
   urlRoot: '/api/photography',
 
   defaults: {
-    active: false
-  },
-
-  validate: function (attrs) {
-    var errors = [];
-
-    if (attrs.name === '') {
-      errors.push('Missing "name" field');
-    }
-
-    if (attrs.hex === '') {
-      errors.push('Missing "hex" field');
-    }
-
-    return errors.length > 0 ? errors : undefined;
+    //userId: userId,
+    //feature: 'user',
+    //sort: 'created_at',
+    //sort_direction: 'desc', // 'asc'
+    //page: 1,
+    //rpp: 20, //— Results to return. Can not be over 100, default 20.
+    //photos: null,
+    //totalPages: null,
+    //$container: $('#container'),
+    //$pager: $('.pager'),
+    //$sort: $('#sorts')
   }
 });

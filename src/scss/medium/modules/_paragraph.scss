@@ -1,58 +1,23 @@
+//TODO ported from old size using Susy 1 convert this to suzy 2
+//.paragraph {
+//  padding:0 $section-side-padding;
+//
+//  @include at-breakpoint($medium-breakpoint 12) {
+//    li {
+//      @include span-columns(6); // each gallery-image is 3 of 9 cols.
+//      &:nth-child(2n) { @include omega; } // every third image completes a row.
+//    }
+//  }
+//}
+
+
 .paragraph {
     padding:0 $section-side-padding;
 
-    img {
-        width: 130px;
-        height: 130px;
-        @include border-radius(300px);
-    }
     p {
         letter-spacing: 2px;
         margin: 0 auto;
         max-width: 90%;
         font-size: 14px;
-    }
-}
-
-// Only on the top paragraph.
-.page .module:first-child + .tpl-textcallout {
-    .paragraph p {
-        max-width: 80%;
-    }
-}
-
-// Block Paragraph
-.paragraph-block {
-    position: relative;
-    padding-top: 0;
-    margin-top: $section-padding + $section-margin;
-
-    h2 {
-        @include box-sizing(border-box);
-        max-width: none;
-        margin: 0 auto;
-        padding: 30px 20%;
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-    }
-
-
-    &.image {
-        h2 {
-            position: relative;
-            z-index: 1;
-            border: none;
-        }
-        .image-wrapper {
-            position: absolute;
-            top:0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
     }
 }

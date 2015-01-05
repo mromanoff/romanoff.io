@@ -23,21 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-play {
-  border-left: 7px solid #fff;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  display: inline-block;
-  height: 0;
-  overflow: hidden;
-  width: 0;
-}
-
-
 //
 // REPLACE BELOW ONLY
 //
-
 .icon-facebook:before {
   content: "\e604";
 }

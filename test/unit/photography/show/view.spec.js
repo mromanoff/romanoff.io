@@ -18,11 +18,11 @@ describe('photography/show/view', function() {
       this.itemView.initialize({ model: this.model });
     });
 
-    it('should attach the model', function() {
+    xit('should attach the model', function() {
       expect(this.itemView).to.have.ownProperty('model', this.model);
     });
 
-    it('should cleanup the model', function() {
+    xit('should cleanup the model', function() {
       expect(this.model.cleanup).to.have.been.called;
     });
   });

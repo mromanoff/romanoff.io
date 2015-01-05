@@ -1,6 +1,5 @@
 var _ = require('lodash');
 var $ = require('jquery');
-var Backbone = require('backbone');
 var View = require('src/common/view');
 var template = require('./template.hbs');
 
@@ -27,11 +26,11 @@ module.exports = View.extend({
     closeIcon: '.icon-close',
     menu: '.menu',
     nav: 'nav.main'
-
   },
 
   initialize: function () {
     _.bindAll(this, 'navTranslucent');
+    this.$body = $(document.body);
     $(window).scroll(this.navTranslucent);
   },
 
@@ -42,7 +41,7 @@ module.exports = View.extend({
 
   // On Scroll, make the nav translucent.
   navTranslucent: function () {
-    if ($(window).scrollTop() > this.ui.nav.height()) {
+    if (this.$body.scrollTop() > this.ui.nav.height()) {
       this.ui.nav.addClass('active');
     } else {
       this.ui.nav.removeClass('active');
@@ -55,13 +54,9 @@ module.exports = View.extend({
     this.ui.closeIcon.toggleClass('is-hidden');
     this.ui.nav.addClass('open-links');
 
-    $('body').on('touchmove', function (e) {
+    this.$body.on('touchmove', function (e) {
       e.preventDefault();
     });
-
-    setTimeout(function () {
-      window.scrollTo(1, 1);
-    }, 5);
   },
 
   closeMenu: function (e) {
@@ -70,72 +65,6 @@ module.exports = View.extend({
     this.ui.menu.toggleClass('is-hidden');
     this.ui.nav.removeClass('open-links');
 
-    $('body').off('touchmove');
-  },
-
-  onCollapseShow: function () {
-    this.listenToOnce(Backbone.history, 'route', function () {
-      this.ui.collapse.collapse('hide');
-    });
+    this.$body.off('touchmove');
   }
 });
-
-//
-//
-//define(function (require, exports, module) {
-//  'use strict';
-//
-//  var $ = require('jquery');
-//
-//  module.exports = function ($el) {
-//
-//    $el.find('.menu').on('click', function (e) {
-//      e.preventDefault();
-//
-//      $(this).toggleClass('is-hidden');
-//      $('nav.main-transparent .icon-close').toggleClass('is-hidden');
-//
-//      $('nav.main').addClass('open-links');
-//
-//      $('body').on('touchmove', function (e) {
-//        e.preventDefault();
-//      });
-//
-//      // Fix #DPLAT-695
-//      setTimeout(function () {
-//        window.scrollTo(1, 1);
-//      }, 5);
-//    });
-
-
-//    $el.find('.icon-close').on('click', function (e) {
-//      e.preventDefault();
-//
-//      $(this).toggleClass('is-hidden');
-//      $('nav.main-transparent .menu').toggleClass('is-hidden');
-//
-//      $('nav.main').removeClass('open-links');
-//
-//      $('body').off('touchmove');
-//    });
-//
-//    // On Scroll, make the nav translucent.
-//    $(window).on('scroll', function () {
-//      if ($(window).scrollTop() > $('nav.main').height()) {
-//        $('nav.main').addClass('active');
-//      } else {
-//        $('nav.main').removeClass('active');
-//      }
-//    });
-//
-//    // fix for ipad position fixed on keyboard focus
-//    $('input').on('focus', function () {
-//      $('nav.main').css({position: 'absolute'});
-//    });
-//
-//    $('input').on('blur', function () {
-//      $('nav.main').css({position: 'fixed'});
-//    });
-//
-//  };
-//});

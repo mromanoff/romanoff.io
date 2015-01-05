@@ -4,7 +4,7 @@
     }
 
     ul {
-        @include pie-clearfix;
+        @include clearfix;
         max-width: 825px;
         margin: 0 auto;
     }
@@ -57,7 +57,7 @@
                 height: auto;
                 margin: 0 auto;
                 border: none;
-				
+
             }
 			.upcomming{
 				max-width: 100em;
@@ -73,7 +73,7 @@
                 bottom: 0;
                 height: 55%;
                 width: 84%;
-                @include rgba-background-inline(rgba(255,255,255,1));
+                //@include rgba-background-inline(rgba(255,255,255,1));
 
                 .title {
                     margin: 10px auto;
@@ -110,7 +110,7 @@
     .two-cols {
         border-top: 1px solid #b4b4b4;
         border-bottom: 1px solid #b4b4b4;
-        @include pie-clearfix;
+        @include clearfix;
 
         img {
             float: left;

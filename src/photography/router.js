@@ -18,14 +18,20 @@ module.exports = Router.extend({
 
   onBeforeEnter: function () {
     Radio.command('header', 'activate', {path: 'photography'});
+    Radio.command('footer', 'activate', {path: 'photography'});
   },
 
   routes: {
     'photography': 'index',
-    'colors/:id': 'show'
+    'photography/:id': 'show'
   },
 
-  index: function () {
+  index: function (params) {
+    console.info('phography router', params);
+
+    //this.collection.sortBy = params && parseFloat(params.sortBy) || 'created_at';
+    this.collection.page = params && parseFloat(params.page) || 1;
+
     return new IndexRoute({
       container: this.container,
       collection: this.collection
@@ -38,5 +44,4 @@ module.exports = Router.extend({
       collection: this.collection
     });
   }
-
  });

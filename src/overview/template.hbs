@@ -1,16 +1,51 @@
 <!-- using <picture> allows for the use of media queries -->
-<picture>
+<!--<picture>-->
     <!-- Add Fallback for IE9 -->
     <!--[if IE 9]>
-  <video style="display: none;"><![endif]-->
-    <source srcset="/img/michael-1200.jpg" media="(min-width: 1920px)">
-    <source srcset="/img/michael-1200.jpg" media="(min-width: 1024px)">
-    <source srcset="/img/michael-800.jpg" media="(min-width: 768px)">
-    <source srcset="/img/michael-500.jpg" media="(min-width: 320px)">
+  <!--<video style="display: none;"><![endif]&ndash;&gt;-->
+    <!--<source srcset="/img/michael-1200.jpg" media="(min-width: 1920px)">-->
+    <!--<source srcset="/img/michael-1200.jpg" media="(min-width: 1024px)">-->
+    <!--<source srcset="/img/michael-800.jpg" media="(min-width: 768px)">-->
+    <!--<source srcset="/img/michael-500.jpg" media="(min-width: 320px)">-->
     <!--[if IE 9]></video><![endif]-->
     <!-- Add <img> fallback -->
-    <img srcset="/img/michael-500.jpg" alt="Michael Romanoff">
-</picture>
+    <!--<img srcset="/img/michael-500.jpg" alt="Michael Romanoff">-->
+<!--</picture>-->
+
+
+
+<div id="owl-demo" class="owl-carousel owl-theme">
+    <div class="item">
+        <!-- using <picture> allows for the use of media queries -->
+        <picture>
+            <!-- Add Fallback for IE9 -->
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="http://placehold.it/768x720/DB4105/FFF8E3&text=768w+720h" media="(max-width: 768px)">
+            <source srcset="http://placehold.it/1024x600/DB4105/FFF8E3&text=1280w+600h" media="(max-width: 1280px)">
+            <source srcset="http://placehold.it/1920x700/DB4105/FFF8E3&text=1920w+700h" media="(max-width: 1920px)">
+            <!--[if IE 9]></video><![endif]-->
+            <!-- Add <img> fallback -->
+            <img srcset="http://placehold.it/768x720/DB4105/FFF8E3&text=768w+720h+default" alt="Okgrafix.com">
+        </picture>
+    </div>
+
+
+
+    <div class="item">
+        <!-- using <picture> allows for the use of media queries -->
+        <picture>
+            <!-- Add Fallback for IE9 -->
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="http://placehold.it/768x720/33332D/FFF8E3&text=768w+720h" media="(max-width: 768px)">
+            <source srcset="http://placehold.it/1280x600/33332D/FFF8E3&text=1280w+600h" media="(max-width: 1280px)">
+            <source srcset="http://placehold.it/1920x700/33332D/FFF8E3&text=1920w+700h" media="(max-width: 1920px)">
+            <!--[if IE 9]></video><![endif]-->
+            <!-- Add <img> fallback -->
+            <img srcset="http://placehold.it/768x720/33332D/FFF8E3&text=768w+720h+default" alt="Okgrafix.com">
+        </picture>
+    </div>
+</div>
+
 
 <section class="module paragraph">
     <p>For 15 years I have used my knowledge of web design and development to create effective and easy to use

@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var $ = require('jquery');
 var CompositeView = require('src/common/composite-view');
 var Collection = require('src/common/collection');
 var ItemView = require('./item-view');
@@ -7,53 +8,39 @@ var template = require('./composite-template.hbs');
 module.exports = CompositeView.extend({
   template: template,
 
-  initialize: function(options) {
-    this.models = options.collection.models;
-    delete this.collection;
-    this.state.start = (options.page - 1) * this.state.limit;
+  initialize: function () {
+    console.log('this collection', this.collection);
+  },
+
+  ui: {
+    sortPictures: '.sortBy'
+  },
+
+  events: {
+    'click .sortBy a': 'sortPictures'
   },
 
   childView: ItemView,
   childViewContainer: 'ul.category',
 
-  collectionEvents: {
-    'change': 'render'
-  },
-
-  state: {
-    start: 0,
-    limit: 20
-  },
-
-  onBeforeRender: function() {
-    var filtered = _.chain(this.models)
-      .drop(this.state.start)
-      .take(this.state.limit)
-      .value();
-
-    this.collection = new Collection(filtered);
-  },
-
-  templateHelpers: function() {
-    var total   = Math.floor(this.models.length / this.state.limit) + 1;
-    var current = Math.floor(this.state.start / this.state.limit) + 1;
-
-    var pages = _.times(total, function(index) {
-      return {
-        current : index + 1 === current,
-        page    : index + 1
-      };
-    });
-
-    var prev = current - 1 > 0     ? current - 1 : false;
-    var next = current + 1 < total ? current + 1 : false;
+  templateHelpers: function () {
+    var pageCount = this.collection.pageCount;
+    var page = this.collection.page;
 
     return {
-      total   : total,
-      current : current,
-      pages   : pages,
-      prev    : prev,
-      next    : next
+      pagination: {
+        page: page,
+        pageCount: pageCount
+      }
     };
+  },
+
+  sortPictures: function (e) {
+    e.preventDefault();
+    console.log('sort clicked');
+    var sort = $(e.currentTarget).data('sort-name');
+    this.ui.sortPictures.find('li').removeClass('active');
+    this.ui.sortPictures.find('a[data-sort-name="' + sort + '"]').closest('li').addClass('active');
+    //TODO trigger route + keep page number
   }
 });

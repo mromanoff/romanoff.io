@@ -14,6 +14,7 @@ module.exports = Router.extend({
 
   onBeforeEnter: function() {
     Radio.command('header', 'activate', { path: '' });
+    Radio.command('footer', 'activate', { path: '' });
   },
 
   routes: {

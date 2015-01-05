@@ -1,5 +1,3 @@
-@import "compass/typography/text/replacement";
-
 $nav-height: 60px;
 
 nav.main {
@@ -37,7 +35,7 @@ nav.main {
 
     .member-dropdown {
         width: 150px;
-        
+
         &:before {
             right: 56px;
         }
@@ -48,5 +46,5 @@ nav.main {
             }
         }
     }
-    
+
 }

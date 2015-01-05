@@ -1,245 +1,119 @@
-@import "compass/typography/text/replacement";
-
 $nav-height: 130px;
 
 body.closed-nav {
-    nav.main {
-        @include transform(translate3d(0,-100%,0));
+  nav.main {
+    @include transform(translate3d(0,-100%,0));
 
-        .full-wrapper {
-            opacity: 0;
-        }
-
-        .login-tab {
-            top: 100%;
-            opacity: 1;
-        }
-    }
-}
-
-nav.main {
-    height: $nav-height;
-
-    &.open-links {
-        height: $nav-height;
-    }
-
-    .full-wrapper {
-        @include large-padding;
+    .full-wrApper {
+      opacity: 0;
     }
 
     .login-tab {
-        @include transition(all 0.3s);
-        position: absolute;
-        top: -100%;
-        right: 40px;
-        opacity: 0;
-        background: white;
-        padding: 4px 20px;
-        border: 1px solid #717374;
-        border-top: 0;
+      top: 100%;
+      opacity: 1;
+    }
+  }
+}
 
+nav.main {
+  height: $nav-height;
+
+  .full-wrApper {
+    @include large-padding;
+  }
+
+  .login-tab {
+    @include transition(all 0.3s);
+    position: absolute;
+    top: -100%;
+    right: 40px;
+    opacity: 0;
+    background: white;
+    padding: 4px 20px;
+    border: 1px solid #717374;
+    border-top: 0;
+
+    a {
+      color: #080808;
+      font-size: 0.75em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .logo {
+    float: none;
+    padding-top: 18px;
+    width: 226px;
+    height: 60px;
+  }
+
+  .links-wrApper {
+    position: static;
+    width: auto;
+    height: auto;
+
+    background: transparent;
+
+    margin: 0;
+  }
+
+  // Show the nav even if it was hidden on smaller sizes.
+  &.open-links {
+    .full-wrApper {
+      opacity: 1;
+    }
+  }
+
+  .main-links {
+    padding: 0;
+    margin-top: 6px;
+  }
+
+  .main-links, .secondary-links {
+    li {
+      @include inline-block;
+      text-align: left;
+      margin-bottom: 0;
+
+      a {
+        color: #7A7A7B;
+        font-size: 13px;
+        margin-right: 10px;
+        letter-spacing: 2.5px;
+        font-weight: bold;
+
+        &.is-white {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .secondary-links {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    li {
+      a {
+        color: #cfcfcf;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        border-right: 1px solid #444;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: 0;
+        &.highlight {
+          color: #fff;
+        }
+      }
+      &:last-child {
         a {
-            color: #080808;
-            font-size: 0.75em;
-            font-weight: bold;
-            text-transform: uppercase;
+          color: white;
+          border: none;
         }
+      }
     }
+  }
 
-    .logo {
-        float: none;
-        padding-top: 46px;
-        width: 160px;
-        height: 30px;
-    }
-
-    .links-wrapper {
-        background: transparent;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
-    }
-
-    // Show the nav even if it was hidden on smaller sizes.
-    &.open-links {
-        .full-wrapper {
-            opacity: 1;
-        }
-    }
-
-    .main-links {
-        padding: 0;
-        margin-top: 6px;
-    }
-
-    .main-links, .secondary-links {
-        li {
-            @include inline-block;
-            text-align: left;
-
-            margin-bottom: 0px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-            a {
-                color: #7A7A7B;
-                font-size: 13px;
-                margin-right: 10px;
-                letter-spacing: 2.5px;
-                font-weight: bold;
-
-                &.is-white {
-                    color: white;
-                }
-            }
-        }
-    }
-
-    .secondary-links {
-        position: absolute;
-        top: 10px;
-        right: 40px;
-
-        .menu-chat {
-            visibility: hidden;
-        }
-
-        li {
-            a {
-                color: #cfcfcf;
-                font-size: 11px;
-                letter-spacing: 1.5px;
-                border-right: 1px solid #444;
-                padding-right: 15px;
-                padding-left: 15px;
-                margin-right: 0;
-
-                &.highlight {
-                    color: #fff;
-                }
-
-                &.menu-login {
-                    color: #fff;
-                    word-spacing: 4px;
-
-                    .user-image {
-                        display: inline-block;
-                        position: relative;
-                        width: 50px;
-
-                        &.no-image {
-                            display: none;
-                        }
-
-                        img {
-                            width: 30px;
-                            border-radius: 100%;
-                            position: absolute;
-                            top: 50%;
-                            height: 30px;
-                            left: 50%;
-                            margin-left: -15px;
-                            margin-top: -20px;
-                        }
-
-                        .notifications {
-                            position: absolute;
-                            display: inline-block;
-                            width: 18px;
-                            height: 18px;
-                            border-radius: 100%;
-                            background-color: #FFF;
-                            line-height: 1.8em;
-                            color: #000;
-                            text-align: center;
-                            top: -25px;
-                            text-indent: 2px;
-                            right: 5px;
-                        }
-                    }
-                }
-
-                &.member-dropdown-open {
-                    .icon-dropdown {
-                        display: inline-block;
-                        @include scaleY(-1);
-                    }
-
-                    .user-image {
-                        .notifications {
-                            display: none;
-                        }
-                    }
-                }
-
-                .icon-dropdown {
-                    font-size: 10px;
-                }
-            }
-            &:last-child {
-                a {
-                    border: none;
-                    padding-right: 0;
-                }
-            }
-        }
-    }
-
-    .member-dropdown {
-        display: none;
-        position: absolute;
-        top: 60px;
-
-        background-color: #7c878e;
-        padding: 0;
-        width: 225px;
-        right: 0;
-
-        &:before {
-            content: ' ';
-            display: block;
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: -7px;
-            right: 76px;
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-            border-bottom: 7px solid #7c878e;
-        }
-
-        li {
-            border-top: 1px solid #a1a9ae;
-            padding-top: 0;
-
-            &:first-child {
-                border-top: none;
-            }
-
-            a {
-                display: block;
-                font-size: 11px;
-                font-weight: bold;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-
-                color: #fff;
-                line-height: normal;
-                padding: 15px 0;
-                text-align: left;
-                padding-left: 30px;
-
-                span {
-                    font-size: 12px;
-                }
-
-                &:hover {
-                    color: #000;
-                }
-            }
-        }
-    }
 }

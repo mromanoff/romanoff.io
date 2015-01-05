@@ -6,18 +6,30 @@
 // 6- Media queries in their specific section
 // 7- Mobile first
 
-
 @import "../bower_components/compass-mixins/lib/compass/reset";
+//@import "../bower_components/compass-mixins/lib/compass/utilities/general/clearfix";
+//@import "../bower_components/compass-mixins/lib/compass/utilities/general/float";
 @import "../bower_components/compass-mixins/lib/compass/css3";
-@import "../bower_components/compass-mixins/lib/compass/utilities/general/clearfix";
+//@import "../bower_components/compass-mixins/lib/compass/typography/text/replacement";
 @import "../bower_components/susy/sass/susy";
 @import "config/_settings";
 @import "config/_mixins";
 @import "vendor/nprogress";
+@import "vendor/owlcarousel";
 
-@import "_fonts";
+@import "fonts";
 
-@import "_small";
-//@import "_medium";
-//@import "_large";
-//@import "_extralarge";
+@import "small";
+
+
+@media screen and (min-width: $medium-breakpoint) {
+  @import "medium";
+}
+
+@media screen and (min-width: $large-breakpoint) {
+  @import "large";
+}
+
+@media screen and (min-width: $extra-large-breakpoint) {
+  @import "extralarge";
+}

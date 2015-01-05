@@ -92,8 +92,7 @@ hr.separator-line {
 }
 
 main {
-  margin: 0 auto;
-  max-width: 1024px;
+  margin: 0 auto 40px auto;
   padding-top: 50px;
 }
 
@@ -106,20 +105,6 @@ $section-padding: 20px;
 .module {
   margin-top: $section-margin;
   padding-top: $section-padding;
-
-  &.mod-0 {
-    margin-top: 0;
-    padding-top: 0;
-  }
-
-  &.mod-last {
-    margin-bottom: ($section-margin * 2);
-  }
-
-}
-
-footer {
-  margin-top: $section-margin;
 }
 
 .module:last-child {
@@ -132,9 +117,16 @@ footer {
   padding-top: 0;
 }
 
-picture img {
-  width: 100%;
-  height: auto;
+
+footer {
+  margin-top: $section-margin;
+}
+
+picture {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 img.full-width{
@@ -144,10 +136,10 @@ img.full-width{
 
 #nprogress {
   .bar {
-    background-color: $brand-danger;
+    background-color: $brand-primary5;
   }
 
   .peg {
-    box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+    box-shadow: 0 0 10px #ff0000, 0 0 5px #ff0000;
   }
 }
