@@ -9,12 +9,13 @@ module.exports = Route.extend({
   },
 
   fetch: function(id) {
-    if (this.collection.isNew()) {
+    //if (this.collection.isNew()) {
       this.model = new Model({ id: id });
-      return this.model.fetch();
-    } else {
+      //return this.model.fetch();
+    //} else {
       this.model = this.collection.get(id);
-    }
+      console.log('this model', this.model.toJSON());
+   // }
   },
 
   render: function() {

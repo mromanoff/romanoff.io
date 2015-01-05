@@ -30,3 +30,16 @@
     <ul class="portfolio category"></ul>
 </section>
 
+<section class="module no-gutter pagination">
+    <ul>
+      {{#pagination pagination type="previous"}}
+          <li {{#if disabled}}class="disabled"{{/if}}><a href="#photography?page={{n}}">&laquo;</a></li>
+      {{/pagination}}
+      {{#pagination pagination type="middle" limit="5"}}
+          <li {{#if active}}class="active"{{/if}}><a href="#photography?page={{n}}">{{n}}</a></li>
+      {{/pagination}}
+      {{#pagination pagination type="next"}}
+          <li {{#if disabled}}class="disabled"{{/if}}><a href="#photography?page={{n}}">&raquo;</a></li>
+      {{/pagination}}
+    </ul>
+</section>

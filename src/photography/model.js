@@ -6,6 +6,12 @@
 var Model = require('src/common/model');
 
 module.exports = Model.extend({
+
+
+
+  //url  https://api.500px.com/v1/photos/93619595?image_size=3&comments=1&consumer_key=vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK
+
+
   urlRoot: '/api/photography',
 
   defaults: {

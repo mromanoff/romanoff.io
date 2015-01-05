@@ -7,7 +7,7 @@ module.exports = View.extend({
   className: 'overview',
 
   onShow: function () {
-    this.$el.find('#owl-demo').owlCarousel({
+    this.$el.find('#hero').owlCarousel({
       navigation : true, // Show next and prev buttons
       slideSpeed : 300,
       paginationSpeed : 400,
