@@ -14,7 +14,7 @@ module.exports = Route.extend({
       //return this.model.fetch();
     //} else {
       this.model = this.collection.get(id);
-      console.log('this model', this.model.toJSON());
+      //console.log('this model', this.model.toJSON());
    // }
   },
 

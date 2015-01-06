@@ -27,8 +27,6 @@ module.exports = Router.extend({
   },
 
   index: function (params) {
-    console.info('phography router', params);
-
     //this.collection.sortBy = params && parseFloat(params.sortBy) || 'created_at';
     this.collection.page = params && parseFloat(params.page) || 1;
 

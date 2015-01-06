@@ -3,7 +3,6 @@ var View = require('./composite-view');
 
 module.exports = Route.extend({
   initialize: function(options) {
-    console.log('route options', options);
     this.container = options.container;
     this.collection = options.collection;
   },
@@ -14,10 +13,7 @@ module.exports = Route.extend({
     //}
   },
 
-  render: function(params) {
-    //var page = params && parseFloat(params.page) || 1;
-    //this.collection.currentPage = page;
-
+  render: function() {
     this.view = new View({
       collection: this.collection
     });

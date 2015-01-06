@@ -39,7 +39,6 @@ module.exports = Marionette.AppRouter.extend({
       if (!self.active) {
         self.triggerMethod.apply(self, ['enter'].concat(args));
       }
-
       self.triggerMethod.apply(self, ['route'].concat(args));
     });
   },
