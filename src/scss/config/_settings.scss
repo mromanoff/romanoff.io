@@ -17,15 +17,25 @@ $gray-lighter:           #eee;
 
 // Brand colors
 // -------------------------
-$brand-primary:         #B22222;
+
+// based on https://color.adobe.com/Roles1-color-theme-1814741/
+
+
+//$brand-primary:         #B22222;
+$brand-primary:         rgb(148, 9, 13);
 $brand-primary2:        #E9967A;
-$brand-primary3:        #483D8B;
-$brand-primary4:        #253f3f; //shade(#2F4F4F, 20%);
-$brand-primary5:        #DAA520;
+//$brand-primary3:        #483D8B;
+$brand-primary3:        rgb(72, 61, 139);
+//$brand-primary4:        #253f3f; //shade(#2F4F4F, 20%);
+$brand-primary4:        rgb(38, 50, 72); //shade(#2F4F4F, 20%);
+//$brand-primary5:        #DAA520;
+$brand-primary5:        rgb(255, 160, 0);
 
 $brand-success:         #5cb85c;
-$brand-warning:         #f0ad4e;
-$brand-danger:          #d9534f;
+//$brand-warning:         #f0ad4e;
+$brand-warning:         rgb(255, 140, 0);
+//$brand-danger:          #d9534f;
+$brand-danger:          rgb(212,13,18);
 $brand-info:            #5bc0de;
 
 
@@ -35,7 +45,7 @@ $primary-bg: #fff;
 
 // Navigation Variables
 $navigation-background: $brand-primary4;
-$navigation-background-active: rgba(32, 55, 55, 0.9);
+$navigation-background-active: rgba($brand-primary4, 0.9);
 
 //Footer
 $footer-text-color: $brand-primary2;
