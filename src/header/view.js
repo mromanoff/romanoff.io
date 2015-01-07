@@ -35,7 +35,7 @@ module.exports = View.extend({
   },
 
   events: {
-    'click .menu': 'toggleMenu',
+    'click .menu': 'openMenu',
     'click .icon-close': 'closeMenu'
   },
 
@@ -48,23 +48,29 @@ module.exports = View.extend({
     }
   },
 
-  toggleMenu: function (e) {
+  openMenu: function (e) {
     e.preventDefault();
-    this.ui.menu.toggleClass('is-hidden');
-    this.ui.closeIcon.toggleClass('is-hidden');
+    this.ui.menu.addClass('is-hidden');
+    this.ui.closeIcon.removeClass('is-hidden');
     this.ui.nav.addClass('open-links');
+    this.disableTouchEvent();
+  },
 
+  closeMenu: function (e) {
+    e.preventDefault();
+    this.ui.menu.removeClass('is-hidden');
+    this.ui.closeIcon.addClass('is-hidden');
+    this.ui.nav.removeClass('open-links');
+    this.enableTouchEvent();
+  },
+
+  disableTouchEvent: function () {
     this.$body.on('touchmove', function (e) {
       e.preventDefault();
     });
   },
 
-  closeMenu: function (e) {
-    e.preventDefault();
-    this.ui.closeIcon.toggleClass('is-hidden');
-    this.ui.menu.toggleClass('is-hidden');
-    this.ui.nav.removeClass('open-links');
-
+  enableTouchEvent: function () {
     this.$body.off('touchmove');
   }
 });

@@ -7,9 +7,9 @@
     li {
       display: inline-block;
       box-sizing: border-box;
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
       margin-bottom: 3px;
       background-color: $gray-dark;
       text-transform: uppercase;
@@ -31,7 +31,7 @@
         }
       }
       a {
-        line-height: 50px;
+        line-height: 40px;
         display: block;
         color: white;
         text-decoration: none;

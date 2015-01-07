@@ -1,0 +1,14 @@
+.pagination, .sort {
+  ul {
+    li {
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      margin-bottom: 3px;
+
+      a {
+        line-height: 50px;
+      }
+    }
+  }
+}
