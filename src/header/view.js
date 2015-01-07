@@ -36,7 +36,8 @@ module.exports = View.extend({
 
   events: {
     'click .menu': 'openMenu',
-    'click .icon-close': 'closeMenu'
+    'click .icon-close': 'closeMenu',
+    'click .main-links a': 'enableTouchEvent'
   },
 
   // On Scroll, make the nav translucent.
