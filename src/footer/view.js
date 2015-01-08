@@ -9,14 +9,15 @@ module.exports = View.extend({
     'all': 'render'
   },
 
-  templateHelpers: function() {
+  templateHelpers: function () {
     return {
-      primaryItems   : this.serializeWhere({ type: 'primary' }),
-      secondaryItems : this.serializeWhere({ type: 'secondary' })
+      primaryItems: this.serializeWhere({type: 'primary'}),
+      secondaryItems: this.serializeWhere({type: 'secondary'}),
+      currentYear: new Date().getFullYear()
     };
   },
 
-  serializeWhere: function(props) {
+  serializeWhere: function (props) {
     return _.invoke(this.collection.where(props), 'toJSON');
   }
 });

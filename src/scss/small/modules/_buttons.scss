@@ -67,8 +67,7 @@ nav.button-container {
 // .box                 - Button thin style black background white foreground.
 // .box.white           - Button thin style inverted.
 // .tab-down            - Tab button.
-//
-// Styleguide 1.2
+
 a.button {
   &:hover {
     // TODO
@@ -76,7 +75,7 @@ a.button {
   }
 
   &.primary {
-    border-color: shade($primary-btn-bg, 50%);
+    border-color: $primary-btn-bg;
     background: $primary-btn-bg;
     color: #080808;
   }
@@ -91,15 +90,6 @@ a.button {
     border-color: #080808;
     background: #080808;
     color: #fff;
-  }
-
-  &.cta {
-    @include small-label;
-
-    span {
-      display: block;
-      font-size: 52px;
-    }
   }
 
   &.small {
@@ -133,41 +123,39 @@ a.button {
   &.fat {
     display: inline-block;
     padding: 1.5em 3em;
-
-    &.black {
-      border: 1px solid #4a4a4a;
-    }
-  }
-
-  &.tab-trigger {
-    @include box-button;
-    @include small-label;
-    border-left-width: 0;
-    border-right-width: 0;
-    display: block;
-    margin: -1px 0 0;
-    position: relative;
-
-    &.active {
-      &:after {
-        $size: 18px;
-        background: #fff;
-        border-bottom: 1px solid #080808;
-        border-right: 1px solid #080808;
-        content: "";
-        display: block;
-        height: $size;
-        left: 50%;
-        margin: (-$size/2) 0 0 (-$size/2);
-        position: absolute;
-        top: 100%;
-        width: $size;
-       // @include rotate;
-      }
-    }
   }
 
   &.inline {
     display: inline-block;
+  }
+}
+
+button {
+
+  &.primary {
+    border-color: $primary-btn-bg;
+    background: $primary-btn-bg;
+    color: #080808;
+  }
+
+  &.small {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 1.4em 0;
+  }
+
+  &.box {
+    @include box-button;
+    @include medium-label;
+    text-decoration: none;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    display: block;
+
+    &.small {
+      @include small-label;
+    }
   }
 }

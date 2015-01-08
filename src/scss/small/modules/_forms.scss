@@ -8,24 +8,17 @@
     margin: 0 auto;
   }
 
-
   .button {
     display: block;
-    max-width: 200px;
-    margin: 60px auto;
-
-    &.submit {
-      margin: 0 auto;
-    }
+    margin: 0 auto;
   }
 
-  .control-group{
-    &.error input{
+  .control-group {
+    &.error input {
       border-bottom: 1px solid $brand-danger;
       border-color: $brand-danger;
     }
   }
-
 
   div, input {
     font-size: 20px;
