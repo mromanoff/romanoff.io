@@ -35,7 +35,7 @@ footer {
         @include transition(background 0.3s, color 0.3s);
 
         &:hover {
-          background: adjust-lightness($footer-bg-color, 10%);
+          background: rgba(215, 48, 48, .5);
           color: $footer-text-color;
         }
       }
