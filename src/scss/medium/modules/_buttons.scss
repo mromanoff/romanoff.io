@@ -9,29 +9,13 @@ nav.button-container {
 }
 
 a.button {
-    &.cta {
-        @include medium-label;
-
-        span {
-            font-size: 64px;
-        }
-    }
-
     &.small {
         font-size: 13px;
     }
-    
+
     &.box {
         @include inline-block;
         padding: 1.35em 3em;
-    }
-}
-
-.caption {
-    .buttons {
-        a {
-            padding: 1.2em;
-        }
     }
 }
 
@@ -54,12 +38,8 @@ a.button {
   }
 }
 
-// tmp: cta for mobile, normal link for everything else
-.btn-mobile-cta {
-  background: none;
-  padding: 0;
-  border: none;
-  text-decoration: underline;
-  width: 100%;
-  display: inline;
+.owl-theme .owl-controls .owl-buttons div {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
 }
