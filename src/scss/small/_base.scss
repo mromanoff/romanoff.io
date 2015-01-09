@@ -92,7 +92,7 @@ hr.separator-line {
 }
 
 main {
-  margin: 0 auto 40px auto;
+  margin: 0 auto 0 auto;
   padding-top: 50px;
 }
 
@@ -105,21 +105,24 @@ $section-padding: 20px;
 .module {
   margin-top: $section-margin;
   padding-top: $section-padding;
-}
+  &:last-child {
+    margin-bottom: $section-margin * 2;
+  }
 
-.module:last-child {
-  margin-bottom: -$section-margin;
-}
+  // Margin Exceptions
+  .no-gutter-top {
+    margin-top: 0;
+    padding-top: 0;
+  }
 
-// Margin Exceptions
-.no-gutter {
-  margin-top: 0;
-  padding-top: 0;
+  .no-gutter-bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
-
 
 footer {
-  margin-top: $section-margin;
+  //margin-top: $section-margin;
 }
 
 picture {
