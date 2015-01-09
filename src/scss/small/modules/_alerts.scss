@@ -1,0 +1,33 @@
+.alert {
+  @include box-sizing(border-box);
+  padding: 10px;
+  margin: 10px auto;
+  width: 70%;
+  min-width: 70%;
+  max-width: 70%;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.8em;
+  text-align: center;
+  text-transform: uppercase;
+
+  ul{
+    li {
+      line-height: 1.8em;
+    }
+  }
+
+
+  &.warning {
+    color: white;
+    background: $brand-warning;
+    border: 1px solid white;
+  }
+
+  &.error {
+    color: pink;
+    background: $brand-danger;
+    border: 1px solid pink;
+  }
+
+}

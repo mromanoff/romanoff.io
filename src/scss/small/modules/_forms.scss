@@ -1,11 +1,19 @@
 .form {
   background: $brand-primary3;
-  @include clearfix;
 
-  .form-wrApper {
-    max-width: 740px;
-    padding: 2%;
-    margin: 0 auto;
+
+  h3 {
+    color: $gray-light;
+    text-align: center;
+    font-weight: normal;
+  }
+  h4 {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    font-size: .9em;
+    font-weight: 400;
+    letter-spacing: 3px;
   }
 
   .button {
@@ -13,14 +21,14 @@
     margin: 0 auto;
   }
 
-  .control-group {
-    &.error input {
-      border-bottom: 1px solid $brand-danger;
-      border-color: $brand-danger;
-    }
-  }
+//  .control-group {
+//    &.error input {
+//      border-bottom: 1px solid $brand-danger;
+//      border-color: $brand-danger;
+//    }
+//  }
 
-  div, input {
+  input {
     font-size: 20px;
     font-weight: 200;
     font-family: $font-family;
@@ -31,36 +39,20 @@
 
   input {
     -webkit-Appearance: none;
-    @include border-radius(0px);
-
     display: block;
     width: 70%;
     min-width: 70%;
     max-width: 70%;
-    border: 1px solid #fff;
+    border: 1px solid white;
     margin: 10px auto;
     padding: 12px 30px;
     background: transparent;
-    color: #fff;
+    color: white;
     text-align: center;
 
     &.half {
       width: 48%;
       margin: 1% 0;
-    }
-  }
-
-  div {
-    margin: 20px 0;
-    text-align: center;
-    color: #989797;
-
-    small {
-      display: block;
-      margin: 20px 0;
-      font-size: 0.7em;
-      font-weight: normal;
-      color: #fff;
     }
   }
 }

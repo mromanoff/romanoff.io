@@ -1,7 +1,7 @@
  {
-  "name": "Okgrafix2015",
-  "version": "0.0.1",
-  "description": "Okgrafix web site",
+  "name": "RM",
+  "version": "0.0.2",
+  "description": "romanoff.io web site",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mromanoff/okgrafix2015.git"
+    "url": "https://github.com/mromanoff/romanoff.io.git"
   },
   "keywords": [
     "marionette",
@@ -20,9 +20,9 @@
   "author": "Michael Romanoff <zelcie@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mromanoff/okgrafix2015/issues"
+    "url": "https://github.com/mromanoff/romanoff.io.git/issues"
   },
-  "homepage": "http://okgrafix.com",
+  "homepage": "http://romanoff.io",
   "devDependencies": {
     "bluebird": "^2.3.0",
     "body-parser": "^1.4.3",

@@ -110,12 +110,12 @@ $section-padding: 20px;
   }
 
   // Margin Exceptions
-  .no-gutter-top {
+  &.no-gutter-top {
     margin-top: 0;
     padding-top: 0;
   }
 
-  .no-gutter-bottom {
+  &.no-gutter-bottom {
     margin-bottom: 0;
     padding-bottom: 0;
   }
