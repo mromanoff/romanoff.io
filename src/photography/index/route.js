@@ -1,3 +1,8 @@
+/**
+ * Photography Index Route
+ * @type {exports}
+ */
+
 var Route = require('src/common/route');
 var View = require('./composite-view');
 

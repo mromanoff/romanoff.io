@@ -1,9 +1,39 @@
+/**
+ * Overview View
+ * @type {exports}
+ * @private
+ */
+
+
+var _ = require('lodash');
+var Collection = require('src/common/collection');
 var View = require('src/common/view');
 var template = require('./template.hbs');
+
 
 module.exports = View.extend({
   template: template,
   className: 'overview',
+
+
+  initialize: function (options) {
+    this.models = options.collection.models;
+    delete this.collection;
+    this.start = 1;
+    this.limit = 4;
+
+
+    console.log('this model', this.model.attributes);
+
+  },
+
+  onBeforeRender: function() {
+    var recent = _.chain(this.models)
+      .drop(this.start)
+      .take(this.limit)
+      .value();
+    this.collection = new Collection(recent);
+  },
 
   onShow: function () {
     this.$el.find('#hero').owlCarousel({
@@ -11,17 +41,16 @@ module.exports = View.extend({
       slideSpeed : 300,
       paginationSpeed : 400,
       singleItem:true
-      // 'singleItem:true' is a shortcut for:
-      // items : 1,
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
     });
   },
 
   templateHelpers: function () {
+    console.log('git hub model', this.model.toJSON().data);
+
     return {
+      repos: this.model.toJSON().data,
+      recentWork: this.collection.toJSON(),
+
       heroImages: [
         {
           small: '/img/hero/main-1-768x720.jpg',
@@ -51,8 +80,4 @@ module.exports = View.extend({
       ]
     };
   }
-
-
-
-
 });

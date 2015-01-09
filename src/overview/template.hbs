@@ -54,30 +54,43 @@
 
 
 <section id="recentWork" class="module paragraph">
+    <h2 class="title">Recent Work</h2>
+    <ul class="recent-work">
+      {{#each recentWork}}
+          <li>
+              <a href="#work">
+                  <img src="/img/work/medium/{{image}}" alt="{{name}}">
+              </a>
+          </li>
+      {{/each}}
+    </ul>
 </section>
 
 
 <section class="module paragraph">
     <h2 class="title">Projects and Code samples I'm working on.</h2>
 
-    <p><strong>Equifit Forms<br>
-        <em>on GitHub</em></strong><br>
-        Node.JS, MongoDB, Backbone.JS, BackboneLayoutManager, Backbone Forms, Bootstrap and LESS<br>
-        <a href="https://github.com/mromanoff/equifit" target="_blank">Equifit forms</a>
-    </p>
+    {{#each repos}}
+        <p><strong>{{name}}<br>
+            <em>on GitHub</em></strong><br>
+          {{description}}<br><a href="{{html_url}}" target="_blank">{{name}}</a>
+        </p>
+    {{/each}}
 
-    <p><strong>Okgrafix.com<br>
-        <em>on GitHub</em></strong><br>
-        Node.JS, MongoDB, Backbone.JS, BackboneLayoutManager, Backbone Forms, Susy and SASS <br>
-        <a href="https://github.com/mromanoff/okgrafix" target="_blank">Okgrafix.com (Backbone.JS)</a><br>
-        <a href="https://github.com/mromanoff/okgrafix-emberjs" target="_blank">Okgrafix.com (Ember.JS)</a><br>
-    </p>
 
-    <p><strong>Purchase and Schedule Apps POC<br>
-        <em>on BitBucket</em></strong><br>
-        Backbone.JS, Marionette, Susy and SASS<br>
-        <a href="https://bitbucket.org/zelcie/equinox-poc-2014/src" target="_blank">Purchae and Schedule Apps POC</a>
-    </p>
+    <!--<p><strong>Equifit Forms<br>-->
+        <!--<em>on GitHub</em></strong><br>-->
+        <!--Node.JS, MongoDB, Backbone.JS, BackboneLayoutManager, Backbone Forms, Bootstrap and LESS<br>-->
+        <!--<a href="https://github.com/mromanoff/equifit" target="_blank">Equifit forms</a>-->
+    <!--</p>-->
+
+    <!--<p><strong>Okgrafix.com<br>-->
+        <!--<em>on GitHub</em></strong><br>-->
+        <!--Node.JS, MongoDB, Backbone.JS, BackboneLayoutManager, Backbone Forms, Susy and SASS <br>-->
+        <!--<a href="https://github.com/mromanoff/okgrafix" target="_blank">Okgrafix.com (Backbone.JS)</a><br>-->
+        <!--<a href="https://github.com/mromanoff/okgrafix-emberjs" target="_blank">Okgrafix.com (Ember.JS)</a><br>-->
+    <!--</p>-->
+
 
     <p><strong>Code snippets<br>
         <em>on Codepen</em></strong><br>
