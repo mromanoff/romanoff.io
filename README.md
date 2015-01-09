@@ -1,4 +1,4 @@
-Okgrafix web site
+Romanoff.io web site
 =================
 
 ## Project in working progress. ##
@@ -7,7 +7,6 @@ Okgrafix web site
   1. add SASS and SUSY
   2. Use 500px API for pull images for Photography page
   3. Add Mongolab and save data for contact form
-
 
 
 
@@ -32,17 +31,6 @@ View IcoMoon documentation here:
 [IcoMoon docs](http://icomoon.io/#docs)
 
 
-## Getting started ##
-
-The easiest way to get started is to install Git and clone the repository:
-
-``` bash
-# Using Git, fetch only the latest commits.  You won't need the full history
-git clone --depth 1 https://github.com/mromanoff/okgrafix-2015.git
-
-# Move the repository to your own project name.
-mv okgrafix my-project
-```
 
 ## Updating dependencies ##
 
