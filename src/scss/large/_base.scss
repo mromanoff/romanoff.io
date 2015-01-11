@@ -11,10 +11,28 @@ main {
 // Modules Margin-Padding
 $section-margin: 40px;
 
-.module:last-child {
-  margin-bottom: $section-margin;;
+
+.module {
+  .module:last-child {
+    margin-bottom: $section-margin;;
+  }
+
+  // Margin Exceptions
+  &.no-gutter {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &.no-gutter-top {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &.no-gutter-bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
-footer {
-  margin-top: $section-margin;
-}

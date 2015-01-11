@@ -15,31 +15,29 @@
 <section class="module no-gutter pagination">
     <ul>
       {{#pagination pagination type="previous"}}
-          <li {{#if disabled}}class="disabled"{{/if}}><a href="#photography?page={{n}}">&laquo;</a></li>
+          <li {{#if disabled}}class="disabled"{{/if}}><a class="icon-angle-left" href="#photography?page={{n}}"></a></li>
       {{/pagination}}
       {{#pagination pagination type="middle" limit="4"}}
           <li {{#if active}}class="active"{{/if}}><a href="#photography?page={{n}}">{{n}}</a></li>
       {{/pagination}}
       {{#pagination pagination type="next"}}
-          <li {{#if disabled}}class="disabled"{{/if}}><a href="#photography?page={{n}}">&raquo;</a></li>
+          <li {{#if disabled}}class="disabled"{{/if}}><a class="icon-angle-right" href="#photography?page={{n}}"></a></li>
       {{/pagination}}
     </ul>
 </section>
 
-<section class="module">
-    <ul class="portfolio category"></ul>
-</section>
+<ul class="module gallery"></ul>
 
 <section class="module pagination">
     <ul>
       {{#pagination pagination type="previous"}}
-          <li {{#if disabled}}class="disabled"{{/if}}><a href="#photography?page={{n}}">&laquo;</a></li>
+          <li {{#if disabled}}class="disabled"{{/if}}><a class="icon-angle-left" href="#photography?page={{n}}"></a></li>
       {{/pagination}}
       {{#pagination pagination type="middle" limit="5"}}
           <li {{#if active}}class="active"{{/if}}><a href="#photography?page={{n}}">{{n}}</a></li>
       {{/pagination}}
       {{#pagination pagination type="next"}}
-          <li {{#if disabled}}class="disabled"{{/if}}><a href="#photography?page={{n}}">&raquo;</a></li>
+          <li {{#if disabled}}class="disabled"{{/if}}><a class="icon-angle-right" href="#photography?page={{n}}"></a></li>
       {{/pagination}}
     </ul>
 </section>

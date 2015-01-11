@@ -34,7 +34,7 @@ nav.main {
     border-top: 0;
 
     a {
-      color: #080808;
+      color: $black2;
       font-size: 0.75em;
       font-weight: bold;
       text-transform: uppercase;
@@ -99,7 +99,7 @@ nav.main {
         color: #cfcfcf;
         font-size: 11px;
         letter-spacing: 1.5px;
-        border-right: 1px solid #444;
+        border-right: 1px solid $black3;
         padding-right: 15px;
         padding-left: 15px;
         margin-right: 0;

@@ -1,0 +1,18 @@
+.gallery {
+  li {
+    @include gallery(2 of 6);
+    margin-bottom: gutter(4);
+
+    img {
+      width: 100%;
+      min-width: 280px;
+      min-height: 280px;
+    }
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 90%;
+    font-size: 14px;
+  }
+}

@@ -77,18 +77,18 @@ a.button {
   &.primary {
     border-color: $primary-btn-bg;
     background: $primary-btn-bg;
-    color: #080808;
+    color: $black2;
   }
 
   &.white {
-    border-color: #080808;
+    border-color: $black2;
     background: #fff;
-    color: #080808;
+    color: $black2;
   }
 
   &.black {
-    border-color: #080808;
-    background: #080808;
+    border-color: $black2;
+    background: $black2;
     color: #fff;
   }
 
@@ -131,10 +131,14 @@ a.button {
 }
 
 button {
+  @include transition(background 0.3s, color 0.3s);
   &.primary {
     border-color: $primary-btn-bg;
     background: $primary-btn-bg;
-    color: #080808;
+    color: $black2;
+    &:hover {
+      background-color: rgba(255, 160, 0, .7);
+    }
   }
 
   &.small {
@@ -167,9 +171,18 @@ button {
   font-size: 12px;
   border-radius: 50px;
   background: #869791;
-  @include opacity(0.5);
+  @include opacity(1);
   height: 40px;
   width: 40px;
   line-height: 40px;
   margin: 10px;
+  @include transition(background 0.3s, color 0.3s);
+  &:hover {
+    background-color: #869791;
+  }
 }
+
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+   background-color:  $gray-light;
+}
+

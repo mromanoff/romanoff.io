@@ -3,7 +3,8 @@
  * @type {exports}
  */
 var Collection = require('src/common/collection');
-var Model = require('./model');
+//var Model = require('./model');
+var Model = require('src/common/model');
 
 module.exports = Collection.extend({
   model: Model,
@@ -11,13 +12,12 @@ module.exports = Collection.extend({
   initialize: function () {
     this.apiUrl = 'https://api.500px.com/v1/photos';
     this.consumerKey = 'vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK';
-    this.sdkKey = '10e2aea1742dcba191588e8bb86d9e7d3f63cdd5';
     this.userId = 678550;
     this.feature = 'user';
     this.rpp = 20; //— results to return. Can not be over 100, default 20.
     this.sort = 'created_at';
     this.sortDirection = 'desc'; // 'asc'
-    this.imageSize = 4;
+    this.imageSize = 3;
     this.page = 1;
     this.pageCount= null;
   },

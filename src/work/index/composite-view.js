@@ -20,7 +20,7 @@ module.exports = CompositeView.extend({
   },
 
   childView: ItemView,
-  childViewContainer: 'ul.category',
+  childViewContainer: '.gallery',
 
   collectionEvents: {
     'change': 'render'

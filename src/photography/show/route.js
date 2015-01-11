@@ -1,21 +1,15 @@
 var Route = require('src/common/route');
-var Model = require('../model');
 var View = require('./view');
 
 module.exports = Route.extend({
   initialize: function(options) {
     this.container = options.container;
-    this.collection = options.collection;
+    this.model = options.model;
   },
 
   fetch: function(id) {
-    //if (this.collection.isNew()) {
-      this.model = new Model({ id: id });
-      //return this.model.fetch();
-    //} else {
-      this.model = this.collection.get(id);
-      //console.log('this model', this.model.toJSON());
-   // }
+      this.model.set({ id: id }).fetch();
+      return this.model.fetch();
   },
 
   render: function() {

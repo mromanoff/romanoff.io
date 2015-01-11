@@ -7,6 +7,7 @@ var Router = require('src/common/router');
 var Radio = require('backbone.radio');
 
 var Collection = require('./collection');
+var Model = require('./model');
 var IndexRoute = require('./index/route');
 var ShowRoute = require('./show/route');
 
@@ -14,6 +15,7 @@ module.exports = Router.extend({
   initialize: function (options) {
     this.container = options.container;
     this.collection = new Collection();
+    this.model = new Model();
   },
 
   onBeforeEnter: function () {
@@ -39,7 +41,7 @@ module.exports = Router.extend({
    show: function () {
     return new ShowRoute({
       container: this.container,
-      collection: this.collection
+      model: this.model
     });
   }
  });

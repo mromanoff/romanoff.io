@@ -1,16 +1,16 @@
-var _ = require('lodash');
+/**
+ * Photography Index Composite View
+ * @type {exports}
+ */
+
 var $ = require('jquery');
 var CompositeView = require('src/common/composite-view');
-var Collection = require('src/common/collection');
 var ItemView = require('./item-view');
 var template = require('./composite-template.hbs');
 
 module.exports = CompositeView.extend({
   template: template,
-
-  initialize: function () {
-    console.log('this collection', this.collection);
-  },
+  tagName: 'ul',
 
   ui: {
     sortPictures: '.sortBy'
@@ -21,7 +21,7 @@ module.exports = CompositeView.extend({
   },
 
   childView: ItemView,
-  childViewContainer: 'ul.category',
+  childViewContainer: '.gallery',
 
   templateHelpers: function () {
     var pageCount = this.collection.pageCount;
@@ -37,7 +37,6 @@ module.exports = CompositeView.extend({
 
   sortPictures: function (e) {
     e.preventDefault();
-    console.log('sort clicked');
     var sort = $(e.currentTarget).data('sort-name');
     this.ui.sortPictures.find('li').removeClass('active');
     this.ui.sortPictures.find('a[data-sort-name="' + sort + '"]').closest('li').addClass('active');

@@ -6,7 +6,7 @@ var Route = require('src/common/route');
 var View = require('./view');
 var RecentWorkCollection = require('src/work/collection');
 
-var GitHubCollection = require('./github/collection');
+//var GitHubCollection = require('./github/collection');
 var GitHubModel = require('./github/model');
 
 

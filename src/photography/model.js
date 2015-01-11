@@ -6,21 +6,14 @@
 var Model = require('src/common/model');
 
 module.exports = Model.extend({
-  //url  https://api.500px.com/v1/photos/93619595?image_size=3&comments=1&consumer_key=vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK
-
-  urlRoot: '/api/photography',
-
   defaults: {
-    //userId: userId,
-    //feature: 'user',
-    //sort: 'created_at',
-    //sort_direction: 'desc', // 'asc'
-    //page: 1,
-    //rpp: 20, //— Results to return. Can not be over 100, default 20.
-    //photos: null,
-    //totalPages: null,
-    //$container: $('#container'),
-    //$pager: $('.pager'),
-    //$sort: $('#sorts')
+    apiUrl: 'https://api.500px.com/v1/photos/',
+    consumerKey: 'vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK',
+    imageSize: 4,
+    comments: 20
+  },
+
+  url: function () {
+    return this.get('apiUrl') + this.get('id') + '?image_size=' + this.get('imageSize') + '&comments=' + this.get('comments') + '&consumer_key=' + this.get('consumerKey');
   }
 });

@@ -4,7 +4,6 @@
  * @private
  */
 
-
 var _ = require('lodash');
 var Collection = require('src/common/collection');
 var View = require('src/common/view');
@@ -15,16 +14,11 @@ module.exports = View.extend({
   template: template,
   className: 'overview',
 
-
   initialize: function (options) {
     this.models = options.collection.models;
     delete this.collection;
     this.start = 1;
     this.limit = 4;
-
-
-    console.log('this model', this.model.attributes);
-
   },
 
   onBeforeRender: function() {
@@ -45,8 +39,6 @@ module.exports = View.extend({
   },
 
   templateHelpers: function () {
-    console.log('git hub model', this.model.toJSON().data);
-
     return {
       repos: this.model.toJSON().data,
       recentWork: this.collection.toJSON(),
@@ -64,19 +56,6 @@ module.exports = View.extend({
           large: '/img/hero/main-2-1920x700.jpg',
           alt: 'romanoff.io'
         }
-        //,
-        //{
-        //  small: 'http://placehold.it/768x720/DB4105/FFF8E3&text=768w+720h',
-        //  medium: 'http://placehold.it/1024x600/DB4105/FFF8E3&text=1280w+600h',
-        //  large: 'http://placehold.it/1920x700/DB4105/FFF8E3&text=1920w+700h',
-        //  alt: 'romanoff.io'
-        //},
-        //{
-        //  small: 'http://placehold.it/768x720/33332D/FFF8E3&text=768w+720h',
-        //  medium: 'http://placehold.it/1280x600/33332D/FFF8E3&text=1280w+600h',
-        //  large: 'http://placehold.it/1920x700/33332D/FFF8E3&text=1920w+700h',
-        //  alt: 'romanoff.io'
-        //}
       ]
     };
   }

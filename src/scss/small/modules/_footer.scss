@@ -11,6 +11,8 @@ footer {
     font-weight: 200;
     text-align: center;
     text-transform: uppercase;
+
+
     color: $footer-text-color;
   }
 
@@ -36,7 +38,7 @@ footer {
         @include transition(background 0.3s, color 0.3s);
 
         &:hover {
-          background: rgba(215, 48, 48, .5);
+          background-color: rgba(215, 48, 48, .5);
           color: $footer-text-color;
         }
       }

@@ -1,4 +1,4 @@
- {
+{
   "name": "RM",
   "version": "0.0.2",
   "description": "romanoff.io web site",
@@ -64,6 +64,7 @@
     "selenium-webdriver": "^2.42.1",
     "sinon": "^1.10.2",
     "sinon-chai": "^2.5.0",
+    "susy": "^2.2.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.0.0"

@@ -2,4 +2,21 @@
     <img src="{{image_url}}" alt="{{name}}" />
 </a>
 <h4>{{name}}</h4>
-<h6 style="text-align: center;">votes: {{votes_count}} favorites: {{favorites_count}}</h6>
+
+{{#if rating}}
+    <section class="module no-gutter ratings">
+        <p>
+          {{#if votes_count}}
+              <strong>Votes:</strong> {{votes_count}}
+          {{/if}}
+
+          {{#if favorites_count}}
+              <strong>Favorites:</strong> {{favorites_count}}
+          {{/if}}
+
+          {{#if highest_rating}}
+              <strong>Rating:</strong> {{highest_rating}}
+          {{/if}}
+        </p>
+    </section>
+{{/if}}

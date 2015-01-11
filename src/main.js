@@ -26,6 +26,11 @@ app.module('footer', {
   container: app.layout.footer
 });
 
+app.module('flashes', {
+  moduleClass: require('src/flashes/module'),
+  container: app.layout.flashes
+});
+
 app.module('overview', {
   moduleClass: require('src/overview/module'),
   container: app.layout.content

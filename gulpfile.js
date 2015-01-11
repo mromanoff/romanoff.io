@@ -13,6 +13,8 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var api = require('./api/api');
 
+var sassRuby = require('gulp-ruby-sass');
+
 //var sass = require('gulp-ruby-sass');
 
 gulp.task('clean', function () {
@@ -40,30 +42,30 @@ gulp.task('images', function () {
 });
 
 // using libsass
-gulp.task('styles', function() {
-  return gulp.src('./src/scss/**/*.scss')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      sourceComments: false,
-      outputStyle: 'expanded'
-    }))
-    //.pipe($.rename('main.css'))
-    .pipe($.autoprefixer('last 2 version'))
-    .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('./dist'))
-    .pipe(reload({stream: true}));
-});
-
-
-//gulp.task('styles', function () {
-//  return gulp.src('./src/scss/*.scss')
+//gulp.task('styles', function() {
+//  return gulp.src('./src/scss/**/*.scss')
 //    .pipe($.plumber())
-//    .pipe(sass({
-//      compass: true
+//    .pipe($.sourcemaps.init())
+//    .pipe($.sass({
+//      sourceComments: false,
+//      outputStyle: 'expanded'
 //    }))
-//    .pipe(gulp.dest('./dist'));
+//    //.pipe($.rename('main.css'))
+//    .pipe($.autoprefixer('last 2 version'))
+//    .pipe($.sourcemaps.write('./'))
+//    .pipe(gulp.dest('./dist'))
+//    .pipe(reload({stream: true}));
 //});
+
+
+gulp.task('styles', function () {
+  return gulp.src('./src/scss/*.scss')
+    .pipe($.plumber())
+    .pipe(sassRuby({
+      compass: true
+    }))
+    .pipe(gulp.dest('./dist'));
+});
 
 
 var bundler;

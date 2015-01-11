@@ -1,34 +1,64 @@
-<h1 class="title">{{name}}</h1>
-<img class="full-width" src="{{image_url}}" alt="{{name}}">
-
-<p class="html-callout">
-    <strong>Votes:</strong> {{votes_count}}
-    <strong>Favorites:</strong> {{favorites_count}}
-    <strong>Rating:</strong> {{highest_rating}}
-</p>
-
-<h3>Rate this picture: <a href="http://500px.com{{url}}" target="_blank">{{name}}</a></h3>
-
-<p class="html-callout">{{description}}</p>
-
-<p class="html-callout"><strong>Camera:</strong> {{camera}}</p>
-<p class="html-callout"><strong>Lens:</strong> {{lens}}</p>
-<p class="html-callout"><strong>Focal length:</strong> {{focal_length}}</p>
-<p class="html-callout"><strong>ISO:</strong> {{iso}}</p>
-<p class="html-callout"><strong>Aperture:</strong> {{aperture}}</p>
+<h1 class="title">{{photo.name}}</h1>
+<img class="full-width" src="{{photo.image_url}}" alt="{{photo.name}}">
 
 
+{{#if photo.rating}}
+    <section class="module no-gutter ratings">
+        <p>
+          {{#if photo.votes_count}}
+              <strong>Votes:</strong> {{photo.votes_count}}
+          {{/if}}
+
+          {{#if photo.favorites_count}}
+              <strong>Favorites:</strong> {{photo.favorites_count}}
+          {{/if}}
+
+          {{#if photo.highest_rating}}
+              <strong>Rating:</strong> {{photo.highest_rating}}
+          {{/if}}
+        </p>
+    </section>
+{{/if}}
+
+<section class="module">
+    <h3>Rate this picture: <a href="http://500px.com{{photo.url}}" target="_blank">{{photo.name}}</a></h3>
+  {{#if photo.description}}
+      <p>{{photo.description}}</p>
+  {{/if}}
+
+  {{#if photo.camera}}
+      <p><strong>Camera:</strong> {{photo.camera}}</p>
+  {{/if}}
+
+  {{#if photo.lens}}
+      <p><strong>Lens:</strong> {{photo.lens}}</p>
+  {{/if}}
+
+  {{#if photo.focal_length}}
+      <p><strong>Focal length:</strong> {{photo.focal_length}}</p>
+  {{/if}}
+
+  {{#if photo.iso}}
+      <p><strong>ISO:</strong> {{photo.iso}}</p>
+  {{/if}}
+
+  {{#if photo.aperture}}
+      <p><strong>Aperture:</strong> {{photo.aperture}}</p>
+  {{/if}}
+
+</section>
 
 {{#if comments}}
-<div class="module">
-    <h2 class="title">Comments:</h2>
-    {{#each comments}}
-    <p class="html-callout">
-        <img class="gravatar" src="{{user.userpic_url}}" alt="{{user.fullname}}">{{user.fullname}} from {{user.country}}<br>
-        {{body}}
-    </p>
-    {{/each}}
-</div>
+    <section class="module comments">
+        <h2 class="title">Comments:</h2>
+      {{#each comments}}
+          <p>
+              <img class="gravatar" src="{{user.userpic_url}}" alt="{{user.fullname}}">{{user.fullname}}
+              from {{user.country}}<br>
+            {{body}}
+          </p>
+      {{/each}}
+    </section>
 {{/if}}
 
 

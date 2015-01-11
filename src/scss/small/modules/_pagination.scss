@@ -17,6 +17,10 @@
       font-weight: bold;
       letter-spacing: 0.1em;
       color: white;
+      @include transition(background 0.3s, color 0.3s);
+      &:hover {
+        background-color: $gray;
+      }
       &.active {
         background-color: $brand-primary5;
         a {

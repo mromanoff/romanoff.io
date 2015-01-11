@@ -15,6 +15,18 @@ $gray:                   #555;
 $gray-light:             #999;
 $gray-lighter:           #eee;
 
+// Blacks
+// -------------------------
+$black:                 #000;
+$black2:                #080808;
+$black3:                #444;
+
+
+// Whites
+// -------------------------
+$white:                 #fff;
+
+
 // Brand colors
 // -------------------------
 
@@ -40,8 +52,8 @@ $brand-info:            #5bc0de;
 
 
 // Primary bg and color
-$primary-fg: #000;
-$primary-bg: #fff;
+$primary-fg: $black;
+$primary-bg: $white;
 
 // Navigation Variables
 $navigation-background: $brand-primary4;
@@ -73,3 +85,16 @@ $font-family-sans-serif:  $font-family;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
+
+
+
+// Susy Layouts
+// --------------------------
+
+$susy: (
+  columns: 12,
+  gutters: .25,
+  gutter-position: inside,
+);
+
+

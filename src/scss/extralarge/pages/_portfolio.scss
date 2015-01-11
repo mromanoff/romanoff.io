@@ -1,0 +1,24 @@
+.gallery {
+
+  img {
+    max-width: $extra-large-breakpoint;
+  }
+
+
+  li {
+    @include gallery(2 of 8);
+    margin-bottom: gutter(10);
+
+    img {
+      width: 100%;
+      min-width: 280px;
+      min-height: 280px;
+    }
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 90%;
+    font-size: 14px;
+  }
+}
