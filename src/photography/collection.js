@@ -3,7 +3,6 @@
  * @type {exports}
  */
 var Collection = require('src/common/collection');
-//var Model = require('./model');
 var Model = require('src/common/model');
 
 module.exports = Collection.extend({

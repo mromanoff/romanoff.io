@@ -1,0 +1,15 @@
+.recent-work {
+  @include clearfix;
+  @include container();
+
+  li {
+    @include gallery(2 of 4);
+    margin-bottom: gutter(4);
+
+    img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #444;
+    }
+  }
+}

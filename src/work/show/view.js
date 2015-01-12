@@ -8,7 +8,7 @@ var template = require('./template.hbs');
 
 module.exports = View.extend({
   template: template,
-  className: 'work work--show container',
+  className: 'gallery',
 
   initialize: function (options) {
     this.model = options.model;
