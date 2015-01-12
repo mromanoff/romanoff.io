@@ -1,11 +1,9 @@
 .gallery {
-  text-align: center;
   @include clearfix;
+  text-align: center;
   padding: 0 $section-side-padding;
 
-  img {
-    max-width: $medium-breakpoint;
-  }
+
 
   li {
     margin-bottom: $default-margin * 3;

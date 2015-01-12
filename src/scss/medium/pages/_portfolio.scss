@@ -1,15 +1,16 @@
 .gallery {
+  @include container(80%);
+  padding: 0;
 
   img {
-    max-width: $large-breakpoint;
+    max-width: $medium-breakpoint;
   }
 
   li {
     @include gallery(2 of 4);
-    margin-bottom: gutter(2);
+    margin-bottom: gutter(4);
 
     img {
-      width: 100%;
       min-width: 280px;
       min-height: 280px;
     }
