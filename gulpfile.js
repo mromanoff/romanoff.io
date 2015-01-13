@@ -12,10 +12,7 @@ var _ = require('lodash');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var api = require('./api/api');
-
 var sassRuby = require('gulp-ruby-sass');
-
-//var sass = require('gulp-ruby-sass');
 
 gulp.task('clean', function () {
   return gulp.src('app/tmp', {read: false})
@@ -88,6 +85,7 @@ function bundle() {
     .pipe(source('main.js'))
     .pipe(buffer())
     .pipe($.sourcemaps.init({loadMaps: true}))
+    .pipe($.uglify())
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'))
     .pipe(reload({stream: true}));
