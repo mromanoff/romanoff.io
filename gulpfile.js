@@ -13,6 +13,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var api = require('./api/api');
 var sassRuby = require('gulp-ruby-sass');
+var minifyCSS = require('gulp-minify-css');
 
 gulp.task('clean', function () {
   return gulp.src('app/tmp', {read: false})
@@ -61,6 +62,7 @@ gulp.task('styles', function () {
     .pipe(sassRuby({
       compass: true
     }))
+    .pipe(minifyCSS())
     .pipe(gulp.dest('./dist'));
 });
 
