@@ -4,45 +4,57 @@
  */
 
 var Route = require('src/common/route');
+
 var HeroView = require('./hero/view');
+var heroCollection = require('./hero/collection');
+
 var WorkView  = require('./work/view');
-//var PhotographyView  = require('../photography/view');
-//var CodeView  = require('../code/view');
+var WorkCollection = require('src/work/collection');
+
+var CodeView  = require('./code/view');
+//var CodeCollection  = require('./code/collection');
+var CodeModel =  require('./code/model');
+//var CodeRoute = require('./code/route');
 
 module.exports = Route.extend({
   initialize: function(options) {
     this.layout = options.layout;
-   // this.collection = options.collection;
+    this.heroCollection = heroCollection;
+    this.workCollection = new WorkCollection();
+    //this.codeCollection = new CodeCollection();
+    this.codeModel = new CodeModel();
   },
 
-  //fetch: function() {
-  //  if (this.collection.isNew()) {
-  //    return this.collection.fetch();
-  //  }
-  //},
+  fetch: function() {
+    if (this.codeModel.isNew()) {
+      this.codeModel.fetch();
+    }
 
-  //onFetch: function(id) {
-  //  this.model = this.collection.get(id);
-  //  this.collection.active = this.model;
-  //},
+    if (this.workCollection.isNew()) {
+      return this.workCollection.fetch();
+    }
+  },
+
 
   render: function() {
 
-    this.hero = new HeroView();
-    this.work = new WorkView();
+    this.hero = new HeroView({
+      collection: this.heroCollection
+    });
 
-    //this.library = new LibraryView({
-    //  collection: this.collection
-    //});
-    //
-    //this.viewer = new ViewerView({
-    //  model: this.model
-    //});
+    this.work = new WorkView({
+      collection: this.workCollection
+    });
+
+    this.code = new CodeView({
+      model: this.codeModel
+    });
+
 
     this.layout.hero.show(this.hero);
     this.layout.work.show(this.work);
     //this.layout.photography.show(this.photography);
-    //this.layout.code.show(this.code);
+    this.layout.code.show(this.code);
   }
 });
 

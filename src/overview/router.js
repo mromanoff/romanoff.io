@@ -3,20 +3,15 @@
  * @type {exports}
  */
 
-
 var Router = require('src/common/router');
 var Radio = require('backbone.radio');
 
 var LayoutView = require('./layout-view');
-//var Collection = require('./collection');
-
-//var IndexRoute = require('./route');
-var ShowRoute = require('./route');
+var IndexRoute = require('./route');
 
 module.exports = Router.extend({
   initialize: function (options) {
     this.container = options.container;
-    //this.collection = new Collection();
   },
 
   onBeforeEnter: function () {
@@ -27,20 +22,11 @@ module.exports = Router.extend({
   },
 
   routes: {
-    '': 'show'
+    '': 'index'
   },
 
-  //index: function () {
-  //  return new IndexRoute({
-  //    //collection: this.collection
-  //    layout: this.layout
-  //  });
-  //}
-  //,
-  //
-  show: function () {
-    return new ShowRoute({
-     // collection: this.collection,
+  index: function () {
+    return new IndexRoute({
       layout: this.layout
     });
   }
