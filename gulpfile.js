@@ -33,13 +33,25 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./dist/fonts'));
 });
 
-gulp.task('images', function () {
-  return gulp.src('./src/img/**/*')
-    .pipe($.plumber())
-    .pipe(gulp.dest('./dist/img'));
+//gulp.task('images', function () {
+//  return gulp.src('./src/img/**/*')
+//    .pipe($.plumber())
+//    .pipe(gulp.dest('./dist/img'));
+//});
+
+
+// minify new images
+gulp.task('imagemin', function () {
+  var imgSrc = './src/img/**/*', imgDst = './dist/img';
+
+  gulp.src(imgSrc)
+    .pipe($.changed(imgDst))
+    .pipe($.imagemin())
+    .pipe(gulp.dest(imgDst));
 });
 
-// using libsass
+
+// using libsass. TODO: currently doesn't play well with SUSY2
 //gulp.task('styles', function() {
 //  return gulp.src('./src/scss/**/*.scss')
 //    .pipe($.plumber())
@@ -60,9 +72,11 @@ gulp.task('styles', function () {
   return gulp.src('./src/scss/*.scss')
     .pipe($.plumber())
     .pipe(sassRuby({
-      compass: true
+      compass: true,
+      sourcemap: true,
+      sourcemapPath: '../scss'
     }))
-    .pipe(minifyCSS())
+   // .pipe(minifyCSS())
     .pipe(gulp.dest('./dist'));
 });
 
@@ -127,7 +141,7 @@ gulp.task('build', [
   'clean',
   'html',
   'fonts',
-  'images',
+  'imagemin',
   'styles',
   'scripts',
   'test'
