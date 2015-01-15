@@ -1,3 +1,9 @@
+img {
+  &.icon{
+    width: 120px;
+  }
+}
+
 .recent-work {
   @include clearfix;
   @include container();

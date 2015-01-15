@@ -20,11 +20,15 @@
     </section>
 {{/if}}
 
-<section class="module">
-    <h3>Rate this picture: <a href="http://500px.com{{photo.url}}" target="_blank">{{photo.name}}</a></h3>
+<section class="module photo-details">
+    <h3>{{photo.name}}</h3>
   {{#if photo.description}}
       <p>{{photo.description}}</p>
   {{/if}}
+
+    <nav class="button-container centered">
+        <a class="button whtie box small" href="http://500px.com{{photo.url}}" target="_blank">Rate this picture <span class="icon-thumbs-up"></span></a>
+    </nav>
 
   {{#if photo.camera}}
       <p><strong>Camera:</strong> {{photo.camera}}</p>
