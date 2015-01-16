@@ -1,0 +1,13 @@
+
+<section id="recentPhotography" class="module paragraph">
+    <h2 class="title">Recent Photography</h2>
+    <ul class="recent-work">
+      {{#each recentPhotography}}
+          <li>
+              <a href="#photography/{{id}}">
+                  <img src="{{image_url}}" alt="{{name}}" />
+              </a>
+          </li>
+      {{/each}}
+    </ul>
+</section>

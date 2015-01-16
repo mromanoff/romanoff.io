@@ -27,7 +27,8 @@
   {{/if}}
 
     <nav class="button-container centered">
-        <a class="button whtie box small" href="http://500px.com{{photo.url}}" target="_blank">Rate this picture <span class="icon-thumbs-up"></span></a>
+        <a class="button whtie box small" href="http://500px.com{{photo.url}}" target="_blank">Rate this picture <span
+                class="icon-thumbs-up"></span></a>
     </nav>
 
   {{#if photo.camera}}
@@ -57,8 +58,12 @@
         <h2 class="title">Comments:</h2>
       {{#each comments}}
           <p>
-              <img class="gravatar" src="{{user.userpic_url}}" alt="{{user.fullname}}">{{user.fullname}}
-              from {{user.country}}<br>
+              <img class="gravatar" src="{{user.userpic_url}}" alt="{{user.fullname}}">
+            {{user.fullname}}
+            {{#if user.country}}
+                from {{user.country}}
+            {{/if}}
+              <br>
             {{body}}
           </p>
       {{/each}}
