@@ -4,7 +4,7 @@ img {
   }
 }
 
-.recent-work {
+.preview {
   @include clearfix;
   @include container();
 
@@ -16,6 +16,7 @@ img {
       width: 100%;
       height: auto;
       border: 1px solid #444;
+      margin: 0;
     }
   }
 }

@@ -76,7 +76,7 @@ gulp.task('styles', function () {
       sourcemap: true,
       sourcemapPath: '../scss'
     }))
-   // .pipe(minifyCSS())
+    .pipe(minifyCSS())
     .pipe(gulp.dest('./dist'));
 });
 
