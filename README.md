@@ -7,11 +7,6 @@ http://romanoff.io
 
 
 ### TODO: ###
-  1. add SASS and SUSY
-  2. Use 500px API for pull images for Photography page
-  3. Add Mongolab and save data for contact form
-
-
 
 This site build with:
 FrontEnd: Backbone, Marionette, Underscore, jQuery, Gulp, Mocha, Sass, Susy, IcoMoon.
