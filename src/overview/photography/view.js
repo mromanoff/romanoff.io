@@ -15,6 +15,6 @@ module.exports = View.extend({
   serializeData: function(){
     return {
       recentPhotography: this.collection.toJSON()
-    }
+    };
   }
 });

@@ -13,6 +13,6 @@ module.exports = View.extend({
   serializeData: function(){
     return {
       repos: _.first(this.model.toJSON().data, 6)
-    }
+    };
   }
 });

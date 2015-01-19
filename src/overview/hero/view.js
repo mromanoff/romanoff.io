@@ -21,6 +21,6 @@ module.exports = View.extend({
   serializeData: function(){
     return {
       images: this.collection.toJSON()
-    }
+    };
   }
 });

@@ -9,14 +9,12 @@ module.exports = View.extend({
   template: template,
 
   initialize: function () {
-    console.log('this collection', this.collection.toJSON());
-
     this.collection.reset(this.collection.first(4));
   },
 
   serializeData: function(){
     return {
       recentWork: this.collection.toJSON()
-    }
+    };
   }
 });
