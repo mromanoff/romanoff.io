@@ -2,6 +2,8 @@
  * Code View
  * @type {Marionette.ItemView|exports}
  */
+
+var _ = require('lodash');
 var View = require('src/common/view');
 var template = require('./template.hbs');
 
@@ -10,7 +12,7 @@ module.exports = View.extend({
 
   serializeData: function(){
     return {
-      repos: this.model.toJSON().data
+      repos: _.first(this.model.toJSON().data, 6)
     }
   }
 });

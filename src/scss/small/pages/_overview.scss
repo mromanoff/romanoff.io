@@ -26,8 +26,13 @@ img {
   li {
     margin-bottom: $default-margin * 2;
   }
-  small {
-    font-size: $font-smaller;
+  span {
     display: block;
+    font-size: $font-small * 2;
+    color: $gray-light;
   }
+//  small {
+//    font-size: $font-smaller;
+//    display: block;
+//  }
 }
