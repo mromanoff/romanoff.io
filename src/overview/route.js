@@ -75,7 +75,6 @@ module.exports = Route.extend({
       model: this.codeModel
     });
 
-
     this.layout.hero.show(this.hero);
     this.layout.work.show(this.work);
     this.layout.photography.show(this.photography);

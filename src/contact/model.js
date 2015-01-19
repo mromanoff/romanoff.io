@@ -4,8 +4,16 @@
  */
 var Model = require('src/common/model');
 
+var API = {
+  url: 'https://api.mongolab.com/',
+  version: 1,
+  database: 'romanoff-io',
+  collection: 'contact',
+  key: 'oOfu-DRx8fwXi9VifYrwAwgJGCBXT1_n'
+};
+
 module.exports = Model.extend({
-  url: 'https://api.mongolab.com/api/1/databases/romanoff-io/collections/contact?apiKey=oOfu-DRx8fwXi9VifYrwAwgJGCBXT1_n',
+  url: API.Url + '/api/' + API.version + '/databases/' + API.database + '/collections/' + API.collection + '?apiKey=' + API.Key,
 
   defaults: {
     firstName: null,

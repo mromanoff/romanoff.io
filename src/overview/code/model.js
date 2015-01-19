@@ -6,8 +6,14 @@
 //var Model = require('src/common/model');
 var Backbone = require('backbone');
 
+var API = {
+  url: 'https://api.github.com/users/mromanoff/repos',
+  sort: 'updated',
+  token: '41be95208e904343cad9c9bdb7ba8e7f8de39841'
+};
+
 module.exports = Backbone.Model.extend({
   url: function() {
-    return 'https://api.github.com/users/mromanoff/repos?sort=updated&access_token=41be95208e904343cad9c9bdb7ba8e7f8de39841&callback=?';
+    return API.url + '?sort=' + API.sort + '&access_token=' + API.token + '&callback=?';
   }
 });
