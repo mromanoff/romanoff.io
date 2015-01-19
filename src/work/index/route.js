@@ -18,11 +18,9 @@ module.exports = Route.extend({
     }
   },
 
-  render: function(params) {
-    var page = params && parseFloat(params.page) || 1;
+  render: function() {
     this.view = new View({
-      collection: this.collection,
-      page: page
+      collection: this.collection
     });
 
     this.container.show(this.view);
