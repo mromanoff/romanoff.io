@@ -6,7 +6,7 @@ describe('photography/show/view', function() {
     this.model.url = 'foo';
     this.model.cleanup = stub();
 
-    this.View = proxyquire('src/photography/show/view.js', {
+    this.View = proxyquire('../../src/photography/show/view.js', {
       './template.hbs' : this.template
     });
 

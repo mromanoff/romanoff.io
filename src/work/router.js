@@ -4,7 +4,7 @@
  */
 
 
-var Router = require('src/common/router');
+var Router = require('../common/router');
 var Radio = require('backbone.radio');
 
 var Collection = require('./collection');

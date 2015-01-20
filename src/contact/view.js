@@ -3,8 +3,8 @@
  * @type {Marionette.ItemView|exports}
  */
 var nprogress = require('nprogress');
-var View = require('src/common/view');
-var FormBehavior = require('src/forms/behavior');
+var View = require('../common/view');
+var FormBehavior = require('../forms/behavior');
 var _ = require('lodash');
 var Backbone = require('backbone');
 var template = require('./template.hbs');

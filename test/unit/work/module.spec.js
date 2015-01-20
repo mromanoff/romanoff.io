@@ -2,7 +2,7 @@
 //  beforeEach(function() {
 //    this.Router = stub();
 //
-//    this.Module = proxyquire('src/work/module.js', {
+//    this.Module = proxyquire('../../src/work/module.js', {
 //      './router': this.Router
 //    });
 //

@@ -1,6 +1,6 @@
 //describe('work/model', function() {
 //  beforeEach(function() {
-//    this.Model = proxyquire('src/work/model.js', {});
+//    this.Model = proxyquire('../../src/work/model.js', {});
 //    this.model = new this.Model();
 //  });
 //

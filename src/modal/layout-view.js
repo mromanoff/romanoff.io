@@ -1,4 +1,4 @@
-var LayoutView = require('src/common/layout-view');
+var LayoutView = require('../common/layout-view');
 var $ = require('jquery');
 var template = require('./layout-template.hbs');
 
@@ -7,26 +7,26 @@ module.exports = LayoutView.extend({
   className: 'modal fade',
 
   attributes: {
-    'tabindex' : -1,
-    'role' : 'dialog'
+    'tabindex': -1,
+    'role': 'dialog'
   },
 
   regions: {
     content: '.modal-content'
   },
 
-  initialize: function() {
-    this.$el.modal({ show: false, backdrop: 'static' });
+  initialize: function () {
+    this.$el.modal({show: false, backdrop: 'static'});
   },
 
   triggers: {
-    'show.bs.modal'   : { preventDefault: false, event: 'before:open' },
-    'shown.bs.modal'  : { preventDefault: false, event: 'open' },
-    'hide.bs.modal'   : { preventDefault: false, event: 'before:close' },
-    'hidden.bs.modal' : { preventDefault: false, event: 'close' }
+    'show.bs.modal': {preventDefault: false, event: 'before:open'},
+    'shown.bs.modal': {preventDefault: false, event: 'open'},
+    'hide.bs.modal': {preventDefault: false, event: 'before:close'},
+    'hidden.bs.modal': {preventDefault: false, event: 'close'}
   },
 
-  open: function(view) {
+  open: function (view) {
     var deferred = $.Deferred();
     this.once('open', deferred.resolve);
     this.content.show(view);
@@ -34,9 +34,9 @@ module.exports = LayoutView.extend({
     return deferred;
   },
 
-  close: function() {
+  close: function () {
     var deferred = $.Deferred();
-    this.once('close', function() {
+    this.once('close', function () {
       this.content.empty();
       deferred.resolve();
     });

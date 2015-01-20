@@ -3,7 +3,7 @@
  * @type {exports}
  */
 
-var Route = require('src/common/route');
+var Route = require('../common/route');
 var View = require('./view');
 var Model = require('./model');
 

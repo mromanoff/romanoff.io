@@ -1,31 +1,31 @@
 var Radio = require('backbone.radio');
-var View = require('src/common/view');
-var Model = require('src/common/model');
+var View = require('../../common/view');
+var Model = require('../../common/model');
 var template = require('./template.hbs');
 
 module.exports = View.extend({
   template: template,
 
-  initialize: function() {
+  initialize: function () {
     this.model = new Model(this.options);
     Radio.request('modal', 'open', this);
   },
 
   events: {
-    'click .btn-primary' : 'confirm',
-    'click .close'       : 'cancel'
+    'click .btn-primary': 'confirm',
+    'click .close': 'cancel'
   },
 
-  confirm: function() {
+  confirm: function () {
     var self = this;
-    Radio.request('modal', 'close').then(function() {
+    Radio.request('modal', 'close').then(function () {
       self.trigger('confirm');
     });
   },
 
-  cancel: function() {
+  cancel: function () {
     var self = this;
-    Radio.request('modal', 'close').then(function() {
+    Radio.request('modal', 'close').then(function () {
       self.trigger('cancel');
     });
   }

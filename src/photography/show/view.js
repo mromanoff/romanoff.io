@@ -3,7 +3,7 @@
  * @type {exports}
  */
 
-var View = require('src/common/view');
+var View = require('../../common/view');
 var template = require('./template.hbs');
 
 module.exports = View.extend({

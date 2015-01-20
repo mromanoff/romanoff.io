@@ -9,7 +9,7 @@ http://romanoff.io
 ### TODO: ###
 
 This site build with:
-FrontEnd: Backbone, Marionette, Underscore, jQuery, Gulp, Mocha, Sass, Susy, IcoMoon.
+FrontEnd: Backbone, Marionette, Underscore, jQuery, Gulp, Mocha, Sass, Susy, IcoMoon, Picturefill
 
 Built in testing support for: Mocha with Chai.
 
@@ -28,6 +28,18 @@ View Susy documentation here:
 View IcoMoon documentation here:
 [IcoMoon docs](http://icomoon.io/#docs)
 
+View Picturefill project:
+[GitHub] (https://github.com/scottjehl/picturefill)
+
+
+## Bugs
+
+Picturefill v. 2.2.0 have a bug and will be fixed in 2.3 release.
+for now just change:
+( this, this.document, new this.Image() );
+to:
+} )( window, window.document, new window.Image() );
+
 
 
 ## Updating dependencies ##
@@ -38,6 +50,8 @@ good idea to update after fetching.
 ``` bash
 # Install dependencies.
 npm install
+
+bower install
 
 
 ## Build process ##

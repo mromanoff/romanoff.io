@@ -2,7 +2,7 @@ describe('photography/module', function() {
   beforeEach(function() {
     this.Router = stub();
 
-    this.Module = proxyquire('src/photography/module.js', {
+    this.Module = proxyquire('../../src/photography/module.js', {
       './router': this.Router
     });
 

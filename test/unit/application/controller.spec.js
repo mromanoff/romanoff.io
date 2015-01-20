@@ -3,8 +3,8 @@ describe('application/application', function() {
     this.layoutView = { render: stub() };
     this.LayoutView = stub().returns(this.layoutView);
 
-    this.Controller = proxyquire('src/application/application.js', {
-      './layout-view': this.LayoutView,
+    this.Controller = proxyquire('../../src/application/application.js', {
+      './layout-view': this.LayoutView
     });
 
     this.module = new this.Controller();

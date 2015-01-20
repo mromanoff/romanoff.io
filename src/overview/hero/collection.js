@@ -3,7 +3,7 @@
  * @type {exports}
  */
 
-var Collection = require('src/common/collection');
+var Collection = require('../../common/collection');
 
 module.exports = new Collection([
   {

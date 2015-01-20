@@ -3,7 +3,7 @@
  * @type {exports}
  */
 
-//var Model = require('src/common/model');
+//var Model = require('../common/model');
 var Backbone = require('backbone');
 
 var API = {

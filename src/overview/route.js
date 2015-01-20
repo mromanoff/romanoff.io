@@ -4,16 +4,16 @@
  */
 
 var $ = require('jquery');
-var Route = require('src/common/route');
+var Route = require('../common/route');
 
 var HeroView = require('./hero/view');
 var heroCollection = require('./hero/collection');
 
 var WorkView = require('./work/view');
-var WorkCollection = require('src/work/collection');
+var WorkCollection = require('../work/collection');
 
 var PhotographyView = require('./photography/view');
-var PhotographyCollection = require('src/photography/collection');
+var PhotographyCollection = require('../photography/collection');
 
 var CodeView = require('./code/view');
 var CodeModel = require('./code/model');

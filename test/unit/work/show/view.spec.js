@@ -6,7 +6,7 @@
 //    this.model.url = 'foo';
 //    this.model.cleanup = stub();
 //
-//    this.View = proxyquire('src/work/show/view.js', {
+//    this.View = proxyquire('../../src/work/show/view.js', {
 //      './template.hbs' : this.template
 //    });
 //

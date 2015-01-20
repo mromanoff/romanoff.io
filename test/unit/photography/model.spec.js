@@ -1,6 +1,6 @@
 describe('photography/model', function() {
   beforeEach(function() {
-    this.Model = proxyquire('src/photography/model.js', {});
+    this.Model = proxyquire('../../src/photography/model.js', {});
     this.model = new this.Model();
   });
 

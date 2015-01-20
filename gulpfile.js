@@ -9,9 +9,12 @@ var path = require('path');
 var merge = require('merge-stream');
 var buffer = require('vinyl-buffer');
 var _ = require('lodash');
+
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+
 var api = require('./api/api');
+
 var sassRuby = require('gulp-ruby-sass');
 var minifyCSS = require('gulp-minify-css');
 
@@ -72,9 +75,10 @@ gulp.task('styles', function () {
   return gulp.src('./src/scss/*.scss')
     .pipe($.plumber())
     .pipe(sassRuby({
-      compass: true,
-      sourcemap: true,
-      sourcemapPath: '../scss'
+      compass: true
+      //,
+     // sourcemap: true,
+     // sourcemapPath: '../scss'
     }))
     .pipe(minifyCSS())
     .pipe(gulp.dest('./dist'));
@@ -97,11 +101,11 @@ function getBundler() {
 
 function bundle() {
   return getBundler().bundle()
-    .pipe($.plumber())
+    .on('error', $.util.log)
     .pipe(source('main.js'))
     .pipe(buffer())
     .pipe($.sourcemaps.init({loadMaps: true}))
-    .pipe($.uglify())
+    //.pipe($.uglify())
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'))
     .pipe(reload({stream: true}));
@@ -119,15 +123,9 @@ gulp.task('jshint', function () {
     .pipe($.jshint.reporter(stylish));
 });
 
-gulp.task('symlink', function () {
-  return gulp.src('./src')
-    .pipe($.plumber())
-    .pipe($.symlink('./node_modules'));
-});
-
 var reporter = 'spec';
 
-gulp.task('mocha', ['jshint', 'symlink'], function () {
+gulp.task('mocha', ['jshint'], function () {
   return gulp.src([
     './test/setup/node.js',
     './test/setup/helpers.js',

@@ -2,7 +2,7 @@
  * Contact Model
  * @type {exports}
  */
-var Model = require('src/common/model');
+var Model = require('../common/model');
 
 var API = {
   url: 'https://api.mongolab.com/',

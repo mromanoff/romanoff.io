@@ -4,7 +4,7 @@
  * @private
  */
 
-var CompositeView = require('src/common/composite-view');
+var CompositeView = require('../../common/composite-view');
 var ItemView = require('./item-view');
 var template = require('./composite-template.hbs');
 

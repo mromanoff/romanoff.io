@@ -3,7 +3,7 @@
  * @type {exports}
  */
 var Radio = require('backbone.radio');
-var Module = require('src/common/module');
+var Module = require('../common/module');
 var Router = require('./router');
 
 module.exports = Module.extend({

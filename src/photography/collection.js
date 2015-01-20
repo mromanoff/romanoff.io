@@ -2,8 +2,8 @@
  * Photography Collection
  * @type {exports}
  */
-var Collection = require('src/common/collection');
-var Model = require('src/common/model');
+var Collection = require('../common/collection');
+var Model = require('../common/model');
 
 var API = {
   url: 'https://api.500px.com/v1/photos',

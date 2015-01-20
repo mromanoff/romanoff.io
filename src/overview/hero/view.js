@@ -1,8 +1,8 @@
 /***
-  * Hero View
-  * @type {Marionette.ItemView|exports}
+ * Hero View
+ * @type {Marionette.ItemView|exports}
  */
-var View = require('src/common/view');
+var View = require('../../common/view');
 var template = require('./template.hbs');
 
 module.exports = View.extend({
@@ -11,14 +11,14 @@ module.exports = View.extend({
 
   onShow: function () {
     this.$el.owlCarousel({
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
+      navigation: true, // Show next and prev buttons
+      slideSpeed: 300,
+      paginationSpeed: 400,
+      singleItem: true
     });
   },
 
-  serializeData: function(){
+  serializeData: function () {
     return {
       images: this.collection.toJSON()
     };

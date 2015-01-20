@@ -8,9 +8,9 @@ describe('footer/module', function() {
 
     this.container = { show: stub() };
 
-    this.Module = proxyquire('src/footer/module.js', {
+    this.Module = proxyquire('../../src/footer/module.js', {
       './view' : this.View,
-      'src/common/collection': this.Collection
+      '../common/collection': this.Collection
     });
 
     this.module = new this.Module('footer', {}, { container: this.container });

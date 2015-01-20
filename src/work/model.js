@@ -4,7 +4,7 @@
  */
 
 var _ = require('lodash');
-var Model = require('src/common/model');
+var Model = require('../common/model');
 
 module.exports = Model.extend({
   //idAttribute: '_id',
