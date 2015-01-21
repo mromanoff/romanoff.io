@@ -36,17 +36,9 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./dist/fonts'));
 });
 
-//gulp.task('images', function () {
-//  return gulp.src('./src/img/**/*')
-//    .pipe($.plumber())
-//    .pipe(gulp.dest('./dist/img'));
-//});
-
-
 // minify new images
 gulp.task('imagemin', function () {
   var imgSrc = './src/img/**/*', imgDst = './dist/img';
-
   gulp.src(imgSrc)
     .pipe($.changed(imgDst))
     .pipe($.imagemin())
@@ -105,7 +97,7 @@ function bundle() {
     .pipe(source('main.js'))
     .pipe(buffer())
     .pipe($.sourcemaps.init({loadMaps: true}))
-    //.pipe($.uglify())
+    .pipe($.uglify())
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'))
     .pipe(reload({stream: true}));
