@@ -16,6 +16,4 @@
   @if $show or susy-get(debug inspect) {
     -susy-#{$mixin}: inspect($inspect);
   }
-}
-
-
+};
