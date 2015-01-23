@@ -129,16 +129,28 @@ $section-padding: 20px;
   }
 }
 
-picture {
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
 
 img.full-width{
-  width: 100%;
   height: auto;
+  max-width: 100%; /* [1] */
+  font-style: italic; /* [2] */
+  vertical-align: middle; /* [3] */
+}
+
+picture {
+  img {
+    height: auto;
+    max-width: 100%; /* [1] */
+    font-style: italic; /* [2] */
+    vertical-align: middle; /* [3] */
+  }
 }
 
 #nprogress {
