@@ -28,33 +28,12 @@ module.exports = Route.extend({
   },
 
   fetch: function () {
-    //if (this.codeModel.isNew()) {
-    //  this.codeModel.fetch();
-    //}
-    //
-    //if (this.workCollection.isNew()) {
-    //  this.workCollection.fetch();
-    //}
-    //
-    //if (this.photographyCollection.isNew()) {
-    //  this.photographyCollection.fetch();
-    //}
-
     return $.when(
       this.codeModel.fetch(),
       this.workCollection.fetch(),
       this.photographyCollection.fetch()
     );
-    // or with es6 Promises
-    //return Promise.all([x.fetch(), y.fetch(), z.fetch()]);
   },
-
-  //or sequentially:
-  //fetch: function () {
-  //  return x.fetch()
-  //      .then(() => y.fetch())
-  //.then(() => z.fetch());
-  //},
 
   render: function () {
 
