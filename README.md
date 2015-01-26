@@ -2,7 +2,7 @@ Romanoff.io web site
 =================
 
 [![Dependency Status](https://david-dm.org/mromanoff/romanoff.io.svg?style=flat-square)](https://david-dm.org/mromanoff/romanoff.io)
-[![devDependency Status](https://david-dm.org/mromanoff/romanoff.io/dev-status.svg)](https://david-dm.org/mromanoff/romanoff.io#info=devDependencies)
+[![devDependency Status](https://david-dm.org/mromanoff/romanoff.io/dev-status.svg?style=flat-square)](https://david-dm.org/mromanoff/romanoff.io#info=devDependencies)
 
 
 ## Project in working progress. ##
