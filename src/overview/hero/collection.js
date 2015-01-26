@@ -35,7 +35,7 @@ module.exports = new Collection([
     medium: '/img/hero/main-4-1280x600.jpg',
     large: '/img/hero/main-4-1920x700.jpg',
     extraLarge: '/img/hero/main-4-1920x700.jpg',
-    title: 'Take a picture before too late',
+    title: 'Take a picture before it\'s too late',
     alt: 'romanoff.io'
   }
 ]);
