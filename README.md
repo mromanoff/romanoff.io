@@ -1,8 +1,8 @@
 Romanoff.io web site
 =================
 
-[![David](https://img.shields.io/david/strongloop/express.svg?style=flat-square)](https://david-dm.org/mromanoff/romanoff.io#info=dependencies&view=table)
-[![David](https://img.shields.io/david/dev/strongloop/express.svg?style=flat-square)](https://david-dm.org/mromanoff/romanoff.io#info=devDependencies&view=table)
+[![Dependency Status](https://david-dm.org/mromanoff/romanoff.io.svg?style=flat-square)](https://david-dm.org/mromanoff/romanoff.io)
+[![devDependency Status](https://david-dm.org/mromanoff/romanoff.io/dev-status.svg)](https://david-dm.org/mromanoff/romanoff.io#info=devDependencies)
 
 
 ## Project in working progress. ##
