@@ -1,6 +1,12 @@
 Romanoff.io web site
 =================
 
+[![node](https://img.shields.io/node/v/gh-badges.svg?style=flat-square)](https://github.com/mromanoff/romanoff.io)
+[![Bower](https://img.shields.io/bower/v/bootstrap.svg?style=flat-square)](https://github.com/mromanoff/romanoff.io)
+[![David](https://img.shields.io/david/strongloop/express.svg?style=flat-square)](https://github.com/mromanoff/romanoff.io)
+[![David](https://img.shields.io/david/dev/strongloop/express.svg?style=flat-square)]([![David](https://img.shields.io/david/strongloop/express.svg?style=flat-square)](https://github.com/mromanoff/romanoff.io))
+
+
 ## Project in working progress. ##
 
 http://romanoff.io
