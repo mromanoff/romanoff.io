@@ -32,9 +32,6 @@ module.exports = Collection.extend({
   },
 
   parse: function (response) {
-
-    console.log('check for tags', response);
-
     this.pageCount = response.total_pages; // jshint ignore:line
     return response.photos;
   }

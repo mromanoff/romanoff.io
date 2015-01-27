@@ -9,8 +9,8 @@ module.exports = View.extend({
   template: template,
 
   initialize: function () {
-    this.collection.reset(this.collection.slice(0, 4));
-    //this.collection.reset(this.collection.sample(4));
+    //this.collection.reset(this.collection.slice(0, 4));
+    this.collection.reset(this.collection.sample(4));
   },
 
   serializeData: function(){

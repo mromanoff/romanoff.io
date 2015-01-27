@@ -3,8 +3,6 @@
   text-align: center;
   padding: 0 $section-side-padding;
 
-
-
   li {
     margin-bottom: $default-margin * 3;
     h4 {
@@ -13,10 +11,17 @@
       margin: 10px 0;
     }
     img {
+      @include transition(all 0.3s);
       width: 100%;
       height: auto;
       border: 1px solid $black3;
+      opacity: 1;
+      &:hover {
+        @include transition(all 0.3s);
+        opacity: .9;
+      }
     }
+
    &:last-child {
      margin-bottom: 0;
    }
