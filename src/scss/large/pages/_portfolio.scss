@@ -2,9 +2,9 @@
 .gallery {
   @include container(80%);
 
-  img {
-    max-width: $large-breakpoint;
-  }
+//  img {
+//    max-width: $large-breakpoint;
+//  }
 
   li {
     @include gallery(2 of 6);

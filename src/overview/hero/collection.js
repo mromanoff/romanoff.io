@@ -27,7 +27,8 @@ module.exports = new Collection([
     medium: '/img/hero/main-2-1280x600.jpg',
     large: '/img/hero/main-2-1920x700.jpg',
     extraLarge: '/img/hero/main-2-1920x700.jpg',
-    title: 'Stop talking start walking',
+    title: 'The way to get started is to quit talking and begin doing.',
+    subTitle: '~Walt Disney~',
     alt: 'romanoff.io'
   },
   {
@@ -35,7 +36,8 @@ module.exports = new Collection([
     medium: '/img/hero/main-4-1280x600.jpg',
     large: '/img/hero/main-4-1920x700.jpg',
     extraLarge: '/img/hero/main-4-1920x700.jpg',
-    title: 'Take a picture before it\'s too late',
+    title: 'Attitude is a little thing that makes a big difference.',
+    subTitle: '~Winston Churchill~',
     alt: 'romanoff.io'
   }
 ]);

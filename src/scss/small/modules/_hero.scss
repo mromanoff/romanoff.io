@@ -16,14 +16,20 @@
       top: 50%;
       left: 50%;
       @include transform(translate(-50%, -50%));
-      background: rgba(0, 0, 0, 0.3);
+      @include transition(all 0.8s);
+      background: rgba(0, 0, 0, 0.35);
+
+      &:hover{
+        @include transition(all 0.8s);
+        opacity: 0;
+      }
     }
   }
 }
 
 .hero-title {
   @include translateZ(0);
-  border: 1px solid #fff;
+  //border: 1px solid #fff;
   color: #fff;
   font-size: 22px;
   font-weight: 200;
@@ -46,7 +52,7 @@
 
   small {
     display: block;
-    font-size: 0.4em;
+    font-size: 0.35em;
     font-weight: bold;
     margin: 10px 0;
 

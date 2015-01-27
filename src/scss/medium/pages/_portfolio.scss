@@ -2,9 +2,9 @@
   @include container(80%);
   padding: 0;
 
-  img {
-    max-width: $medium-breakpoint;
-  }
+//  img {
+//    max-width: $medium-breakpoint;
+//  }
 
   li {
     @include gallery(2 of 4);
