@@ -5,26 +5,18 @@
 
 var $ = require('jquery');
 var Route = require('../common/route');
-
 var HeroView = require('./hero/view');
-var heroCollection = require('./hero/collection');
-
 var WorkView = require('./work/view');
-var WorkCollection = require('../work/collection');
-
 var PhotographyView = require('./photography/view');
-var PhotographyCollection = require('../photography/collection');
-
 var CodeView = require('./code/view');
-var CodeModel = require('./code/model');
 
 module.exports = Route.extend({
   initialize: function (options) {
     this.layout = options.layout;
-    this.heroCollection = heroCollection;
-    this.workCollection = new WorkCollection();
-    this.photographyCollection = new PhotographyCollection();
-    this.codeModel = new CodeModel();
+    this.heroCollection = options.heroCollection;
+    this.workCollection = options.workCollection;
+    this.photographyCollection = options.photographyCollection;
+    this.codeModel = options.codeModel;
   },
 
   fetch: function () {
@@ -36,7 +28,6 @@ module.exports = Route.extend({
   },
 
   render: function () {
-
     this.hero = new HeroView({
       collection: this.heroCollection
     });
@@ -44,7 +35,6 @@ module.exports = Route.extend({
     this.work = new WorkView({
       collection: this.workCollection
     });
-
 
     this.photography = new PhotographyView({
       collection: this.photographyCollection

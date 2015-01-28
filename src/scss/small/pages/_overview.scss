@@ -15,8 +15,12 @@ img {
     img {
       width: 100%;
       height: auto;
-      border: 1px solid #444;
-      margin: 0;
+      border: 1px solid $black3;
+      opacity: 1;
+      &:hover {
+        @include transition(all 0.3s);
+        opacity: .9;
+      }
     }
   }
 }

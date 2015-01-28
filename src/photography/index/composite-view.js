@@ -12,10 +12,10 @@ module.exports = CompositeView.extend({
   template: template,
   tagName: 'ul',
 
-  initialize: function () {
-    // filter out nsfw (not safe for work)
-    this.collection.reset(this.collection.where({nsfw: false}));
-  },
+  //initialize: function () {
+  //  // filter out NSFW (not safe for work)
+  //  this.collection.reset(this.collection.where({nsfw: false}));
+  //},
 
   ui: {
     sortPictures: '.sortBy'

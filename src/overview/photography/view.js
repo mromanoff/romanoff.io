@@ -9,8 +9,12 @@ module.exports = View.extend({
   template: template,
 
   initialize: function () {
-    //this.collection.reset(this.collection.slice(0, 4));
-    this.collection.reset(this.collection.sample(4));
+    // filter out nsfw (not safe for work)
+    this.collection.reset(this.collection.chain()
+      .filter(function(model) { return model.get('nsfw') === false;})
+      .sample(4)
+      .value()
+    );
   },
 
   serializeData: function(){

@@ -14,6 +14,7 @@ var API = {
   sort: 'highest_rating',  // 'created_at', times_viewed, votes_count, favorites_count,
   sortDirection: 'desc', // 'asc'
   imageSize: 3,
+  exclude: 'Nude',
   tags: 1, // If set to 1, returns an array of tags for the photo.
   page: 1,
   pageCount: null
@@ -28,7 +29,7 @@ module.exports = Collection.extend({
   },
 
   url: function () {
-    return API.url + '?feature=' + API.feature + '&user_id=' + API.userId + '&sort=' + API.sort + '&image_size=' + API.imageSize + '&page=' + this.page + '&tags=' + API.tags + '&rpp=' + API.rpp + '&consumer_key=' + API.consumerKey; // jshint ignore:line
+    return API.url + '?exclude=' + API.exclude + '&feature=' + API.feature + '&user_id=' + API.userId + '&sort=' + API.sort + '&image_size=' + API.imageSize + '&page=' + this.page + '&tags=' + API.tags + '&rpp=' + API.rpp + '&consumer_key=' + API.consumerKey; // jshint ignore:line
   },
 
   parse: function (response) {

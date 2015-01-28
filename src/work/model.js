@@ -7,8 +7,6 @@ var _ = require('lodash');
 var Model = require('../common/model');
 
 module.exports = Model.extend({
-  //idAttribute: '_id',
-
   defaults: {
     visible: false,
     category: null,
@@ -32,5 +30,4 @@ module.exports = Model.extend({
   url: function () {
     return this.get('dataUrl') + this.get('id') + '?apiKey=' + this.get('apiKey');
   }
-
 });
