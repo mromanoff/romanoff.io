@@ -4,7 +4,9 @@
   padding: 0 $section-side-padding;
 
   li {
-    margin-bottom: $default-margin * 3;
+    @include gallery(2 of 4);
+    margin-bottom: gutter(6);
+
     h4 {
       font-weight: normal;
       letter-spacing: 2px;

@@ -2,18 +2,9 @@
   @include container(80%);
   padding: 0;
 
-//  img {
-//    max-width: $medium-breakpoint;
-//  }
-
   li {
-    @include gallery(2 of 4);
-    margin-bottom: gutter(4);
-
-    img {
-      min-width: 280px;
-      min-height: 280px;
-    }
+    @include gallery(2 of 6);
+    margin-bottom: gutter(8);
   }
 
   p {

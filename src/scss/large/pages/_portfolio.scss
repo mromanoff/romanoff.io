@@ -2,12 +2,8 @@
 .gallery {
   @include container(80%);
 
-//  img {
-//    max-width: $large-breakpoint;
-//  }
-
   li {
-    @include gallery(2 of 6);
-    margin-bottom: gutter(6);
+    @include gallery(2 of 8);
+    margin-bottom: gutter(12);
   }
 }

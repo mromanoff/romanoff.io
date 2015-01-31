@@ -7,6 +7,6 @@
 
   li {
     @include gallery(2 of 8);
-    margin-bottom: gutter(8);
+    margin-bottom: gutter(10);
   }
 }
