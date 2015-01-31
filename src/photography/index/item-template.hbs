@@ -1,22 +1,3 @@
 <a href="#photography/{{id}}">
     <img src="{{image_url}}" alt="{{name}}" />
 </a>
-<h4>{{name}}</h4>
-
-{{#if rating}}
-    <section class="module no-gutter ratings">
-        <p>
-          {{#if votes_count}}
-              <strong>Votes:</strong> {{votes_count}}
-          {{/if}}
-
-          {{#if favorites_count}}
-              <strong>Favorites:</strong> {{favorites_count}}
-          {{/if}}
-
-          {{#if highest_rating}}
-              <strong>Rating:</strong> {{highest_rating}}
-          {{/if}}
-        </p>
-    </section>
-{{/if}}
