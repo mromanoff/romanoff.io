@@ -69,9 +69,10 @@ gulp.task('styles', function () {
     .pipe(sassRuby({
       compass: true
       //,
-     // sourcemap: true,
-     // sourcemapPath: '../scss'
+      //sourcemap: true,
+      //sourcemapPath: '../scss'
     }))
+    //.pipe($.autoprefixer('last 2 version'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('./dist'));
 });
