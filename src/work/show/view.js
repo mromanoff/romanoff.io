@@ -10,12 +10,12 @@ module.exports = View.extend({
   template: template,
   className: 'gallery',
 
-  initialize: function (options) {
-    this.model = options.model;
-    this.model.cleanup();
+  events: {
+    'click .goBack': 'goBack'
   },
 
-  modelEvents: {
-    'all': 'render'
+  goBack: function (e) {
+    e.preventDefault();
+    window.history.back();
   }
 });

@@ -8,5 +8,14 @@ var template = require('./template.hbs');
 
 module.exports = View.extend({
   template: template,
-  className: 'gallery'
+  className: 'gallery',
+
+  events: {
+    'click .goBack': 'goBack'
+  },
+
+  goBack: function (e) {
+    e.preventDefault();
+    window.history.back();
+  }
 });
