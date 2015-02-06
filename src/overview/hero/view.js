@@ -11,10 +11,12 @@ module.exports = View.extend({
 
   onShow: function () {
     this.$el.owlCarousel({
-      navigation: true, // Show next and prev buttons
-      slideSpeed: 300,
-      paginationSpeed: 400,
-      singleItem: true
+      navigation: true,
+      slideSpeed: 500,
+      paginationSpeed: 500,
+      rewindSpeed: 1000,
+      singleItem: true,
+      autoPlay: true
     });
   },
 
