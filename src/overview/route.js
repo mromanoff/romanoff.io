@@ -5,7 +5,7 @@
 
 var $ = require('jquery');
 var Route = require('../common/route');
-var HeroView = require('./hero/view');
+var HeroView = require('./hero/composite-view');
 var WorkView = require('./work/view');
 var PhotographyView = require('./photography/view');
 var CodeView = require('./code/view');

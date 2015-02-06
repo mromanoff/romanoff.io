@@ -160,26 +160,53 @@ button {
   }
 }
 
-.owl-theme .owl-controls .owl-buttons div {
-  color: #FFF;
-  display: inline-block;
-  padding: 0;
-  zoom: 1;
-  font-size: 12px;
-  border-radius: 50px;
-  background: #869791;
-  @include opacity(1);
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  margin: 10px;
-  @include transition(background 0.3s, color 0.3s);
-  &:hover {
-    background-color: #869791;
+.hero-region {
+  position: relative;
+}
+
+.carousel-navigation {
+
+  a {
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    zoom: 1;
+    font-size: 56px;
+    @include opacity(0.8);
+    height: 180px;
+    width: 80px;
+    line-height: 180px;
+    @include transition(color 0.3s);
+
+    z-index: 9999;
+    position: absolute;
+    top: 33%;
+
+    //TODO: update this
+    //@include transform(translate(-50%, -50%));
+
+    &.next {
+      right: 0;
+    }
+
+    &.prev {
+      left: 0;
+    }
+  }
+
+  a:hover {
+    color: rgba(255, 255, 255, .5);
+  }
+
+}
+
+.owl-theme .owl-controls {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  .owl-page span {
+    background: white
   }
 }
-
-.owl-theme .owl-controls.clickable .owl-buttons div:hover {
-   background-color:  $gray-light;
-}
-
