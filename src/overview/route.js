@@ -16,12 +16,12 @@ module.exports = Route.extend({
     this.heroCollection = options.heroCollection;
     this.workCollection = options.workCollection;
     this.photographyCollection = options.photographyCollection;
-    this.codeModel = options.codeModel;
+    this.codeCollection = options.codeCollection;
   },
 
   fetch: function () {
     return $.when(
-      this.codeModel.fetch(),
+      this.codeCollection.fetch(),
       this.workCollection.fetch(),
       this.photographyCollection.fetch()
     );
@@ -41,7 +41,7 @@ module.exports = Route.extend({
     });
 
     this.code = new CodeView({
-      model: this.codeModel
+      collection: this.codeCollection
     });
 
     this.layout.hero.show(this.hero);

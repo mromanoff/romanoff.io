@@ -8,11 +8,11 @@ var View = require('../../common/view');
 var template = require('./template.hbs');
 
 module.exports = View.extend({
-  template: template,
+    template: template,
 
-  serializeData: function(){
-    return {
-      repos: _.slice(this.model.toJSON().data, 0, 5)
-    };
-  }
+    serializeData: function () {
+        return {
+            repos: _.slice(this.collection.toJSON(), 0, 5)
+        };
+    }
 });

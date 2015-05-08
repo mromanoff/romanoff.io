@@ -12,7 +12,7 @@ var IndexRoute = require('./route');
 var heroCollection = require('./hero/collection');
 var WorkCollection = require('../work/collection');
 var PhotographyCollection = require('../photography/collection');
-var CodeModel = require('./code/model');
+var CodeCollection = require('./code/collection');
 
 module.exports = Router.extend({
   initialize: function (options) {
@@ -20,7 +20,7 @@ module.exports = Router.extend({
     this.heroCollection = heroCollection;
     this.workCollection = new WorkCollection();
     this.photographyCollection = new PhotographyCollection();
-    this.codeModel = new CodeModel();
+    this.codeCollection = new CodeCollection();
   },
 
   onBeforeEnter: function () {
@@ -39,7 +39,7 @@ module.exports = Router.extend({
       heroCollection: this.heroCollection,
       workCollection: this.workCollection,
       photographyCollection: this.photographyCollection,
-      codeModel: this.codeModel
+      codeCollection: this.codeCollection
     });
   }
 });
