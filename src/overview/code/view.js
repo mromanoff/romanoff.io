@@ -12,7 +12,7 @@ module.exports = View.extend({
 
     serializeData: function () {
         return {
-            repos: _.slice(this.collection.toJSON(), 0, 5)
+            repos: this.collection.toJSON().slice(0, 5)
         };
     }
 });
