@@ -3,7 +3,6 @@
  * @type {Marionette.ItemView|exports}
  */
 
-var _ = require('lodash');
 var View = require('../../common/view');
 var template = require('./template.hbs');
 
